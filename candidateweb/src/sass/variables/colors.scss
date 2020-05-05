@@ -1,0 +1,59 @@
+$fluttr-black: #333;
+$fluttr-light-grey: #979797;
+$fluttr-blue:  #3498db;
+$fluttr-caca: #cacaca;
+$fluttr-green: rgb(26, 188, 156);
+$fluttr-orange: #ffa602;
+$fluttr-red: #FC5640;
+$fluttr-purple: #8e44ad;
+
+.fluttr-black {
+    color: $fluttr-black 
+}
+.fluttr-light-grey {
+    color: $fluttr-light-grey
+}
+.fluttr-blue {
+    color: $fluttr-blue 
+}
+.fluttr-caca {
+    color: $fluttr-caca 
+}
+.fluttr-green {
+    color: $fluttr-green 
+}
+.fluttr-orange {
+    color: $fluttr-orange 
+}
+.fluttr-red {
+    color: $fluttr-red 
+}
+.fluttr-purple {
+    color: $fluttr-purple
+}
+
+// new crazy
+
+//Primary colors
+$crazy-eggplant: #8A81E1;
+$crazy-white: #FFF;
+$crazy-darkside: #2C3E50 ;
+
+//Secondary colors
+$crazy-orange: #FFB500;
+$crazy-pink: #F36289;
+$crazy-blue: #00C0E6;
+
+//Old colors
+$crazy-green: #1ABC9C;
+//Status colors
+$crazy-red: #FF5656;
+$crazy-error: #FF5656;
+$crazy-correct: #5CD687;
+//grey colors
+$crazy-mediumgrey: #A0A8B9;
+$crazy-lightgrey: #D8D8D8;
+$crazy-background: #FAFAFA;
+
+// default colors
+$crazy-primary: $crazy-eggplant;

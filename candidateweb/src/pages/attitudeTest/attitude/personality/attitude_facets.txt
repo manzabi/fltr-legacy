@@ -1,0 +1,183 @@
+/*
+export const neuroticism = {
+    domain: 'N',
+    title: 'Neuroticism',
+        {
+            facet: 1,
+            title: 'Anxiety',
+           
+        },
+        {
+            facet: 2,
+            title: 'Anger',
+            
+        },
+        {
+            facet: 3,
+            title: 'Depression',
+            
+        },
+        {
+            facet: 4,
+            title: 'Self-Consciousness',
+       
+        },
+        {
+            facet: 5,
+            title: 'Immoderation',
+      
+        },
+        {
+            facet: 6,
+            title: 'Vulnerability',
+            
+        }
+    ]
+};
+
+export const agreeableness = {
+    domain: 'A',
+    title: 'Agreeableness',
+    facets: [
+        {
+            facet: 1,
+            title: 'Trust',
+           
+        },
+        {
+            facet: 2,
+            title: 'Morality',
+            
+        },
+        {
+            facet: 3,
+            title: 'Altruism',
+            
+        },
+        {
+            facet: 4,
+            title: 'Cooperation',
+            
+        },
+        {
+            facet: 5,
+            title: 'Modesty',
+            
+        },
+        {
+            facet: 6,
+            title: 'Sympathy',
+        }
+    ]
+};
+
+export const conscientiousness = {
+    domain: 'C',
+    title: 'Conscientiousness',
+    facets: [
+        {
+            facet: 1,
+            title: 'Self-Efficacy',
+            
+        },
+        {
+            facet: 2,
+            title: 'Orderliness',
+            
+        },
+        {
+            facet: 3,
+            title: 'Dutifulness',
+            
+        },
+        {
+            facet: 4,
+            title: 'Achievement-Striving',
+            
+        },
+        {
+            facet: 5,
+            title: 'Self-Discipline',
+            
+        },
+        {
+            facet: 6,
+            title: 'Cautiousness',
+        }
+    ]
+};
+
+export const extraversion = {
+    domain: 'E',
+    title: 'Extraversion',
+    facets: [
+        {
+            facet: 1,
+            title: 'Friendliness',
+            
+        },
+        {
+            facet: 2,
+            title: 'Gregariousness',
+            
+        },
+        {
+            facet: 3,
+            title: 'Assertiveness',
+            
+        },
+        {
+            facet: 4,
+            title: 'Activity Level',
+            
+        },
+        {
+            facet: 5,
+            title: 'Excitement-Seeking',
+            
+        },
+        {
+            facet: 6,
+            title: 'Cheerfulness',
+            
+        }
+    ]
+};
+
+export const openess = {
+    domain: 'O',
+    title: 'Openness To Experience',
+    facets: [
+        {
+            facet: 1,
+            title: 'Imagination',
+            
+        },
+        {
+            facet: 2,
+            title: 'Artistic Interests',
+            
+        },
+        {
+            facet: 3,
+            title: 'Emotionality',
+            
+        },
+        {
+            facet: 4,
+            title: 'Adventurousness',
+            
+        },
+        {
+            facet: 5,
+            title: 'Intellect',
+            
+        },
+        {
+            facet: 6,
+            title: 'Liberalism',
+            
+        }
+    ]
+};
+*/

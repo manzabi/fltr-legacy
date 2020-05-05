@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: scheduler
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: scheduler
+    spec:
+      containers:
+      - image: williamyeh/dummy
+        name: scheduler
+        ports:
+        - containerPort: 8099
+        resources: {}
+      restartPolicy: Always
+status: {}

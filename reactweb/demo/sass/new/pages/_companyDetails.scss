@@ -1,0 +1,88 @@
+.crazy-company-details {
+    background-color: $crazy-white;
+    margin-right: 0;
+    margin-left: 0;
+    min-height: 100vh;
+    column-gap: 0;
+    & img {
+        height: 40px;
+        margin-top: 10px;
+    }
+    & h2, p {
+        color: $crazy-darkside;
+    }
+    & .crazy-company-details-form {
+        & .crazy-button {
+            margin-top: 50px;
+            margin-left: calc(50% - 100px);
+        }
+        & .crazy-company-details-item {
+            margin-top: 40px;
+            position: relative;
+            & .question-number {
+                font-weight: 1000;
+                position: absolute;
+                left: -23px;
+            }
+            & .crazy-icon-check-small {
+                position: absolute;
+                font-weight: 1000;
+                color: $crazy-green;
+                left: -25px;
+                top: 2px;
+            }
+            & .company-question {
+                font-weight: 1000;
+            }
+            & .crazy-field {
+                & p {
+                    display: none;
+                }
+            }
+            & .options-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                & .option-box {
+                    height: 49px;
+                    width: calc((100% - 30px)/3);
+                    min-width: 104px;
+                    border: 1px solid $crazy-lightgrey;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    & p {
+                        color: $crazy-darkside;
+                        margin: 0;
+                    }
+                    &.selected {
+                        background-color: $crazy-orange;
+                        & p {
+                            color: $crazy-white;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) { 
+    .crazy-company-details {
+        padding-bottom: 10px;
+        & .crazy-company-details-form { 
+            & .crazy-company-details-item { 
+                & .company-question {
+                    padding-left: 20px;
+                }
+                & .question-number, & .crazy-icon-check-small {
+                    left: 0;
+                }
+            }
+        }
+    }
+}

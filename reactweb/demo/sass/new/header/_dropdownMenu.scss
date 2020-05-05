@@ -1,0 +1,190 @@
+.crazy-dropdown-menu {
+    position: relative;
+    & > *:first-child {
+        cursor: pointer;
+    }
+    & .dropdown-menu-content {
+        background-color: white;
+        position: absolute;
+        right: -10px;
+        top: 100%;
+        width: 20vw;
+        min-width: 300px;
+        box-sizing: border-box;
+        cursor: default;
+        box-shadow: 0 3px 8px 0 #dedede;
+        margin-top: -5px;
+        border-radius: 4px;
+        & a {
+            cursor: pointer;
+        }
+        & .dropdown-header {
+            padding: 6px 25px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 1.78571;
+            color: #777777;
+            white-space: nowrap;
+            background-color: #F9FAFB;
+            margin-bottom: 0px;
+        }
+        & .dropdown-button-container {
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin-bottom: 13px;
+            & .notification-menu-button {
+                height: 33px;
+                width: 50%;
+                font-size: 12px;
+                border-radius: 0;
+                font-weight: bold;
+                padding: 6px 12px;
+                border: none;
+                color: #98A0A3;
+                background: #F9FAFB;
+                &:hover {
+                    background: darken(#F9FAFB, 5%);
+                }
+                &:first-child{
+                    border-right: 1px solid #DDE1E6;
+                }
+            }
+            & .link-menu-button {
+                width: 100%;
+                background-color: transparent;
+                border: 0;
+                font-size: 12px;
+                color: black;
+                padding: 12px 10%;
+                cursor: pointer;
+                &:hover {
+                    background-color: $fluttr-esmerald-green;
+                    color: white;
+                }
+            }
+        }
+        &:hover {
+            display: block;
+            &:after {
+                display: block;
+            }
+        }
+    }
+}
+
+// STYLES FOR SPECIFIC DROPDOWNS
+
+.crazy-dropdown-menu {
+    & .dropdown-menu-content {
+        & .company-dropdown {
+            background-color: white;
+            font-family: Lato, sans-serif;
+            & .company-information {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                cursor: pointer;
+                align-items: center;
+                margin: 13px 0px;
+                padding: 0 17px;
+                & .profile-pic-wrapper {
+                    width: 44px;
+                    height: 44px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid #e9e9e9;
+                }
+                & .company-logo {
+                    box-sizing: content-box;
+                    width: 30px;
+                    height: 30px;
+                    display: block;
+                    padding: 7px;
+                }
+                & .company-details {
+                    & p {
+                        font-size: 16px;
+                        color: #2C3E50;
+                        margin-left: 17px;
+                    }
+                }
+                &:hover {
+                    background-color: #fafafa;
+                }
+                &.no-company {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    & p {
+                        margin: 0;
+                    }
+                    & .company-placeholder {
+                        width: 43px;
+                        height: 43px;
+                        background-color: #e9e9e9;
+                        border-radius: 100px;
+                    }
+                    & .update-button {
+                        color: #f36289;
+                    }
+                }
+            }
+            & hr {
+                width: 100%;
+                border-color:#e9e9e9;
+                margin: 12px 0;
+            }
+            & .company-use-information {
+                color: #adb4c3;
+                & > * {
+                    padding: 12.5px 10%;
+                    margin: 0;
+                }
+
+                & p {
+                    margin: 0;
+                }
+                & .company-plan {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    color: #2C3E50;
+                    & .crazy-button {
+                        pointer-events: none;
+                    }
+                    &:hover {
+                        background-color: #f36289;
+                        color: white;
+                    }
+                }
+                & h2 {
+                    font-size: 16px;
+                }
+                & p {
+                    margin: 0;
+                    font-size: 12px;
+                    position: relative;
+                    & .upgrade {
+                        position: absolute;
+                        right: 0;
+                        font-size: 12px;
+                        color: #4a90e2;
+                    }
+                }
+            }
+            & .user-action-buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                & button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

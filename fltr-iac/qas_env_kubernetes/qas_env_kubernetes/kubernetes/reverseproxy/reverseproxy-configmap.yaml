@@ -1,0 +1,434 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: qas-nginxconfigmap
+data:
+  # Adding new entries here will make them appear as files in the deployment.
+  # Please update k8s.io/k8s.io/README.md when you update this file
+  default.conf: |
+        server {
+
+                listen 80;
+                server_name api.qas.fluttr.in;
+
+                listen 443 ssl;
+
+                ssl_certificate /etc/nginx/ssl/fullchain1.pem;
+                ssl_certificate_key /etc/nginx/ssl/privkey1.pem;
+                ssl_session_timeout 1d;
+                ssl_session_cache shared:SSL:50m;
+                ssl_session_tickets off;
+                # modern configuration. tweak to your needs.
+                ssl_protocols TLSv1.2;
+                ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+                ssl_prefer_server_ciphers on;
+                # OCSP Stapling ---
+                # fetch OCSP records from URL in ssl_certificate and cache them
+                ssl_stapling on;
+                ssl_stapling_verify on;
+
+
+                proxy_set_header        X-Real-IP       $remote_addr;
+                proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+
+
+
+                location / {
+                        rewrite ^/v1/customer(/.*)$ /bizAroundRest/v1/customer$1 break;
+
+
+                        proxy_pass http://wfnet:8080;
+                }
+
+                location /server/ {
+                        return 404;
+                }
+
+        }
+
+        server {
+
+                listen 80;
+                server_name as.qas.fluttr.in;
+
+                listen 443 ssl;
+
+                ssl_certificate /etc/nginx/ssl/fullchain1.pem;
+                ssl_certificate_key /etc/nginx/ssl/privkey1.pem;
+                ssl_session_timeout 1d;
+                ssl_session_cache shared:SSL:50m;
+                ssl_session_tickets off;
+                # modern configuration. tweak to your needs.
+                ssl_protocols TLSv1.2;
+                ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+                ssl_prefer_server_ciphers on;
+                # OCSP Stapling ---
+                # fetch OCSP records from URL in ssl_certificate and cache them
+                ssl_stapling on;
+                ssl_stapling_verify on;
+
+                location /bizAroundRest/v2/api-docs {
+                    proxy_set_header Host $host;
+                    proxy_set_header X-Forwarded-Proto $scheme;
+                    proxy_set_header X-Real-IP $remote_addr;
+                    proxy_pass http://wfnet:8080;
+                }
+        }
+
+
+        server {
+
+                listen 80;
+                server_name qas.fluttr.in;
+
+                listen 443 ssl;
+
+                ssl_certificate /etc/nginx/ssl/fullchain1.pem;
+                ssl_certificate_key /etc/nginx/ssl/privkey1.pem;
+                ssl_session_timeout 1d;
+                ssl_session_cache shared:SSL:50m;
+                ssl_session_tickets off;
+                # modern configuration. tweak to your needs.
+                ssl_protocols TLSv1.2;
+                ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+                ssl_prefer_server_ciphers on;
+                # OCSP Stapling ---
+                # fetch OCSP records from URL in ssl_certificate and cache them
+                ssl_stapling on;
+                ssl_stapling_verify on;
+
+                # real ip
+                proxy_set_header        X-Real-IP       $remote_addr;
+                proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+
+                location / {
+
+                    proxy_pass http://wfnet:8080;
+                    try_files $uri /bizAroundSite/$uri$is_args$args;
+
+                }
+
+                #location ~ ^/bizAroundRest/swagger {
+                 #   return 404;
+                #}
+
+                location /bizAroundRest/v2/api-docs {
+
+                    if ( $query_string = "group=private" ) { return 404; }
+
+                    proxy_pass http://wfnet:8080;
+                }
+
+
+                location /bizAroundRest/server/ {
+                                   proxy_pass http://wfnet:8080;
+
+                }
+
+                location /challenge1 {
+
+                    proxy_pass http://wfnet:8080;
+                    try_files $uri /bizAroundSite/invited/$uri;
+
+                }
+
+                location /apple-app-site-association {
+                    root   /home/bizaround/staticfs/;
+                }
+
+                location /bizAroundRest/ {
+                    if ($http_origin ~* (https?://.*\.fluttr\.in(:[0-9]+)?)) {
+                        set $cors "true";
+                }
+
+                # OPTIONS indicates a CORS pre-flight request
+                if ($request_method = 'OPTIONS') {
+                    set $cors "${cors}options";
+                }
+
+                # non-OPTIONS indicates a normal CORS request
+                if ($request_method = 'GET') {
+                    set $cors "${cors}get";
+                }
+                if ($request_method = 'POST') {
+                    set $cors "${cors}post";
+                }
+
+                if ($request_method = 'PUT') {
+                    set $cors "${cors}post";
+                }
+
+                if ($request_method = 'DELETE') {
+                    set $cors "${cors}delete";
+                }
+
+
+                # if it's a GET or POST, set the standard CORS responses header
+                if ($cors = "trueget") {
+                    add_header 'Access-Control-Allow-Origin' "$http_origin" always;
+                    add_header 'Access-Control-Allow-Credentials' 'true' always;
+                }
+
+                if ($cors = "truepost") {
+                    add_header 'Access-Control-Allow-Origin' "$http_origin" always;
+                    add_header 'Access-Control-Allow-Credentials' 'true' always;
+                }
+
+                    if ($cors = "trueput") {
+                    add_header 'Access-Control-Allow-Origin' "$http_origin" always;
+                    add_header 'Access-Control-Allow-Credentials' 'true' always;
+                }
+
+                if ($cors = "truedelete") {
+                    add_header 'Access-Control-Allow-Origin' "$http_origin" always;
+                    add_header 'Access-Control-Allow-Credentials' 'true' always;
+                }
+
+                if ($cors = "trueoptions") {
+                    add_header 'Access-Control-Allow-Origin' "$http_origin" always;
+                    add_header 'Access-Control-Allow-Credentials' 'true' always;
+
+                    # Tell browser to cache this pre-flight info for 20 days
+                    add_header 'Access-Control-Max-Age' 1728000;
+
+                    add_header 'Access-Control-Allow-Methods' 'GET, POST, PUT, DELETE, OPTIONS';
+                    add_header 'Access-Control-Allow-Headers' 'Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,Keep-Alive,X-Requested-With,If-Modified-Since';
+
+                    add_header 'Content-Length' 0;
+                    add_header 'Content-Type' 'text/plain charset=UTF-8';
+                    return 204;
+                }
+
+                    proxy_pass http://wfnet:8080;
+
+            }
+
+                location /bizAroundOauthProvider/ {
+                        proxy_pass http://wfnet:8080;
+                    }
+
+                location /bizAroundSite/ {
+                        proxy_pass http://wfnet:8080/bizAroundSite/;
+                    }
+
+                location /bizAroundControlRoom/ {
+                        proxy_pass http://wfnet:8080/bizAroundControlRoom/;
+                }
+
+
+                location /image/ {
+                    #autoindex on;
+                    #alias /home/bizaround/webnginx/image/;
+                   proxy_pass http://wfnet:8080/img/;
+                }
+
+                location /file/ {
+
+                    proxy_pass http://wfnet:8080/files/;
+
+                }
+
+                location /download/ {
+
+                    alias /home/bizaround/project/bizaround/extras/download-android-new/;
+                    index index.html;
+
+                }
+
+                location /meetup/ {
+                    alias /home/bizaround/project/bizaround/extras/download-android-new/;
+                    index meetup.html;
+                }
+
+                location /release/ {
+                    root /home/bizaround/project/bizaround/extras;
+                }
+
+                location /webhook/greenhouse {
+                        proxy_set_header Host $host;
+                        proxy_set_header X-Forwarded-Proto $scheme;
+                        proxy_set_header X-Real-IP $remote_addr;
+                        proxy_pass http://wfnet:8080/bizAroundRest/webhook/greenhouse;
+                }
+
+
+            }
+
+
+
+        # FINALIZE SWITCH BY REPLACING SERVER_NAME DIRECTIVES
+
+
+            server {
+
+                    listen 80;
+
+                    server_name web.qas.fluttr.in;
+
+                    listen 443 ssl;
+
+                    ssl_certificate /etc/nginx/ssl/fullchain1.pem;
+                    ssl_certificate_key /etc/nginx/ssl/privkey1.pem;
+                    ssl_session_timeout 1d;
+                    ssl_session_cache shared:SSL:50m;
+                    ssl_session_tickets off;
+                    # modern configuration. tweak to your needs.
+                    ssl_protocols TLSv1.2;
+                    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+                    ssl_prefer_server_ciphers on;
+                    # OCSP Stapling ---
+                    # fetch OCSP records from URL in ssl_certificate and cache them
+                    ssl_stapling on;
+                    ssl_stapling_verify on;
+
+                    try_files $uri $uri/ /index.html;
+
+                    location / {
+
+                            proxy_set_header        Host $host;
+                            proxy_set_header        X-Real-IP $remote_addr;
+                            proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                            proxy_set_header        X-Forwarded-Proto $scheme;
+
+                            proxy_pass http://frontend-console-svc:8080;
+
+                            proxy_read_timeout  90;
+
+                    }
+
+            }
+
+            server {
+
+                    listen 80;
+
+                    server_name website.qas.fluttr.in ;
+
+                    listen 443 ssl;
+
+                    ssl_certificate /etc/nginx/ssl/fullchain1.pem;
+                    ssl_certificate_key /etc/nginx/ssl/privkey1.pem;
+                    ssl_session_timeout 1d;
+                    ssl_session_cache shared:SSL:50m;
+                    ssl_session_tickets off;
+                    # modern configuration. tweak to your needs.
+                    ssl_protocols TLSv1.2;
+                    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+                    ssl_prefer_server_ciphers on;
+                    # OCSP Stapling ---
+                    # fetch OCSP records from URL in ssl_certificate and cache them
+                    ssl_stapling on;
+                    ssl_stapling_verify on;
+
+                    location / {
+
+                            proxy_set_header        Host $host;
+                            proxy_set_header        X-Real-IP $remote_addr;
+                            proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                            proxy_set_header        X-Forwarded-Proto $scheme;
+
+                            proxy_pass http://frontend-website-svc:8080;
+
+                            proxy_read_timeout  90;
+
+                    }
+
+            }
+
+
+            server {
+
+                    listen 80;
+                    server_name talent.qas.fluttr.in;
+
+                    listen 443 ssl;
+
+                    ssl_certificate /etc/nginx/ssl/fullchain1.pem;
+                    ssl_certificate_key /etc/nginx/ssl/privkey1.pem;
+                    ssl_session_timeout 1d;
+                    ssl_session_cache shared:SSL:50m;
+                    ssl_session_tickets off;
+                    # modern configuration. tweak to your needs.
+                    ssl_protocols TLSv1.2;
+                    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+                    ssl_prefer_server_ciphers on;
+                    # OCSP Stapling ---
+                    # fetch OCSP records from URL in ssl_certificate and cache them
+                    ssl_stapling on;
+                    ssl_stapling_verify on;
+
+
+                    location / {
+
+                            proxy_set_header        Host $host;
+                            proxy_set_header        X-Real-IP $remote_addr;
+                            proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                            proxy_set_header        X-Forwarded-Proto $scheme;
+
+                            proxy_pass http://frontend-talent-svc:8080;
+
+                            proxy_read_timeout  90;
+
+                    }
+
+            }
+
+            server {
+
+                    listen 80;
+                    server_name micro.qas.fluttr.in;
+
+                    listen 443 ssl;
+
+                    ssl_certificate /etc/nginx/ssl/fullchain1.pem;
+                    ssl_certificate_key /etc/nginx/ssl/privkey1.pem;
+                    ssl_session_timeout 1d;
+                    ssl_session_cache shared:SSL:50m;
+                    ssl_session_tickets off;
+                    # modern configuration. tweak to your needs.
+                    ssl_protocols TLSv1.2;
+                    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+                    ssl_prefer_server_ciphers on;
+                    # OCSP Stapling ---
+                    # fetch OCSP records from URL in ssl_certificate and cache them
+                    ssl_stapling on;
+                    ssl_stapling_verify on;
+
+                    proxy_set_header        X-Real-IP       $remote_addr;
+                    proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+
+                    location /slack {
+                            proxy_pass http://slackintegration-svc:8090;
+                    }
+
+            }
+
+            server {
+
+                    listen 80;
+                    server_name luna.qas.fluttr.in;
+
+                    listen 443 ssl;
+
+                    ssl_certificate /etc/nginx/ssl/fullchain1.pem;
+                    ssl_certificate_key /etc/nginx/ssl/privkey1.pem;
+                    ssl_session_timeout 1d;
+                    ssl_session_cache shared:SSL:50m;
+                    ssl_session_tickets off;
+                    # modern configuration. tweak to your needs.
+                    ssl_protocols TLSv1.2;
+                    ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+                    ssl_prefer_server_ciphers on;
+                    # OCSP Stapling ---
+                    # fetch OCSP records from URL in ssl_certificate and cache them
+                    ssl_stapling on;
+                    ssl_stapling_verify on;
+
+                    proxy_set_header        X-Real-IP       $remote_addr;
+                    proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+
+                    location / {
+                            proxy_pass http://luna-svc:80;
+                    }
+
+            }

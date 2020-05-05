@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reverseproxyplus-svc
+  labels:
+    app: reverseproxyplus
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    name: http
+  - port: 443
+    protocol: TCP
+    name: https
+  selector:
+    app: reverseproxyplus
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}

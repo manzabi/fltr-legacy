@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="79" passed="79">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="1428" started-at="2019-05-28T10:40:11Z" finished-at="2019-05-28T10:40:12Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="1428" started-at="2019-05-28T10:40:11Z" finished-at="2019-05-28T10:40:12Z">
+      <class name="io.swagger.codegen.CodegenConfigLoaderTest">
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="10" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SwaggerYamlGenerator@78a773fd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="3" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.DartClientCodegen@57c03d88]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="2" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.NodeJSServerCodegen@16aa8654]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.PythonClientCodegen@6d7fc27]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SwiftCodegen@45ac5f9b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SinatraServerCodegen@135606db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="2" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.TizenClientCodegen@518caac3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.PhpClientCodegen@68034211]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="2" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.CsharpDotNet2ClientCodegen@4f74980d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="2" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.TypeScriptAngularClientCodegen@6c372fe6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.FlashClientCodegen@58594a11]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="2" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.AkkaScalaClientCodegen@2a3888c1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="2" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.PerlClientCodegen@4167d97b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="6" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.ObjcClientCodegen@14fa86ae]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="4" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SpringMVCServerCodegen@6e15fe2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="7" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.AsyncScalaClientCodegen@68f1b17f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.JaxRSServerCodegen@1722011b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.JavaInflectorServerCodegen@57ad2aa7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.StaticDocCodegen@5b3f61ff]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.AndroidClientCodegen@3e2059ae]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SwaggerGenerator@398dada8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SilexServerCodegen@7cb502c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.StaticHtmlGenerator@275bf9b3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.TypeScriptNodeClientCodegen@1b8a29df]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.CSharpClientCodegen@4fbe37eb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.RubyClientCodegen@12a94400]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.JavaClientCodegen@6a47b187]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.Qt5CPPGenerator@2049a9c1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.ScalatraServerCodegen@1ef6d34c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByFullQualifiedName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByFullQualifiedName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.ScalaClientCodegen@46271dd6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByFullQualifiedName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SwaggerYamlGenerator@11bb571c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.DartClientCodegen@7c51f34b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.NodeJSServerCodegen@5495333e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.PythonClientCodegen@2a225dd7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SwiftCodegen@61eaec38]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SinatraServerCodegen@125290e5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.TizenClientCodegen@6fa34d52]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="0" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.PhpClientCodegen@57576994]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.CsharpDotNet2ClientCodegen@616ac46a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.TypeScriptAngularClientCodegen@67b9b51a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="2" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.FlashClientCodegen@1205bd62]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.AkkaScalaClientCodegen@7ef27d7f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.PerlClientCodegen@490caf5f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.ObjcClientCodegen@6337c201]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SpringMVCServerCodegen@5c669da8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.AsyncScalaClientCodegen@31920ade]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.JavaInflectorServerCodegen@4032d386]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="0" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.JaxRSServerCodegen@1d483de4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.StaticDocCodegen@28d18df5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.AndroidClientCodegen@934b6cb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SwaggerGenerator@55cf0d14]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.SilexServerCodegen@3b74ac8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.StaticHtmlGenerator@27adc16e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.TypeScriptNodeClientCodegen@b83a9be]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="0" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.CSharpClientCodegen@2609b277]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="0" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.RubyClientCodegen@1fd14d74]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.JavaClientCodegen@563e4951]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.Qt5CPPGenerator@4066c471]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="1" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.ScalatraServerCodegen@2b175c00]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+        <test-method status="PASS" signature="testLoadByName(io.swagger.codegen.CodegenConfig)[pri:0, instance:io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209]" name="testLoadByName" duration-ms="0" started-at="2019-05-28T12:40:11Z" data-provider="codegenConfig" finished-at="2019-05-28T12:40:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[io.swagger.codegen.languages.ScalaClientCodegen@3eb81efb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoadByName -->
+      </class> <!-- io.swagger.codegen.CodegenConfigLoaderTest -->
+      <class name="io.swagger.codegen.config.CodegenConfiguratorTest">
+        <test-method status="PASS" signature="testAdditionalProperties()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testAdditionalProperties" duration-ms="228" started-at="2019-05-28T12:40:11Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdditionalProperties -->
+        <test-method status="PASS" signature="testApiPackage()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testApiPackage" duration-ms="2" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiPackage -->
+        <test-method status="PASS" signature="testArtifactId()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testArtifactId" duration-ms="1" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArtifactId -->
+        <test-method status="PASS" signature="testArtifactVersion()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testArtifactVersion" duration-ms="2" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testArtifactVersion -->
+        <test-method status="PASS" signature="testDynamicProperties()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testDynamicProperties" duration-ms="2" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDynamicProperties -->
+        <test-method status="PASS" signature="testFromFile()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testFromFile" duration-ms="176" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFromFile -->
+        <test-method status="PASS" signature="testGroupId()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testGroupId" duration-ms="3" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGroupId -->
+        <test-method status="PASS" signature="testImportMappings()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testImportMappings" duration-ms="2" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testImportMappings -->
+        <test-method status="PASS" signature="testInstantiationTypes()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testInstantiationTypes" duration-ms="1" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInstantiationTypes -->
+        <test-method status="PASS" signature="testInvokerPackage()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testInvokerPackage" duration-ms="2" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvokerPackage -->
+        <test-method status="PASS" signature="testLanguageSpecificPrimitives()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testLanguageSpecificPrimitives" duration-ms="2" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLanguageSpecificPrimitives -->
+        <test-method status="PASS" signature="testLibrary()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testLibrary" duration-ms="1" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLibrary -->
+        <test-method status="PASS" signature="testModelPackage()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testModelPackage" duration-ms="1" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testModelPackage -->
+        <test-method status="PASS" signature="testSkipOverwrite()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testSkipOverwrite" duration-ms="1" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSkipOverwrite -->
+        <test-method status="PASS" signature="testSystemProperties()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testSystemProperties" duration-ms="26" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSystemProperties -->
+        <test-method status="PASS" signature="testTemplateDir()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testTemplateDir" duration-ms="4" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTemplateDir -->
+        <test-method status="PASS" signature="testTypeMappings()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testTypeMappings" duration-ms="1" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTypeMappings -->
+        <test-method status="PASS" signature="testVerbose()[pri:0, instance:io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d]" name="testVerbose" duration-ms="15" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerbose -->
+      </class> <!-- io.swagger.codegen.config.CodegenConfiguratorTest -->
+      <class name="io.swagger.codegen.DefaultGeneratorTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:io.swagger.codegen.DefaultGeneratorTest@61f8bee4]" name="setUp" is-config="true" duration-ms="59" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSkipOverwrite()[pri:0, instance:io.swagger.codegen.DefaultGeneratorTest@61f8bee4]" name="testSkipOverwrite" duration-ms="534" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSkipOverwrite -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:io.swagger.codegen.DefaultGeneratorTest@61f8bee4]" name="tearDown" is-config="true" duration-ms="3" started-at="2019-05-28T12:40:12Z" finished-at="2019-05-28T12:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- io.swagger.codegen.DefaultGeneratorTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

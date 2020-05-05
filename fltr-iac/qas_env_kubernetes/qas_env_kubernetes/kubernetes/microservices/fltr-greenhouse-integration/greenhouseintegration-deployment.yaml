@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: greenhouseintegration
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: greenhouseintegration
+    spec:
+      containers:
+        - name: greenhouseintegration
+          image: giantswarm/dummy-image:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8090

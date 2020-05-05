@@ -1,0 +1,154 @@
+<!-- USEFUL TO KNOW CURRENTLY SELECTED LOCALE -->
+<selectedFlag 'United-States'>
+
+<!-- NAVIGATION LANGUAGE MENU -->
+<languageMenu[$lang] {
+  enUS: 'English - U.S.',
+  fr: 'French',
+  it: 'Italian',
+  ge: 'German',
+  ar: 'Arabic',
+  ch: 'Chinese'
+}>
+
+<!-- NAVIGATION LANGUAGE MENU - HEADING -->
+<languageMenuHeading 'CHOOSE A LOCALE'>
+
+<!-- SETTINGS MENU - Fluid -->
+<settingsMenuHeading 'Dimension'>
+<settingsMenuFluid 'Fluid'>
+<settingsMenuBoxed 'Boxed (990px)'>
+
+<!-- NOTIFICATIONS MENU -->
+<notificationsMenuHeading 'Your notifications'>
+<notificationsTimeFirst 'an hour ago'>
+
+<!-- SIDEBAR -->
+
+<roleJudge 'Role: Expert'>
+<roleRecruiter 'Role: Recruiter'>
+<dashboard 'Dashboard'>
+<bankInfo 'Bank Information'>
+<invite 'Invite'>
+<faq 'FAQ'>
+
+<!-- HEADER -->
+
+<myDashboard 'My Dashboard'>
+<tqInReview 'TQ in Review'>
+<social 'Social'>
+<searchAJob 'Search a job'>
+<searchATalent 'Search a Talent'>
+<addJob 'Add a job'>
+
+<!-- DASHBOARD WELCOME -->
+<welcomeToFluttr 'Welcome to Fluttr!' >
+<welcomeBody 'This is your command centre as an expert. You can find all TalenQuests relevant for you,
+              sign up for new ones and see the summary for all your activities as an expert.'>
+
+
+<!-- DASHBOARD COMMON -->
+
+<home 'HOME' >
+<inReview 'IN REVIEW' >
+<aboutToStart 'ABOUT TO START'>
+<closed 'CLOSED' >
+
+<inReviewDescription 'You need to complete your reviews now.'>
+<aboutToStartDescription 'You signed up as expert on these TalenQuests. They will require your input soon'>
+<closedDescription 'These are the TalenQuests were you played as Expert and that are now closed.' >
+
+<noTalenQuests 'No TalenQuests available'>
+
+<reviewCompleted 'You already completed the review of this Challenge'>
+
+
+<!-- GENERICS -->
+<genericSave 'Save' >
+<noContent 'No Content' >
+<genericEdit 'Edit' >
+<genericDelete 'Delete'>
+<genericClose 'Close'>
+
+<logout 'Logout'>
+
+<!-- BANK INFO -->
+
+<bankInfoFormHeadline 'You need to setup your bank account...' >
+
+<bankInfoFormHolder 'Name of the Bank Account Holder' >
+<bankInfoFormCountry 'Country' >
+<bankInfoFormSwift 'SWIFT CODE (8 - 11 characters)' >
+<bankInfoFormIban 'IBAN' >
+
+
+<bankInfoViewHeadlineFirst 'You need to set up your bank account to receive your payments after each TalenQuest joined as an expert.
+                       Only payments in Euro and within the SEPA area are allowed at this point.' >
+
+<bankInfoViewHeadlineSecond 'We complete payments 24 hours after the end of each TalenQuest. The time that the transfer will take might
+                       depend on the bank selected, but it will generally take between 1 and 2 working days.' >
+
+<bankInfoViewMoreInfo 'For more info click here' >
+
+<bankInfoSave 'Save Your Bank Account' >
+
+<bankInfoAboutSepa 'About SEPA Credit Transfer' >
+
+<bankInfoSepaMoreInfoFirst 'SEPA Credit Transfer is a euro transaction that debits one account and credits another, within the 33-country Single Euro Payments Area. It standardises transfers using a common timeframe, rules, processes and service levels.'>
+<bankInfoSepaMoreInfoSecond 'Launched in January 2008, SEPA’s credit transfer system replaced a multitude of individual national schemes. The payer (sender) begins the credit transfer by instructing their bank, which then moves an agreed amount of funds to the payee’s (or receiver’s) bank.
+
+                             The maximum execution time is three business days (depending on cut-off time)'>
+
+
+<bankInfoDeleteModalTitle 'Delete bank account'>
+<bankInfoDeleteModalBody  'Are you sure you want to delete this bank account?'>
+
+<!-- JUDGE INVITATION -->
+
+<judgeInvitationHeadline 'Invite the '>
+<judgeInvitationHeadlineNext ' best professionals you trust' >
+
+<judgeInvitationHeadlineNoInvitesLeft 'No invites left' >
+
+<judgeInvitationHeader 'Exclusively invited professionals can become Experts on TalenQuest. Only the best
+                                                           ones become part of this special club. And you are one of them.
+
+                                                            Invite to join you as TalenQuest Expert the three best professionals you know and trust'>
+
+<judgeInvitationInviteButtonText 'Invite Now' >
+
+<judgeInvitationFormFirstName  'First name'>
+<judgeInvitationFormLastName   'Surname'>
+<judgeInvitationFormEmail      'Email'>
+
+
+<!-- NOTIFICATION LIST -->
+<notificationListEmpty 'No notifications available' >
+
+<!-- OPPORTUNITY PANEL -->
+<oppPanelShowMore 'Show more'>
+
+<!-- TIMER -->
+
+<endsIn 'Ends in '>
+
+<!-- EXPERT -->
+<titlePanelTalenQuest ' TalenQuest in status '>
+
+
+<!-- RECRUITER DASHBOARD -->
+
+<sidebarCreateNew 'Add Challenge'>
+
+<opportunitiesCreated ' Job opportuntities published'>
+<talentsApplied ' Talents applied to the position '>
+<talentsAppliedNoName ' Talents applied to this position '>
+<challengeAnswer 'Show challenge answer'>
+<challengeDraft 'Show challenge draft'>
+
+<userChallengePoints 'Points'>
+<userChallengePosition 'Position'>
+<userChallengeScore 'Score'>
+
+<challengeExplanation 'This is the test that candidates will have to complete to display their own talents for this job position. Their responses will be evaluated by the experts you selected.'>
+<challengeExplanationInput 'Please make sure to provide a clear description of what candidates are expected to do to complete the test successfully. '>

@@ -1,0 +1,53 @@
+.leaderboardComponent {
+
+  /** Progress **/
+  .progress {
+    position: relative;
+    height: 25px;
+    color: #333 !important;
+  }
+  .progress > .progress-type {
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 3px 30px 1px 10px;
+    //background-color: rgba(25, 25, 25, 0.2) !important;
+    height: 100%;
+  }
+  .progress-type-me {
+    font-weight: 800 !important;
+  }
+  .progress > .progress-completed {
+    position: absolute;
+    right: 0px;
+    padding: 3px 10px 2px;
+  }
+
+  .progress-bar-info{
+    background-color: #5bc0de !important;
+  }
+
+  .progress-bar-orange{
+    background-color: #FF9F1C !important;
+  }
+
+  .progress-bar-green{
+    background-color: #00C853 !important;
+  }
+
+  .progress-position{
+    float: left;
+    padding: 3px 5px;
+    font-weight: 700;
+    margin-right: 5px;
+    height: 25px;
+    width: 40px;
+    background-color: #eee;
+    border-radius: 5px;
+
+  }
+
+  .progress-row{
+    margin-bottom: 5px;
+  }
+}

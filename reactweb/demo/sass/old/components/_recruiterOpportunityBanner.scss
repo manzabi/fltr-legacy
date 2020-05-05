@@ -1,0 +1,150 @@
+.opportunityMatchItem {
+  .statusContainer {
+    padding: 0px;
+    .status{
+      font-size: 20px;
+      color: $fluttr-black;
+      font-weight: 400;
+    }
+  }
+  .showChallengeContainer{
+    padding: 0px;
+    text-align: right;
+  }
+
+  .opportunityMatchItemInternalContainer{
+    background-color: white;
+  }
+
+  .candidateInfo{
+    .userName{
+      color: $fluttr-black;
+      font-size: 18px;
+    }
+    .position{
+      color: $fluttr-black;
+      font-size: 15px;
+      font-weight: 300;
+    }
+    .dv-star-rating-star{
+      font-size: 20px;
+    }
+  }
+
+  .nopadding {
+    padding:0px;
+  }
+
+}
+
+@media (max-width: $screen-sm-min) {
+  .showChallengeContainer{
+    padding: 0px;
+    text-align: left !important;
+  }
+}
+
+.judgeInfo {
+  padding: 20px;
+
+  .userName{
+    color: $fluttr-black;
+    font-size: 15px;
+  }
+  .position{
+    color: $fluttr-black;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  .bio{
+    color: $fluttr-dark-grey;
+    font-size: 13px;
+    font-style: italic;
+  }
+  .dv-star-rating-star{
+    font-size: 18px;
+  }
+  .feedback{
+    color: $fluttr-dark-grey;
+    font-size: 13px;
+    font-style: italic;
+  }
+  .rateDescription{
+    color: $fluttr-black;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.judgeInfo.col-md-4:nth-child(3n+1) {
+  clear: both;
+}
+
+
+.expertPanel{
+  .title{
+    color: $fluttr-black;
+    font-size: 18px;
+  }
+}
+
+
+
+.recruiterContent{
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+@media (max-width: $screen-sm-min) {
+  .button-action{
+    padding-right:0px;
+    text-align:right;
+  }
+
+  .recruiterOpportunityBannerTop {
+    margin: 20px 20px;
+  }
+
+  .opportunity-company-logo{
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .recruiterContent{
+    // padding-left: 30px;
+    // padding-right: 30px;
+
+    .recruiterOpportunityBannerTop {
+      margin: 20px 0px;
+    }
+    .button-action{
+      text-align:center;
+    }
+  }
+}
+
+.points{
+  color: $fluttr-black;
+  font-size: 30px;
+  font-weight: 400;
+}
+.points-label{
+  color: $fluttr-black;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.header-values{
+  color: $fluttr-black;
+  font-size: 20px;
+  font-weight: 400;
+}
+.header-values-label{
+  color: $fluttr-black;
+  font-size: 14px;
+  font-weight: 300;
+}

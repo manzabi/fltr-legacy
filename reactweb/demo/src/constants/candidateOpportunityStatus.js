@@ -1,0 +1,3 @@
+export const TYPE_STATUS_ASSESSMENT = 1;
+export const TYPE_STATUS_DISQUALIFIED = 2;
+export const TYPE_STATUS_DISCARD = 99;

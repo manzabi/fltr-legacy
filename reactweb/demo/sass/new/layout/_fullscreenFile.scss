@@ -1,0 +1,77 @@
+.crazy-fullscreen-file {
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: initial;
+    height: 100%;
+    margin: 0;
+    & * {
+        z-index: 202;
+    }
+    & .close-file {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: white;
+        cursor: pointer;
+    }
+    & .file-section {
+        overflow: hidden;
+        width: 80%;
+        height: 80%;
+        margin: 5% auto 0;
+        cursor: grab;
+        background-color: white;
+        position: relative;
+        & .scrollable-file {
+            margin: auto;
+            user-select: none;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            & * {
+                user-select: none;
+                pointer-events: none;
+                & :not(.sk-child) {
+                    width: unset !important;
+                }
+            }
+        }
+    }
+    & .file-controls {
+        background-color: rgba(0, 0, 0, 0.85);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: max-content;
+        margin: auto;
+        flex-wrap: wrap;
+        min-width: 130px;
+        & .zoom-button {
+            cursor: pointer;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        & > *:not(.zoom-view) {
+            width: calc(100% / 3);
+            min-width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: 0;
+            user-select: none;
+        }
+        & .zoom-view {
+            width: 80%;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            user-select: none;
+            margin: auto;
+        }
+    }
+}

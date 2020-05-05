@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: oauth
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: oauth
+    spec:
+      containers:
+        - name: oauth
+          image: giantswarm/dummy-image:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8099

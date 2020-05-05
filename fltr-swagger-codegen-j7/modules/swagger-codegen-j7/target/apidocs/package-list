@@ -1,0 +1,6 @@
+config
+io.swagger.codegen
+io.swagger.codegen.auth
+io.swagger.codegen.config
+io.swagger.codegen.examples
+io.swagger.codegen.languages

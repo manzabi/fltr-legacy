@@ -1,0 +1,40 @@
+.main-container.challenge-configuration {
+    & .crazy-section-header .crazy-tooltip {
+        & .activate-button-tooltip-disabled, & .team-tooltip-disabled, & .settings-tooltip-disabled {
+            color: $crazy-white;
+            font-size: 11px;
+            padding: 3px 13px;
+        }
+        & .activate-button-tooltip-enabled {
+            color: $crazy-white;
+            padding: 3px 10px;
+        }
+        & .crazy-primary {
+            top: calc(100% + 13px);
+            &.tooltip-bottom {
+                left: 8%;
+                &::after {
+                    left: 74%;
+                }
+            }
+        }
+    }
+    & .crazy-section-header .crazy-switcher-transparent .tooltip-bottom {
+        left: 30%;
+    }
+}
+.test-configuration-header {
+    & .test-status {
+        font-weight: bold;
+        &.status-live {
+            color: #5cd687;
+        }
+        &.status-to_init {
+            color: #a0a8b9;
+        }
+        &.status-found, &.status-closed {
+            color: #ff5656;
+        }
+    }
+}
+

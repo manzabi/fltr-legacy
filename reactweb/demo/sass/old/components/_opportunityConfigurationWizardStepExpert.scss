@@ -1,0 +1,67 @@
+@media (max-width: $screen-sm-min) {
+  .section-inner-experts{
+    padding:0px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .section-inner-experts{
+    padding-left:50px;
+  }
+}
+
+.opportunityConfigurationWizardStepExperts{
+  .invitation-container{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px 10px 10px 10px;
+  }
+  .invitation-dropdown{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 40px 10px 10px 10px;
+  }
+
+  .invitation-user-wrapper{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+
+  .invitation-user{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #eee;
+    margin-bottom: 10px;
+  }
+
+  .invitation-user-name{
+    color: $fluttr-black;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .invitation-user-email{
+    color: $fluttr-black;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .picture-placeholder{
+    border: 1px solid #DDD;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    display: table;
+
+    i {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}
+

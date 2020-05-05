@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wildfly-config
+  labels:
+    app: wildfly
+data:
+  BIZAROUND_ENVIRONMENT: stg
+  SPRING_PROFILES_ACTIVE: stg
+  DB_HOST: postgres
+  DB_NAME: bizaround
+  DB_PASS: bizaround
+  DB_PORT: "5432"
+  DB_USER: bizaround
+  DS_NAME: postgresDS
+  JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+  JNDI_NAME: java:jboss/datasources/postgresDS

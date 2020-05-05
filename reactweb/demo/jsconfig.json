@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+         "experimentalDecorators": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/routes/old-template",
+        "**/*.css"
+    ],
+    "include": [
+        "src/*", "src/common/components/*", "../../candidateweb/src/components/asyncComponents/AsynchList.jsx", "../../candidateweb/src/pages/talent/OpportunityListPage.jsx", "src/constants/opportunityChallengePlayerStatus.js", "src/constants/candidateOpportunityStatus.js", "src/layout/FluttrGrid.js"
+    ]
+}

@@ -1,0 +1,62 @@
+.full-screen-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(50,50,50,.975);
+  width: 100%;
+  height: 100%;
+  z-index: 9999 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & form {
+    width: 100%;
+    & h2 {
+      text-transform: capitalize;
+      margin: auto;
+      text-align: center;
+      &.animated-fullscreen-form {
+        animation-duration: 1.5s;
+        animation-delay: 0.6s;
+      }
+    }
+    & input {
+      display: block;
+      background-color: transparent;
+      border: 0px;
+      border-bottom: 3px solid #222;
+      color: #222;
+      width: 33%;
+      margin: auto;
+      text-align: center;
+      font-size: 40px;
+      transition: width .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      &.animated-fullscreen-form {
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+      }
+      &:focus {
+        width: 70%;
+        transition: width .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        color: white;
+        outline: none;
+      }
+    }
+  }
+  .animated-fullscreen-form {
+    &.animated {
+      &.animation-active {
+        animation-name: bounceInDown;
+      }
+      &.animation-hide {
+        visibility: hidden;
+      }
+    }
+    &.field-error {
+      color: red;
+      animation-name: shake !important;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+  }
+}

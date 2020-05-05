@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  labels:
+    app: postgres
+data:
+  POSTGRES_DBNAME: bizaround
+  POSTGRES_USER: bizaround
+  POSTGRES_PASS: bizaround
+  LC_ALL: C.UTF-8
+  PGDATA: /var/lib/postgresql/data/pgdata

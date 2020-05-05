@@ -1,0 +1,579 @@
+.challenge-configuration-template-edit {
+    background-color: $crazy-white;
+    padding-top: 32px;
+    position: relative;
+    // padding-left: 33px;
+    & .close-button-wrapper {
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        & .close-button {
+            position: absolute;
+            right: 53px;
+            font-size: 12px;
+            user-select: none;
+            cursor: pointer;
+            &:after {
+                content: '\68';
+                font-family: fluttr-icon-set;
+                position: relative;
+                left: 8px;
+                top: 2px;
+                font-size: 12px;
+            }
+        }
+    }
+    & .crazy-grid {
+        & .page-title {
+            margin-bottom: 16px;
+        }
+        & .page-subtitle {
+            margin-bottom: 50px;
+        }
+        & .introduction-page {
+            margin-bottom: 28px;
+        }
+        & .steps-container {
+            & .step {
+                position: relative;
+                margin-bottom: 50px;
+                & .step-number {
+                    position: absolute;
+                    left: -20px;
+                }
+                & .tick {
+                    position: absolute;
+                    left: -23px;
+                    top: 2px;
+                    font-size: 14px;
+                    color: $crazy-green;
+                }
+                & .missing {
+                    position: absolute;
+                    left: -23px;
+                    top: 2px;
+                    font-size: 14px;
+                    color: $crazy-red;
+                }
+                & .first-step {
+                    height: 300px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                    width: 100%;
+                    & .crazy-grid {
+                        margin: 0;
+                        height: 100%;
+                        width: 100%;
+                        & .cover-image {
+                            height: 100%;
+                            padding-left: 34px;
+                            position: relative;
+                            & .crazy-input-group {
+                                margin-top: 29px;
+                                & .file-input-label {
+                                    color: $crazy-white;
+                                    margin-left: 7px;
+                                }
+                            }
+                            & .required-field {
+                                position: absolute;
+                                top: 68px;
+                                left: 4px;
+                                font-size: 12px;
+                                color: $crazy-red;
+                            }
+                            & textarea {
+                                border: 0;
+                                outline: 0;
+                                background: transparent;
+                                border-bottom: 2px solid $crazy-white;
+                                font-size: 23px;
+                                font-weight: 800;
+                                color: $crazy-white;
+                                width: 355px;
+                                overflow-y: hidden;
+                                word-wrap: break-word;
+                                resize: none;
+                                font-family: Montserrat;
+                                &::placeholder {
+                                    color: $crazy-white;
+                                    font-family: Montserrat;
+                                }
+                                &.missing-title {
+                                    border-bottom: 2px solid $crazy-red;
+                                }
+                            }
+                            & p {
+                                color: $crazy-white;
+                            }
+                            & .title-length-counter {
+                                position: absolute;
+                                width: 355px;
+                                text-align: right;
+                            }
+                            & .upload-button {
+                                position: relative;
+                                height: 70px;
+                            }
+                        }
+                        & .company-logo {
+                            height: 100%;
+                            border: 1px solid $crazy-mediumgrey;
+                            position: relative;
+                            &.missing-logo {
+                                border: 1px solid $crazy-red;
+                            }
+                            & .required-field {
+                                position: absolute;
+                                bottom: -45px;
+                                left: 4px;
+                                font-size: 12px;
+                                color: $crazy-red;
+                            }
+                            & .picture {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-bottom: 1px solid $crazy-mediumgrey;
+                                height: calc(100% - 70px);
+                                & img {
+                                    width: calc(100% - 72px);
+                                }
+                            }
+                            & .upload-button {
+                                height: 70px;
+                                display: flex;
+                                justify-content: center;
+                                margin: auto;
+                                align-items: center;
+                                & .file-input-label {
+                                    overflow: hidden;
+                                    display: block;
+                                    white-space: nowrap;
+                                    max-width: 100%;
+                                    margin: auto;
+                                    padding-left: 20px;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                    }
+                }
+                & .second-step {
+                    & textarea {
+                        width: 100%;
+                        outline: none;
+                        border: 1px solid $crazy-mediumgrey;
+                        border-radius: 4px;
+                        padding: 20px 29px;
+                        min-height: 176px;
+                        resize: none;
+                        color: $crazy-darkside;
+                        overflow: hidden;
+                        &::placeholder {
+                            color: $crazy-mediumgrey;
+                        }
+                    }
+                    & .required-field {
+                        position: absolute;
+                        bottom: -45px;
+                        left: 4px;
+                        font-size: 12px;
+                        color: $crazy-red;
+                    }
+                    & .missing-about .demo-editor {
+                        border: 2px solid $crazy-red;
+                    }
+                }
+                & .third-step {
+                    & .options-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        & .option {
+                            height: 49px;
+                            width: calc((100% - 30px)/3);
+                            min-width: 104px;
+                            border: 1px solid $crazy-lightgrey;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            & p {
+                                color: $crazy-darkside;
+                                margin: 0;
+                            }
+                            &.selected {
+                                background-color: $crazy-orange;
+                                & p {
+                                    color: $crazy-white;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                        &.missing-seniority .option {
+                            border: 1px solid $crazy-red;
+                        }
+                        & .required-field {
+                            position: absolute;
+                            bottom: -45px;
+                            left: 4px;
+                            font-size: 12px;
+                            color: $crazy-red;
+                        }
+                    }
+                }
+                & .fourth-step {
+                    & .required-field {
+                        position: absolute;
+                        bottom: -35px;
+                        left: 4px;
+                        font-size: 12px;
+                        color: $crazy-red;
+                    }
+                    & .skills-search-container {
+                        display: flex;
+                        justify-content: left;
+                        & .crazy-searchbar {
+                            margin-right: 23px;
+                            &:hover {
+                                margin-right: 22px;
+                            }
+                            &.error-searchbar {
+                                border: 2px solid $crazy-red;
+                            }
+                            & .searchbar-children-wrapper {
+                                padding: 20px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                height: 85%;
+                                cursor: default;
+                                &.no-team {
+                                    height: unset;
+                                    padding: 0px;
+                                }
+                                & .selected-team-searchbar {
+                                    color: $crazy-darkside;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    font-weight: normal;
+                                    & i {
+                                        cursor: pointer;
+                                        font-size: 8px;
+                                    }
+                                }
+                                & .create-tag-text {
+                                    cursor: pointer;
+                                    padding-top: 10px;
+                                    color: $crazy-primary;
+                                    display: flex;
+                                    & i {
+                                        font-size: 11px;
+                                        display: flex;
+                                        align-items: center;
+                                    }
+                                    & p {   
+                                        color: $crazy-primary;
+                                        margin-left: 10px;
+                                        margin-bottom: 0;
+                                        font-size: 12px;
+                                    }
+                                }
+                                & .team-title, & .team-option {
+                                    height: 42px;
+                                    width: 100%;
+                                    color: $crazy-darkside;
+                                    font-weight: normal;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: left;
+                                    position: relative;
+                                }
+                                & .team-option {
+                                    padding-left: 43px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        background-color: $crazy-primary;
+                                        color: $crazy-white;
+                                    }
+                                }
+                                & .team-title {
+                                    cursor: default;
+                                    padding-left: 19px;
+                                }
+                                & .skills-wrapper {
+                                    overflow-y: auto;
+                                    width: 100%;
+                                    height: 100px;
+                                    padding: 10px 0 0;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                        & .skills-wrapper {
+                            width: 90%;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: left;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            margin-bottom: 33px;
+                            & .skill {
+                                margin-right: 9px;
+                                margin-bottom: 12px;
+                                width: max-content;
+                                height: 20px;
+                                border-radius: 2px;
+                                padding: 7px 12px;
+                                font-size: 12px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                white-space: nowrap;
+                                border: 2px solid $crazy-blue;
+                                color: $crazy-blue;
+                                position: relative;
+                                cursor: pointer;
+                                & span {
+                                    user-select: none;
+                                }
+                                & .cross-in-circle {
+                                    cursor: pointer;
+                                    border-radius: 50%;
+                                    height: 12px;
+                                    width: 12px;
+                                    background-color: #2C3E50;
+                                    position: absolute;
+                                    right: -6px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    top: -6px;
+                                    visibility: hidden;
+                                    & .crazy-icon {
+                                        color: $crazy-white;
+                                        font-size: 6px;
+                                    }
+                                }
+                                &.selected {
+                                    color: $crazy-white;
+                                    background-color: $crazy-blue;
+                                    cursor: auto;
+                                    &:hover .cross-in-circle {
+                                        visibility: visible;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .step {
+            // background-color: $crazy-background; 
+            & .tick {
+                position: absolute;
+                left: -23px;
+                top: 2px;
+                font-size: 14px;
+                color: $crazy-green;
+            }
+            & .missing {
+                position: absolute;
+                left: -23px;
+                top: 2px;
+                font-size: 14px;
+                color: $crazy-red;
+            }
+            & .last {
+                background-color: $crazy-white;
+                border: 1px solid $crazy-mediumgrey;
+                border-radius: 4px;
+                padding: 19px 16px 21px 16px;
+                margin-bottom: 47px;
+                &.shadow {
+                    box-shadow: 0 3px 8px 0 #dedede;
+                }
+                & .task-field {
+                    background-color: $crazy-white;
+                    border: 1px solid $crazy-mediumgrey;
+                    border-radius: 4px;
+                    & .title-and-controls {
+                        border-bottom: 1px solid $crazy-mediumgrey;
+                        padding-left: 21px;
+                        padding-right: 21px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 50px;
+                        & p {
+                            color: $crazy-darkside;
+                            margin: 0;
+                        }
+                        & .control-panel {
+                            & span {
+                                color: $crazy-red;
+                            }
+                            & .buttons-wrapper {
+                                margin: auto;
+                                & i {
+                                    cursor: pointer;
+                                    &[disabled] {
+                                        cursor: auto;
+                                        color: $crazy-lightgrey;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .task-editor .rdw-editor-main {
+                        border: 2px solid transparent;
+                    }
+                }
+                & .buttons-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 232px;
+                    margin-left: auto;
+                    margin-top: 18px;
+                }
+            }
+            & .add-new-task {
+                height: 131px;
+                width: 100%;
+                border: 1px dashed $crazy-mediumgrey;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                margin-top: 39px;
+                & p {
+                    color: $crazy-primary;
+                    margin: 0;
+                    &:before {
+                        content: '\42';
+                        font-family: fluttr-icon-set;
+                        position: relative;
+                        font-size: 17px;
+                        top: 4px;
+                        right: 12px;
+                    }
+                }
+            }
+            & .attachment-list {
+                border-radius: 4px;
+                border: 1px solid $crazy-lightgrey;
+                background-color: $crazy-white;
+                & .attachment-title {
+                    height: 50px;
+                    border-bottom: 1px solid $crazy-lightgrey;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 33px;
+                    & p {
+                        margin: 0;
+                        font-size: 15px;
+                    }
+                }
+                & .attachment-files {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    & .attachment-file {
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 33px;
+                        cursor: pointer;
+                        & i {
+                            color: $crazy-primary;
+                            font-size: 18px;
+                            display: flex;
+                        }
+                        & p {
+                            margin: 0;
+                            margin-left: 12px;
+                            & span {
+                                margin-left: 26px;
+                                color: $crazy-primary;
+                                font-size: 12px;
+                                font-weight: bold;
+                                visibility: hidden;
+                            }
+                        }
+                        &:hover p span {
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            & #addAttachmentsForm {
+                & .input-overlay {
+                    height: 131px;
+                    width: 100%;
+                    border: 1px dashed $crazy-mediumgrey;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    margin-top: 39px;
+                    font-size: 14px;
+                    & span {
+                        display: block;
+                        margin-top: 24px;
+                        &:before {
+                            content: '\72';
+                            font-family: fluttr-icon-set;
+                            position: relative;
+                            font-weight: normal;
+                            right: 10px;
+                            top: 3px;
+                        }
+                        &:after {
+                            content: '(Max 200 Mb, Image, PDF, ppt, etc…)';
+                            white-space: pre;
+                            display: block;
+                            font-weight: normal;
+                            color: $crazy-mediumgrey;
+                        }
+                    }
+                }
+            }
+        }
+        & .template-edit-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            margin-top: 40px;
+            & p {
+                margin: 0;
+                & span {
+                    color: $crazy-pink;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.close-editor-modal {
+    z-index: 101;
+    & .close-editor-modal-children {
+        padding: 24px 15px 16px 30px;
+        & .buttons-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 30px;
+            margin-right: 17px;
+        }
+    }
+}

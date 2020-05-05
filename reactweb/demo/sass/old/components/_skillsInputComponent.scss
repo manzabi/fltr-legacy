@@ -1,0 +1,88 @@
+.skills-input {
+    background-color: white;
+    padding: 22px;
+    & .challenge-template-tags-component {
+        position: relative;
+        min-height: 200px;
+        & .active-skills {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            position: relative;
+            &:hover {
+                cursor: pointer;
+            }
+            & .tagFluttr {
+                max-width: 100%;
+                flex-grow: 1;
+                z-index: 3;
+                overflow: hidden;
+            }
+            &::after {
+                content: '';
+                flex-grow: 999999999;
+            }
+        }
+        & form {
+            display: flex;
+            align-items: center;
+        }
+        & textarea, & input {
+            width: 100%;
+            border: 0;
+            resize: none;
+            border-radius: 5px;
+            padding: 5px 30px;
+            color: #444;
+            letter-spacing: 0.5px;
+            z-index: 1;
+            background-color: transparent;
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+            position: relative;
+            right: 20px;
+            &::placeholder {
+                color: black;
+                transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+            }
+        }
+        & form i {
+            font-size: 16px;
+            z-index: 0;
+            color: black;
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+        }
+        & form.active {
+            & input, & textarea {
+                &::placeholder {
+                    color: #858383;
+                }
+            }
+            & i {
+                color: #858383;
+            }
+        }
+        & .skill-suggestion-list {
+            border: 0;
+            position: absolute;
+            top: 15%;
+            background-color: white;
+            width: 100%;
+            list-style: none;
+            padding-left: 0;
+            z-index: 9999;
+            max-height: 280px;
+            overflow: auto;
+            & li {
+                border-top: 1px solid #e0e0e0;
+                color: #8C8C8C;
+                padding: 5px 15px;
+                cursor: pointer;
+                width: 100%;
+                &:hover {
+                    background-color: #f3f3f3
+                }
+            }
+        }
+    }
+}

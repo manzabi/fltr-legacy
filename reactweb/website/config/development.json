@@ -1,0 +1,7 @@
+{
+  "env" : "development",
+  "serverUrl": "http://local.fluttr.in",
+  "webLoginPage": "http://local.fluttr.in/login",
+  "webLogoutPage": "http://local.fluttr.in/logout",
+  "FluttrFilesBaseUrl": "https://s3.eu-west-3.amazonaws.com/fluttr-files/"
+}

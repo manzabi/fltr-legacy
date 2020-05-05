@@ -1,0 +1,99 @@
+.recruiter-dashboard-create-challenge {
+    min-height: calc(100vh - 50px);
+    background-color: $crazy-background;
+    & .main-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        & .create-challenge-tooltip {
+            margin: 20px 40px 20px 20px;
+            text-align: left;
+            & p {
+                color: $crazy-white;
+                white-space: nowrap;
+                font-size: 12px;
+                &:first-child {
+                    font-size: 15px;
+                }
+            }
+            & .crazy-button {
+                color: $crazy-white;
+                border-color: $crazy-white;
+                border-width: 2px;
+                font-weight: bold;
+                background-color: transparent;
+            }
+        }
+        & .create-new-item-button {
+            position: relative;
+            width: 117px;
+            height: 117px;
+            border: 2px dashed $crazy-mediumgrey;
+            background-color: transparent;
+            cursor: pointer;
+            margin: 42px auto;
+            & i {
+                position: absolute;
+                color: $crazy-primary;
+                font-size: 17px;
+                top: calc(50% - 12px);
+                right: calc(50% - 9px);
+            }
+        }
+    }
+    & .instructions-side-bar {
+        background-color: $crazy-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 61px;
+        padding-right: 65px;
+        height: calc(100vh - 50px);
+        & .instruction-title {
+            position: relative;
+            color: #ffb500;        
+            font-weight: bold;    
+            margin-top: 26px;
+            & .instruction-number {
+                color: #ffb500;
+                position: absolute;
+                top: 0;
+                left: -20px;
+            }
+            & .instruction-text {
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 1.67;
+                letter-spacing: 0.3px;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile-max) {
+    .recruiter-dashboard-create-challenge {
+        & .instructions-side-bar {
+            height: unset;
+        }
+        & .crazy-tooltip {
+            & .tooltip-bubble {
+                width: 100px;
+                padding-right: 10px;
+                padding-bottom: 5px;
+                & .create-challenge-tooltip {
+                    width: 90%;
+                    margin: auto;
+                    & p {
+                        white-space: normal;
+                    }
+                    & .false-button {
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    } 
+}

@@ -1,0 +1,121 @@
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+}
+
+.fluttr-modal {
+  display: none;
+  overflow: auto;
+  &.fluttr-modal-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    &.get-started-modal {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(52,152,219); /* Old browsers */
+      background: -moz-linear-gradient(45deg, rgba(206,228,243, 1) 0%, rgba(206,228,243, 1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(45deg, rgba(206,228,243, 1) 0%,rgba(206,228,243, 1) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(45deg, rgba(206,228,243, 1) 0%,rgba(206,228,243, 1) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3498db', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+    & .container {
+      & .modal-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        & .selection {
+          cursor: pointer;
+          position: relative;
+          margin: 0px;
+          & .image-block {
+            position: relative;
+            border-radius: 40px;
+            transition: all 1s linear;
+            background-color: rgba(0, 0, 0, .5);
+            height: 100%;
+            width: 80%;
+            margin: auto;
+            & img {
+              display: block;
+              border-radius: 40px;
+              box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+              width: 100%;
+            }
+            & .text-block {
+              border-radius: 40px;
+              opacity:0;
+              transition:opacity 0.5s linear;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, .5);
+              color: white;
+              text-align: center;
+            }
+            &:hover {
+              & .text-block {
+                opacity: 1;
+              }
+            }
+          }
+          & .block-label {
+            position: absolute;
+            bottom: - 100;
+            text-align: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//-----------------------MOBILE MEDIA QUERY
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+  .fluttr-modal {
+    &.fluttr-modal-open {
+      & .container {
+        & .modal-body {
+          justify-content: center;
+          & .selection {
+            margin: 30px auto;
+          }
+        }
+      }
+    }
+  }
+}
+//-----------------------TABLET MEDIA QUERY
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .fluttr-modal {
+    &.fluttr-modal-open {
+      & .container {
+        & .modal-body {
+          justify-content: center;
+          & .selection {
+            margin: 30px inherit;
+          }
+        }
+      }
+    }
+  }
+}
+//-----------------------DESKTOP SMALL MEDIA QUERY
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+
+}
+//-----------------------DESKTOP LONG MEDIA QUERY
+@media (min-width: $desktop-lg-min) {
+
+}

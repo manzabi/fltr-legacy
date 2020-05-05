@@ -1,0 +1,36 @@
+.fluttr-context-menu-container {
+    width: 20px;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    & .fluttr-context-menu {
+        text-align: left;
+        z-index: 10;
+        min-width: 200px;
+        box-shadow: 0 3px 14px -1px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        background-color: white;
+        top: 25px;
+        right: 10px;
+        border-radius: 4px;
+        & .menu-options {
+            list-style: none;
+            padding: 10px 0;
+            margin: 0 auto;
+            & .menu-option {
+                font-weight: normal;
+                font-size: 14px;
+                padding: 10px 40px 10px 20px;
+                color: #2C3E50;
+                cursor: pointer;
+                font-family: Lato, 'sans-serif';
+                &:hover {
+                    // background-color: $fluttr-caca;
+                    background-color: #8A81E1;
+                    color: white;
+                    // font-weight: bold;
+                }
+            }
+        }
+    }
+}

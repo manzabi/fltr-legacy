@@ -1,0 +1,1 @@
+export const JOB_TITLE_MAX_LENGTH = 40;

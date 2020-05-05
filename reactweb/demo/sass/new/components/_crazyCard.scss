@@ -1,0 +1,24 @@
+.crazy-card {
+    border-radius: 4px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.19);
+    border: solid 1px #e9e9e9;
+    background-color: $crazy-white;
+    padding: 18px 22px;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    & h2 {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+    & p:not(.bold) {
+        margin: 0;
+    }
+}
+
+[class*='crazy-col'] > .crazy-card:only-child {
+    height: 100%;
+    margin: 0;
+}

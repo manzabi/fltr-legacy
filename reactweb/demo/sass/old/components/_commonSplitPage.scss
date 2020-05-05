@@ -1,0 +1,109 @@
+.fluttr-split-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    // min-height: 85vh;
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    & > h2 {
+        margin-bottom: 50px;
+    }
+    & .fluttr-split-page-actions-container {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 80px;
+        & .fluttr-split-page-action {
+            margin: 10px 26px;
+            padding: 10px;
+            width: 250px;
+            height: 220px;
+            border: solid 4px rgba(0, 0, 0, 0.14);
+            color: $fluttr-black;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            & i {
+                display: block;
+                text-align: center;
+                font-size: 60px;
+            }
+            & img {
+                z-index: 0;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            & .action-body {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                border-radius: 5px;
+                padding: 0 10px;
+                & p {
+                    display: none;
+                }
+            }
+            &:hover {
+                border-color: rgba(74, 144, 226, .83);
+                color: white;
+                & .action-body {
+                    background-color: rgba(74, 144, 226, .83);
+                    & p {
+                        display: block;
+                    }
+                }
+            }
+        }
+        & .details-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            & .card-detail {
+                color: black;
+                width: 250px;
+                margin: 0 26px;
+                & h3 {
+                    color: #3498db;
+                    text-align: center;
+                }
+                & ul {
+                    list-style: none;
+                    padding: 0;
+                    color: black;
+                    list-style: none;
+                    text-align: left;
+                    padding: 0;
+                    & li {
+                        border-bottom: 1px solid #d4d4d5;
+                        padding: 6px;
+                        &:first-child {
+                            border-top: 1px solid #d4d4d5;
+                            font-weight: 600;
+                        }
+                        &:last-child {
+                            border: 0;
+                        }
+                        &.explanation-field {
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    & .detail-choise-information {
+        width: 100%;
+    }
+}

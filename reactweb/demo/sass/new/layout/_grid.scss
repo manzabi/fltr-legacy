@@ -1,0 +1,396 @@
+.crazy-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 21px;
+    box-sizing: content-box;
+    height: 100%;
+    & > :not([class*="crazy-col"]) {
+        grid-column: span 12
+    }
+    & > .crazy-container {
+        width: 100%;
+    }
+    & .crazy-row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 21px;
+        & > :not([class*="crazy-col"]) {
+            grid-column: span 12
+        }
+    }
+}
+.crazy-container {
+    & .crazy-row {
+        margin: 0 -20px;
+        &.no-margin {
+            margin: 0;
+        }
+    }
+    &.container-fluid {
+        & .crazy-row {
+            margin: 0 -30px;
+            &.no-margin {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@mixin col-width-small ($size) {
+    grid-column: span $size;
+}
+@mixin col-width-long ($size) {
+    grid-column: span $size;
+}
+@mixin col-offset ($size) {
+    grid-column: span $size;
+}
+
+/* Extra small devices (phones, less than 768px) */
+
+/* Small devices (tablets, 768px and up) */
+
+.crazy-col-xs-1 {
+    @include col-width-small($size: 1);
+}
+.crazy-col-xs-2 {
+    @include col-width-small($size: 2);
+}
+.crazy-col-xs-3 {
+    @include col-width-small($size: 3);
+}
+.crazy-col-xs-4 {
+    @include col-width-small($size: 4);
+}
+.crazy-col-xs-5 {
+    @include col-width-small($size: 5);
+}
+.crazy-col-xs-6 {
+    @include col-width-small($size: 6);
+}
+.crazy-col-xs-7 {
+    @include col-width-small($size: 7);
+}
+.crazy-col-xs-8 {
+    @include col-width-small($size: 8);
+}
+.crazy-col-xs-9 {
+    @include col-width-small($size: 9);
+}
+.crazy-col-xs-10 {
+    @include col-width-small($size: 10);
+}
+.crazy-col-xs-11 {
+    @include col-width-small($size: 11);
+}
+.crazy-col-xs-12 {
+    @include col-width-small($size: 12);
+}
+
+@media (min-width: $tablet) {
+    .crazy-col-sm-1 {
+        @include col-width-small($size: 1);
+    }
+    .crazy-col-sm-2 {
+        @include col-width-small($size: 2);
+    }
+    .crazy-col-sm-3 {
+        @include col-width-small($size: 3);
+    }
+    .crazy-col-sm-4 {
+        @include col-width-small($size: 4);
+    }
+    .crazy-col-sm-5 {
+        @include col-width-small($size: 5);
+    }
+    .crazy-col-sm-6 {
+        @include col-width-small($size: 6);
+    }
+    .crazy-col-sm-7 {
+        @include col-width-small($size: 7);
+    }
+    .crazy-col-sm-8 {
+        @include col-width-small($size: 8);
+    }
+    .crazy-col-sm-9 {
+        @include col-width-small($size: 9);
+    }
+    .crazy-col-sm-10 {
+        @include col-width-small($size: 10);
+    }
+    .crazy-col-sm-11 {
+        @include col-width-small($size: 11);
+    }
+    .crazy-col-sm-12 {
+        @include col-width-small($size: 12);
+    }
+    .row {
+      justify-content: center;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $desktop-sm) {
+    .row {
+        justify-content: space-between;
+    }
+    .crazy-col-md-1 {
+        @include col-width-long($size: 1);
+    }
+    .crazy-col-md-2 {
+        @include col-width-long($size: 2);
+    }
+    .crazy-col-md-3 {
+        @include col-width-long($size: 3);
+    }
+    .crazy-col-md-4 {
+        @include col-width-long($size: 4);
+    }
+    .crazy-col-md-5 {
+        @include col-width-long($size: 5);
+    }
+    .crazy-col-md-6 {
+        @include col-width-long($size: 6);
+    }
+    .crazy-col-md-7 {
+        @include col-width-long($size: 7);
+    }
+    .crazy-col-md-8 {
+        @include col-width-long($size: 8);
+    }
+    .crazy-col-md-9 {
+        @include col-width-long($size: 9);
+    }
+    .crazy-col-md-10 {
+        @include col-width-long($size: 10);
+    }
+    .crazy-col-md-11 {
+        @include col-width-long($size: 11);
+    }
+    .crazy-col-md-12 {
+        @include col-width-long($size: 12);
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $desktop-lg) {
+    .crazy-col-lg-1 {
+        @include col-width-long($size: 1);
+    }
+    .crazy-col-lg-2 {
+        @include col-width-long($size: 2);
+    }
+    .crazy-col-lg-3 {
+        @include col-width-long($size: 3);
+    }
+    .crazy-col-lg-4 {
+        @include col-width-long($size: 4);
+    }
+    .crazy-col-lg-5 {
+        @include col-width-long($size: 5);
+    }
+    .crazy-col-lg-6 {
+        @include col-width-long($size: 6);
+    }
+    .crazy-col-lg-7 {
+        @include col-width-long($size: 7);
+    }
+    .crazy-col-lg-8 {
+        @include col-width-long($size: 8);
+    }
+    .crazy-col-lg-9 {
+        @include col-width-long($size: 9);
+    }
+    .crazy-col-lg-10 {
+        @include col-width-long($size: 10);
+    }
+    .crazy-col-lg-11 {
+        @include col-width-long($size: 11);
+    }
+    .crazy-col-lg-12 {
+        @include col-width-long($size: 12);
+    }
+}
+
+// offset configuration
+
+/* Small devices (tablets, 768px and up) */
+.crazy-col-xs-offset-1 {
+    @include col-offset($size: 1);
+}
+.crazy-col-xs-offset-2 {
+    @include col-offset($size: 2);
+}
+.crazy-col-xs-offset-3 {
+    @include col-offset($size: 3);
+}
+.crazy-col-xs-offset-4 {
+    @include col-offset($size: 4);
+}
+.crazy-col-xs-offset-5 {
+    @include col-offset($size: 5);
+}
+.crazy-col-xs-offset-6 {
+    @include col-offset($size: 6);
+}
+.crazy-col-xs-offset-7 {
+    @include col-offset($size: 7);
+}
+.crazy-col-xs-offset-8 {
+    @include col-offset($size: 8);
+}
+.crazy-col-xs-offset-9 {
+    @include col-offset($size: 9);
+}
+.crazy-col-xs-offset-10 {
+    @include col-offset($size: 10);
+}
+.crazy-col-xs-offset-11 {
+    @include col-offset($size: 11);
+}
+.crazy-col-xs-offset-12 {
+    @include col-offset($size: 12);
+}
+@media (min-width: $tablet) {
+    .crazy-col-sm-offset-1 {
+        @include col-offset($size: 1);
+    }
+    .crazy-col-sm-offset-2 {
+        @include col-offset($size: 2);
+    }
+    .crazy-col-sm-offset-3 {
+        @include col-offset($size: 3);
+    }
+    .crazy-col-sm-offset-4 {
+        @include col-offset($size: 4);
+    }
+    .crazy-col-sm-offset-5 {
+        @include col-offset($size: 5);
+    }
+    .crazy-col-sm-offset-6 {
+        @include col-offset($size: 6);
+    }
+    .crazy-col-sm-offset-7 {
+        @include col-offset($size: 7);
+    }
+    .crazy-col-sm-offset-8 {
+        @include col-offset($size: 8);
+    }
+    .crazy-col-sm-offset-9 {
+        @include col-offset($size: 9);
+    }
+    .crazy-col-sm-offset-10 {
+        @include col-offset($size: 10);
+    }
+    .crazy-col-sm-offset-11 {
+        @include col-offset($size: 11);
+    }
+    .crazy-col-sm-offset-12 {
+        @include col-offset($size: 12);
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $desktop-sm) {
+    .crazy-col-md-offset-1 {
+        @include col-offset($size: 1);
+    }
+    .crazy-col-md-offset-2 {
+        @include col-offset($size: 2);
+    }
+    .crazy-col-md-offset-3 {
+        @include col-offset($size: 3);
+    }
+    .crazy-col-md-offset-4 {
+        @include col-offset($size: 4);
+    }
+    .crazy-col-md-offset-5 {
+        @include col-offset($size: 5);
+    }
+    .crazy-col-md-offset-6 {
+        @include col-offset($size: 6);
+    }
+    .crazy-col-md-offset-7 {
+        @include col-offset($size: 7);
+    }
+    .crazy-col-md-offset-8 {
+        @include col-offset($size: 8);
+    }
+    .crazy-col-md-offset-9 {
+        @include col-offset($size: 9);
+    }
+    .crazy-col-md-offset-10 {
+        @include col-offset($size: 10);
+    }
+    .crazy-col-md-offset-11 {
+        @include col-offset($size: 11);
+    }
+    .crazy-col-md-offset-12 {
+        @include col-offset($size: 12);
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $desktop-lg) {
+    .crazy-col-lg-offset-1 {
+        @include col-offset($size: 1);
+    }
+    .crazy-col-lg-offset-2 {
+        @include col-offset($size: 2);
+    }
+    .crazy-col-lg-offset-3 {
+        @include col-offset($size: 3);
+    }
+    .crazy-col-lg-offset-4 {
+        @include col-offset($size: 4);
+    }
+    .crazy-col-lg-offset-5 {
+        @include col-offset($size: 5);
+    }
+    .crazy-col-lg-offset-6 {
+        @include col-offset($size: 6);
+    }
+    .crazy-col-lg-offset-7 {
+        @include col-offset($size: 7);
+    }
+    .crazy-col-lg-offset-8 {
+        @include col-offset($size: 8);
+    }
+    .crazy-col-lg-offset-9 {
+        @include col-offset($size: 9);
+    }
+    .crazy-col-lg-offset-10 {
+        @include col-offset($size: 10);
+    }
+    .crazy-col-lg-offset-11 {
+        @include col-offset($size: 11);
+    }
+    .crazy-col-lg-offset-12 {
+        @include col-offset($size: 12);
+    }
+}
+
+/* Case xs,sm,md,lg equal to 0 */
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .crazy-col-xs-0, .crazy-col-xs-offset-0 {
+        display: none;
+    }
+}
+
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    .crazy-col-sm-0, .crazy-col-sm-offset-0 {
+        display: none;
+    }
+}
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+    .crazy-col-md-0, .crazy-col-md-offset-0 {
+        display: none;
+    }
+}
+
+@media (min-width: $desktop-lg-min){
+    .crazy-col-lg-0, .crazy-col-lg-offset-0 {
+        display: none;
+    }
+}

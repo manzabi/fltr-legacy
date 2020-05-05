@@ -1,0 +1,139 @@
+.home {
+  & #default-slider{
+    color: white;
+    text-align: center;
+  }
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.company-info-section .container {
+    & :first-child h2{
+        margin-top: 0px;
+    }
+}
+.company-info-section :first-child > .container {
+    padding-bottom: 0px;
+}
+
+.award-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .award-logo {
+        display: block;
+    }
+}
+
+.reviews-container {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(52, 152, 219, 0.2);
+    & .reviews-component {
+      width: 80%;
+      margin: auto;
+      & h2 {
+        color: #333333;
+      }
+      & .row {
+        justify-content: space-around;
+        align-items: stretch;
+      }
+    }
+}
+
+.landing-button {
+    text-align: center;
+}
+
+.review-content {
+margin: auto;
+}
+.landing-bottom {
+    & a {
+        display: block;
+    }
+    & .button-container {
+        margin: auto;
+    }
+}
+
+.demo {
+    position: relative;
+}
+.progressbar {
+    width: 60px;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
+
+@media (min-width: $tablet) {
+    .company-info {
+        justify-content: center;
+        & div {
+            width: 100%;
+        }
+    }
+}
+@media (min-width: $desktop-sm) {
+    .company-info {
+        justify-content: center;
+        & div {
+            width: 100%;
+        }
+    }
+    .progressbar {
+        width: 70px;
+    }
+}
+@media (min-width: $desktop-lg) {
+    .company-info {
+        justify-content: center;
+        & div {
+            width: 100%;
+        }
+    }
+    .progressbar {
+        width: 80px;
+    }
+}
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+  .home {
+    .top-slider {
+      font-size: 16px;
+      & .btn.btn-small{
+        font-size: 16px;
+        height: 30px;
+      }
+      & .slider-container {
+        min-height: 80vh;
+        & .header-container {
+          min-height: 80vh;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-lg-min) {
+  .home {
+    .top-slider {
+      font-size: 16px;
+      & .btn.btn-small{
+        font-size: 16px;
+        height: 30px;
+      }
+      & .slider-container {
+        min-height: 80vh;
+        & .header-container {
+          min-height: 80vh;
+        }
+      }
+    }
+  }
+}

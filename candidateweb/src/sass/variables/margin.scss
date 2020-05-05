@@ -1,0 +1,53 @@
+// Vertical
+
+$section-title-padding-top: 30px;
+$section-title-padding-bottom: 20px;
+
+// Horizontal
+$margin-FL3: 40px;
+
+
+
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+  .component {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .section-title {
+          padding-top: calc((#{$section-title-padding-top} / 1.6));
+          padding-bottom: calc((#{$section-title-padding-bottom} / 1.6));
+      }
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $tablet-max) {
+  .component {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .section-title {
+          padding-top: calc((#{$section-title-padding-top} / 1.4));
+          padding-bottom: calc((#{$section-title-padding-bottom} / 1.4));
+      }
+  }
+}
+
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+  .component {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .section-title {
+          padding-top: calc((#{$section-title-padding-top} / 1.2));
+          padding-bottom: calc((#{$section-title-padding-bottom} / 1.2));
+      }
+  }
+}
+@media (min-width: $desktop-lg) {
+  .component {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      .section-title {
+          padding-top: calc((#{$section-title-padding-top} / 1));
+          padding-bottom: calc((#{$section-title-padding-bottom} / 1));
+      }
+  }
+}

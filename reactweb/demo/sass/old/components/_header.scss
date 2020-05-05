@@ -1,0 +1,393 @@
+#rubix-nav-header {
+    margin-left: 0px !important;
+    .navbar-nav>li>a {
+        font-size: 12px !important;
+        color: #ccc !important;
+        &:hover {
+            color: #fff !important;
+        }
+    }
+    .navbar-brand>img {
+        top: -10px !important;
+    }
+}
+
+.user-menu {
+    .dropdown-menu {
+        padding-top: 0px;
+    }
+}
+
+#rubix-nav-header .navbar-nav {
+    display: block;
+    &>li {
+        display: inline-block;
+    }
+}
+
+.fluttr-navbar.fluttr-navbar-new {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #273136;
+    z-index: 101;
+    // Flex
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    & .navbar-section {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        height: 50px;
+        &.navbar-section-company {
+            color: #bbb;
+        }
+        & li {
+            margin-right: 30px;
+            position: relative;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            & i {
+                font-size: 24px;
+                margin-right: 5px;
+            }
+        }
+        & .header-image {
+            border-radius: 100px;
+            width: 30px;
+            height: 30px;
+            &.header-image-no-radius {
+                border-radius: 0;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+.fluttr-header-retro {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    color: white;
+    .menu-toggle {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 700;
+        margin-right: 30px;
+        margin-left: 15px;
+    }
+    & .fluttr-header-logo {
+        width: 60px;
+        cursor: pointer;
+        & img {
+            width: 100%;
+            min-width: 60px;
+        }
+    }
+}
+
+.fluttr-navbar-new {
+    .fluttr-header-logo {
+        width: 90px;
+        cursor: pointer;
+        & img {
+            width: 100%;
+        }
+    }
+    .menu-toggle {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .dropdown-menu-toggle {
+        cursor: pointer;
+        & .dropdown-menu-content {
+            display: none;
+            background-color: white;
+            position: absolute;
+            right: -10px;
+            top: 100%;
+            width: 20vw;
+            min-width: 300px;
+            box-sizing: border-box;
+            cursor: default;
+            box-shadow: 0 3px 8px 0 #dedede;
+            margin-top: -5px;
+            border-radius: 4px;
+            & a {
+                cursor: pointer;
+            }
+            & .dropdown-header {
+                padding: 6px 25px;
+                font-size: 10px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #98A0A3;
+                line-height: 1.78571;
+                color: #777777;
+                white-space: nowrap;
+                background-color: #F9FAFB;
+                margin-bottom: 0px;
+            }
+            & .dropdown-button-container {
+                display: flex;
+                align-items: stretch;
+                flex-wrap: wrap;
+                margin-bottom: 13px;
+                & .notification-menu-button {
+                    height: 33px;
+                    width: 50%;
+                    font-size: 12px;
+                    border-radius: 0;
+                    font-weight: bold;
+                    padding: 6px 12px;
+                    border: none;
+                    color: #98A0A3;
+                    background: #F9FAFB;
+                    &:hover {
+                        background: darken(#F9FAFB, 5%);
+                    }
+                    &:first-child{
+                        border-right: 1px solid #DDE1E6;
+                    }
+                }
+                & .link-menu-button {
+                    width: 100%;
+                    background-color: transparent;
+                    border: 0;
+                    font-size: 12px;
+                    color: black;
+                    padding: 12px 10%;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $fluttr-esmerald-green;
+                        color: white;
+                    }
+                }
+            }
+            &:hover {
+                display: block;
+                &:after {
+                    display: block;
+                }
+            }
+        }
+        &:hover, &.active {
+            & .dropdown-menu-content {
+                display: block;
+                &:after {
+                    display: block;
+                }
+            }
+        } 
+        &.mobile.inactive {
+            & .dropdown-menu-content {
+                display: none;
+            }
+        }
+    }
+    & .notifications-empty {
+        width: 100%;
+        padding: 6px 25px;
+        font-size: 12px;
+        color: #777777;
+        white-space: nowrap;
+        background-color: white;
+        margin-bottom: 0px;
+        cursor: default;
+    }
+    & .notification-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+        &:hover {
+            background-color: #F9FAFB;
+        }
+        & .notification-image-container {
+            width: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            & > * {
+                display: block;
+            }
+            & img {
+                width: 100%;
+                height: 40px;
+            }
+            & span {
+                background-color: #5bc0de;
+                border-radius: .25em;
+                color: white;
+                font-size: 8px;
+                padding: .2em .6em .3em;
+                font-weight: bold;
+            }
+        }
+        & .notification-content {
+            width: 70%;
+            position: relative;
+            & .notification-title {
+                color: $fluttr-esmerald-green;
+                font-weight: bold;
+                line-height: 1;
+                font-size: 12px;
+            }
+            & .notification-body {
+                line-height: 1;
+                font-size: 10px;
+                color: #89949B;
+            }
+            & .notification-time {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                color: #B8C3C8;
+                font-style: italic;
+                font-size: 10px;
+            }
+        }
+    }
+    & .notification-icon {
+        position: relative;
+        & .notification-number {
+            position: absolute;
+            top: 2px;
+            right: 0;
+            background-color: red;
+            padding: 2px 4px;
+            border-radius: 100%;
+            color: white;
+            box-sizing: content-box;
+            line-height: 1;
+            text-align: center;
+        }
+        & i {
+            animation-duration: 1.3s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+    }
+    & .company-dropdown {
+        background-color: white;
+        & .company-information {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+            align-items: center;
+            margin: 13px 0px;
+            padding: 0 17px;
+            & .company-logo {
+                box-sizing: content-box;
+                width: 30px;
+                height: 30px;
+                display: block;
+                padding: 7px;
+            }
+            & .company-details {
+                & p {
+                    font-size: 16px;
+                    color: $fluttr-black;
+                    margin-left: 17px;
+                }
+            }
+            &:hover {
+                background-color: #fafafa;
+            }
+            &.no-company {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & p {
+                    margin: 0;
+                }
+                & .company-placeholder {
+                    width: 43px;
+                    height: 43px;
+                    background-color: #e9e9e9;
+                    border-radius: 100px;
+                }
+                & .update-button {
+                    color: #f36289;
+                }
+            }
+        }
+        & hr {
+            width: 100%;
+            border-color:#e9e9e9;
+            margin: 12px 0;
+        }
+        & .company-use-information {
+            color: #adb4c3;
+            & > * {
+                padding: 12.5px 10%;
+                margin: 0;
+            }
+
+            & p {
+                margin: 0;
+            }
+            & .company-plan {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                color: $fluttr-black;
+                & .crazy-button {
+                    pointer-events: none;
+                }
+                &:hover {
+                    background-color: #f36289;
+                    color: white;
+                }
+            }
+            & h2 {
+                font-size: 16px;
+            }
+            & p {
+                margin: 0;
+                font-size: 12px;
+                position: relative;
+                & .upgrade {
+                    position: absolute;
+                    right: 0;
+                    font-size: 12px;
+                    color: #4a90e2;
+                }
+            }
+        }
+        & .user-action-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            & button {
+              width: 100%;
+            }
+          }
+    }
+}
+
+.dropdown-header:first-child {
+    margin-top: 0;
+}
+
+@media (min-width: 1px) and (max-width: $screen-xs-max) {
+    #rubix-nav-header .navbar-nav {
+        &>li {
+            display: inline-block;
+        }
+    }
+}

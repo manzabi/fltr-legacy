@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: luna-ml
+  name: luna-ml
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: luna-ml
+  template:
+    metadata:
+      labels:
+        app: luna-ml
+    spec:
+      containers:
+      - image: eu.gcr.io/qa-env-225712/fluttr-ml-image-repository:qas_13_2019_03_05
+        imagePullPolicy: Always
+        name: luna-machinelearning
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30

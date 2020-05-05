@@ -1,0 +1,34 @@
+#upgrade-banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f36289;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    z-index: 4;
+    font-size: 13px;
+    & > * {
+        color: white;
+        margin: 0;
+    }
+    & .upgrade-message {
+        margin-left: 8px;
+    }
+    & .upgrade-button {
+        white-space: nowrap;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-left: 11px;
+        font-weight: bold;
+    }
+
+}
+.active-banner {
+    & .header, & .fluttr-navbar.fluttr-navbar-new, & .navbar-fixed-top {
+        top: 30px;
+    }
+}

@@ -1,0 +1,116 @@
+.crazy-checkbox {
+    appearance: none;
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid $crazy-lightgrey;
+    background-color: $crazy-white;
+    cursor: pointer;
+    position: relative;
+    &.disabled {
+        background-color: $crazy-lightgrey;
+        &:after {
+            content: '-';
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: -7px;
+            left: 2px;
+            color: $crazy-mediumgrey;
+        }
+    }
+    &:hover {
+        border: 2px solid $crazy-pink;
+    }
+    &:checked {
+        border: 2px solid $crazy-pink;
+        &:after {
+            content: 'c';
+            font-family: 'fluttr-icon-set';
+            font-size: 10px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            color: $crazy-pink;
+        }
+    }
+}
+
+.crazy-input-group {
+    & input[type='file'] {
+        visibility: hidden;
+        display: none;
+    }
+    & .input-overlay {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        height: 40px;
+        pointer-events: unset;
+        & .file-input-label {
+            color: $crazy-primary;
+            cursor: pointer;
+            margin: 0;
+            font-size: 12px;
+            &:before {
+                content: '\6d';
+                font-family: fluttr-icon-set;
+                position: relative;
+                font-size: 17px;
+                top: 2px;
+                right: 8px;
+            }
+        }
+        & .file-input-icon, & .file-input-label {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            pointer-events: none;
+        }
+    }
+}
+
+.crazy-radio {
+    appearance: none;
+    background-color: $crazy-white;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid $crazy-lightgrey;
+    &.disabled {
+        background-color: $crazy-lightgrey;
+        &:after {
+            content: '';
+            display: block;
+            position: relative;
+            top: 3px;
+            left: 3px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $crazy-mediumgrey;
+        }
+        &:hover {
+            border: 1px solid $crazy-lightgrey;
+        }
+    }
+    &:hover {
+        border: 2px solid $crazy-pink;
+    }
+    &:checked {
+        border: 2px solid $crazy-pink;
+        &:after {
+            content: '';
+            display: block;
+            position: relative;
+            top: 2px;
+            left: 2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $crazy-pink;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.crazy-profile-creation {
+    background-color: $crazy-white;
+    margin-right: 0;
+    margin-left: 0;
+    min-height: 100vh;
+    column-gap: 0;
+    & img {
+        height: 40px;
+        margin-top: 10px;
+    }
+    & .crazy-profile-creation-form {
+        margin-top: 56px;
+        & h2, & p {
+            color: $crazy-darkside;
+        }
+        & p {
+            margin-bottom: 0;
+        }
+        & .name-fields-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            position: relative;
+            & .crazy-field {
+                width: calc(50% - 10px);
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+            & .dropdown-label {
+                position: absolute;
+                top: 150px;
+                color: $crazy-darkside;
+                font-size: 12px;
+            }
+        }
+        & .crazy-dropdown {
+            margin-top: 60px;    
+        }
+        & .crazy-field {
+            margin: 40px 0;
+            width: 100%;
+        }
+        & .crazy-button {
+            margin-left: calc(50% - 100px);
+            margin-top: 10px;
+        }
+        & .drop-error {
+            font-size: 12px;
+            color: $crazy-red;
+            margin-top: 5px;
+        }
+        & .drop-filler {
+            height: 21px;
+            margin-top: 5px;
+        }
+    }
+}

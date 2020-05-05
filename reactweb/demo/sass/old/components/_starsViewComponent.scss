@@ -1,0 +1,14 @@
+.fluttr-star-container {
+    position: relative;
+    text-align: left;
+    display: block;
+    width: max-content;
+    & .stars-layout {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+    }
+    & i {
+        display: inline;
+    }
+}

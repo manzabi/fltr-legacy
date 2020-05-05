@@ -1,0 +1,59 @@
+.challenge-status-widget {
+    & .review-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        & > * {
+            width: 50%;
+            margin-top: 0;
+            margin-bottom: 0;
+            &.fluttr-star-container {
+                width: max-content;
+            }
+            &:nth-child(odd) {
+                &:not(.fluttr-star-container) {
+                    text-align: left;
+                }
+            }
+            &:nth-child(even) {
+                &:not(.fluttr-star-container) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    & .review-content {
+        height: 100%;
+        padding-top: 30px;
+    }
+    & .widget-head {
+        & .fluttr-star-container {
+            position: absolute;
+            top: 17px;
+            right: 9px;
+        }
+    }
+    & .widget-content {
+        height: 100%;
+        // padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        & div {
+            text-align: center;
+        }
+        & .crazy-button {
+            margin: 30px auto 40px;
+        }
+        & .widget-footer {
+            & h2 {
+                margin: 0;
+            }
+        }
+        & .graph-card-subtitle {
+            color: $crazy-mediumgrey;
+        }
+    }
+}

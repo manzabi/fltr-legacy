@@ -1,0 +1,168 @@
+.crazy-circle-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & h2 {
+        margin: 0;
+        position: absolute;
+    }
+    
+    & circle {
+        transition: stroke-dashoffset 0.35s;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+        border-radius: 16px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        &.green {
+            stroke: $crazy-correct;
+        }
+        &.blue {
+            stroke: $crazy-blue;
+        }
+        &.pink {
+            stroke: $crazy-pink;
+        }
+        &.orange {
+            stroke: $crazy-orange;
+        }
+    }
+    & .inner-circle {
+        stroke: #e9e9e9;
+    }
+}
+
+.crazy-half-circle-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & h2 {
+        margin: 0;
+        position: absolute;
+        & span {
+            color: $crazy-lightgrey;
+            position: absolute;
+            font-size: 16px;
+            left: 4px;
+            width: max-content;
+            bottom: -22px;
+        }
+    }
+    & circle {
+        transition: stroke-dashoffset 0.35s;
+        transform: rotate(150deg);
+        transform-origin: 50% 50%;
+        border-radius: 16px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        &.green {
+            stroke: $crazy-correct;
+        }
+        &.blue {
+            stroke: $crazy-blue;
+        }
+        &.pink {
+            stroke: $crazy-pink;
+        }
+    }
+    & .inner-half-circle {
+        stroke: #e9e9e9;
+        &.hidden {
+            stroke: transparent;
+        }
+    }
+}
+
+.crazy-lines-chart {
+    position: relative;
+    & .separator {
+        border-right: 1px solid #e9e9e9;
+        position: absolute;
+        height: 100%;
+        width: 0px;
+        & .separator-number {
+            position: absolute;
+            top: -22px;
+            font-size: 10px;
+            color: #bfbfbf;
+        }
+    }
+    & .bar-container {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        & .bar {
+            position: relative;
+            background-color: #f4f4f4;
+            width: 100%;
+            & .bar-content {
+                height: 5px;
+                z-index: 1;
+                border-radius: 16px;
+                &.orange {
+                    background-color: $crazy-orange;
+                }
+                &.primary {
+                    background-color: $crazy-primary;
+                }
+                &.lightgrey {
+                    background-color: $crazy-lightgrey;
+                }
+            }
+            & .bar-value {
+                position: absolute;
+                left: -50px;
+                top: -9px;
+                font-weight: bold;
+                &.orange {
+                    color: $crazy-orange;
+                }
+                &.primary {
+                    color: $crazy-primary;
+                }
+                &.lightgrey {
+                    color: $crazy-lightgrey;
+                }
+            }
+        }
+    }
+}
+
+.crazy-dividedcircle-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & h2 {
+        margin: 0;
+        position: absolute;
+    }
+    & svg {
+        & circle {
+            transition: stroke-dashoffset 0.35s;
+            transform-origin: 50% 50%;
+            // border-radius: 16px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            &.green {
+                stroke: $crazy-correct;
+            }
+            &.blue {
+                stroke: $crazy-blue;
+            }
+            &.pink {
+                stroke: $crazy-pink;
+            }
+            &.orange {
+                stroke: $crazy-orange;
+            }
+            &.lightgrey {
+                stroke: $crazy-lightgrey;
+            }
+        }
+    }   
+}

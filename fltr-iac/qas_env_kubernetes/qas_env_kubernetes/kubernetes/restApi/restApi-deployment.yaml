@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: restapi
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: restapi
+    spec:
+      containers:
+        - name: restapi
+          image: giantswarm/dummy-image:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8099

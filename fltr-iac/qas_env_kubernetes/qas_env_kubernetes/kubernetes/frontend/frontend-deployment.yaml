@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: giantswarm/dummy-image:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8081
+            - containerPort: 8082
+            - containerPort: 8083

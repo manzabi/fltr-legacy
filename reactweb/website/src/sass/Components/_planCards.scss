@@ -1,0 +1,290 @@
+// RECRUITER CONSOLE SPECIFIC CSS
+
+.upgrade-page-container {
+    text-align: center;
+    background-color: white;
+    margin-top: 60px + 70px;
+}
+
+.plans-container {
+    & > .crazy-grid .crazy-header-md {
+        margin: -10px 0 0;
+    }
+    & > .crazy-grid .crazy-text-md{
+        margin: 0;
+    }
+}
+
+.billing-switch-container {
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+    text-align: initial;
+    & > p {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.3px;
+        text-align: center;
+    }
+    & img {
+        position: relative;
+        left: 20px;
+    }
+    & .switch-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 20px;
+        & span {
+            display: block;
+            cursor: pointer;
+            font-size: 12px;
+            color: #c4c8d3;
+            &.active {
+                color: $crazy-green;
+                border-bottom: 2px solid $crazy-green;
+            }
+        }
+    }
+}
+
+// GENERIC CSS
+.pricing-card {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px 0 #dedede;
+    position: relative;
+    padding: 40px 11px 160px 11px;
+    overflow: visible;
+    color: #242f40;
+    & p, & h2 {
+        margin: 0;
+    }
+    &.featured-plan {
+        box-shadow: 0 25px 36px 0 rgba(0, 0, 0, 0.09), 0 4px 19px 0 rgba(0, 0, 0, 0.24);
+        
+    }
+    &.plan-primary {
+        &.active-plan {
+            pointer-events: none;
+            border-top-color: $crazy-green; 
+        }
+        border-width: 4px 3px 3px 3px;
+        border-color: transparent;
+        border-style: solid;
+        border-top-color: $crazy-green;
+        &:hover {
+            border-color: $crazy-green;
+        }
+    }
+    &.plan-orange {
+        &.active-plan {
+            pointer-events: none;
+            border-top-color: $fluttr-orange; 
+        }
+        border-width: 4px 3px 3px 3px;
+        border-color: transparent;
+        border-style: solid;
+        border-top-color: $fluttr-orange;
+        &:hover {
+            border-color: $fluttr-orange;
+        }
+    }
+    & .billing-save {
+        color: #3498db;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        text-transform: lowercase;
+        font-size: 12px;
+    }
+    
+    & .plan-description {
+        font-size: 13px;
+        font-weight: bold;
+        margin-top: 7px;
+    }
+
+    & > .crazy-header-md {
+        margin-top: 40px;
+     }
+
+    & ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: initial;
+        margin: 30px 0;
+
+        & li {
+            font-size: 13px;
+            line-height: 1.31;
+            letter-spacing: 0.2px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            &::before {
+                font-family: "Font Awesome 5 Pro";
+                content: '\f00c';
+                color: $crazy-green;
+                margin-right: 12px;
+                position: absolute;
+                left: 10px;
+            }
+        }
+    }
+    & .plan-prize {
+        color: #242f40;
+        font-family: Montserrat;
+        font-size: 34px;
+        & .price-currency {
+            font-size: 24px;
+            font-weight: 600;
+            padding-right: 7px;
+        }
+        & .price-period {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    & .billing-period{
+        font-size: 12px;
+        line-height: 1.42;
+        color: #adb4c3;
+        margin: 0;
+    }
+    & .bottom-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin: auto auto 37px;
+        & .crazy-button.inverse {
+            color: $crazy-green;
+            border: 2px solid $crazy-green;
+            &:hover {
+                color: $crazy-white;
+                background-color: $crazy-green; 
+            }
+        }
+        & .pricing-container {
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            & > * {display: block;}
+            & .crazy-header-md {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.badge-container {
+    position: absolute;
+    top: -4px;
+    right: -3px;
+    text-align: center;
+    font-size: 11px;
+    color: white;
+    width: 90px;
+    height: 90px;
+    background-image: url("https://s3.eu-west-3.amazonaws.com/fluttr-files/cdn/img/common/band.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & span {
+        transform: rotate(45deg);
+        display: block;
+        position: relative;
+        top: -9px;
+        left: 9px;
+        font-weight: bold;
+    }
+}
+
+
+
+.contact-page {
+    margin-top: 13px;
+    & .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 48px;
+    }
+}
+
+.pricing-faq-container {
+    text-align: initial;
+    background-color: #fafafa;
+    margin-top: 68px;
+    margin-bottom: 92px;
+    padding-bottom: 70px;
+    padding-top: 80px;
+    & .faq-contact-section {
+        color: #89949B;
+        text-align: center;
+        margin-top: 32px;
+        & a {
+            padding-left: 25px;
+            cursor: pointer;
+        }
+    }
+}
+
+.pricing-bottom-upsell {
+    & .crazy-button {
+        margin-top: 33px;
+        margin-bottom: 60px;
+    }
+}
+
+.contact-page {
+    margin-top: 13px;
+    & .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 48px;
+    }
+}
+
+.upsell-enterprise-section {
+    & p {
+        margin: 10px 0 32px;
+    }
+    & .crazy-button.crazy-primary.inverse {
+        color: $crazy-green;
+        border: 2px solid $crazy-green;
+        &:hover {
+            color: $crazy-white;
+            background-color: $crazy-green; 
+        }
+    }
+}
+
+@media (max-width: $mobile-max) {
+    .pricing-faq-container {
+        & .faq-contact-section {
+            text-align: left;
+        }
+    }
+    .upsell-enterprise-section {
+        margin-top: 76px;
+    }
+}
+
+@media (max-width: $tablet-max) {
+    .upsell-enterprise-section {
+        margin-top: 50px;
+    }
+}

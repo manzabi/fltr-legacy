@@ -1,0 +1,63 @@
+@import url('https://s3.eu-west-3.amazonaws.com/fluttr-files/cdn/crazy_icons.css'); //crazy icons
+
+@mixin crazy-font($size, $lineHeight, $font-weight) {
+    font-size: $size;
+    line-height: $lineHeight;
+    font-weight: $font-weight;
+    &.bold {
+        font-weight: bold;
+    }
+}
+[class*='crazy-header'] {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0;
+}
+
+[class*='crazy-text'] {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.3pt;
+}
+
+[class*='crazy-text'], [class*='crazy-header'] {
+    color: $crazy-darkside;
+}
+
+// standalone color classes
+.crazy-mediumgrey {
+    color: $crazy-mediumgrey;
+}
+.crazy-lightgrey {
+    color: $crazy-lightgrey;
+}
+.crazy-darkside {
+    color: $crazy-darkside;
+}
+.crazy-background {
+    color: $crazy-background;
+}
+.crazy-primary {
+    color: $crazy-primary;
+}
+
+.crazy-red {
+    color: $crazy-red;
+}
+
+.crazy-correct {
+    color: $crazy-correct;
+}
+.crazy-pink {
+    color: $crazy-pink;
+}
+.crazy-green {
+    color: $crazy-green;
+}
+
+.crazy-header-big { @include crazy-font(24px, 1.2, 800); }
+.crazy-header-md { @include crazy-font(20px, 1.2, 800); }
+.crazy-header-small { @include crazy-font(18px, 1.2, 700); }
+
+.crazy-text-big { @include crazy-font(18px, 1.6, 400); }
+.crazy-text-md { @include crazy-font(16px, 1.6, 400); }
+.crazy-text-small { @include crazy-font(14px, 1.6, 400); }
+.crazy-text-extra-small { @include crazy-font(12px, 1.6, 400); }

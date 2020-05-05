@@ -1,0 +1,15 @@
+.crazy-badge {
+    color: $crazy-blue;
+    border: 1px solid $crazy-blue;
+    border-radius: 2px;
+    padding: 0 18px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    &.filled {
+        background-color: $crazy-blue;
+        color: $crazy-white;
+    }
+}

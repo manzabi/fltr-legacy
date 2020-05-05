@@ -1,0 +1,18 @@
+.crazy-email-success {
+    text-align: center;
+    padding-top: 150px;
+    & p {
+        font-weight: bold;
+    }
+    & .email-sent-pic {
+        margin: 40px auto;
+    }
+}
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .crazy-email-success {
+        & .email-sent-pic {
+            margin-top: 0;
+        }
+    }
+}

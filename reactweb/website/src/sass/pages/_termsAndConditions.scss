@@ -1,0 +1,15 @@
+.old-terms-and-conditions, .new-terms-and-conditions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    width: 50%;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .old-terms-and-conditions, .new-terms-and-conditions {
+        width: 80%;
+    }
+}

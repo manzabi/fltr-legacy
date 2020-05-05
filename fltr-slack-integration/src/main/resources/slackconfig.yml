@@ -1,0 +1,7 @@
+fluttr:
+  slack:
+    client_id: "128439447475.543323724948"
+    client_secret: "971372640f5878108436e54ba8a08744"
+    oauth_access_token_url: "https://slack.com/api/oauth.access"
+    requested_parameter_name: "code"
+    requested_eventapi_parameter_name: "challenge"

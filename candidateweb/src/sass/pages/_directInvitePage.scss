@@ -1,0 +1,7 @@
+.talent-process-invitation-component {
+    & .talent-opportunity-process-component {
+        & .btn {
+            display: none;
+        }
+    }
+}

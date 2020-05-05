@@ -1,0 +1,34 @@
+.upload-button-component {
+    & input {
+        display: none;
+    }
+    & .default-upload-button-label {
+        background-color: #5faee3;
+        margin-top: 10px;
+        height: 30px;
+        width: 100%;
+        color: white;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        transition: all 0.2s;
+        background-image: none;
+        border: 2px solid transparent;
+        white-space: nowrap;
+        padding: 3px 15px;
+        font-size: 12px;
+        line-height: 1.78571;
+        border-radius: 20px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}

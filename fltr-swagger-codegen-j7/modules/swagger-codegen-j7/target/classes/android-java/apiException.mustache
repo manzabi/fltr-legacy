@@ -1,0 +1,49 @@
+package {{invokerPackage}};
+
+import {{modelPackage}}.BizAroundAPIError;
+
+public class ApiException extends Exception {
+  int code = 999;
+  BizAroundAPIError error = null;
+  String message;
+
+  public ApiException() {}
+
+  public ApiException(int code, BizAroundAPIError error) {
+    this.code = code;
+    this.error = error;
+    this.message = error.getMessage();
+  }
+
+    public ApiException(int code, String message) {
+      this.code = code;
+      this.message = message;
+    }
+
+  public int getCode() {
+    return code;
+  }
+  
+  public void setCode(int code) {
+    this.code = code;
+  }
+
+    public BizAroundAPIError getError() {
+      if (error == null) {
+          BizAroundAPIError error = new BizAroundAPIError();
+          error.setCode(this.code + "");
+          error.setMessage(this.getMessage());
+          return error;
+      }
+      return error;
+    }
+
+    public void setError(BizAroundAPIError error) {
+      this.error = error;
+    }
+
+    public String getMessage() {
+        return message;
+      }
+
+}

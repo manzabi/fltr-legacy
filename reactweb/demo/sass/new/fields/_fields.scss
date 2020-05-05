@@ -1,0 +1,133 @@
+.crazy-field {
+    height: 80px;
+    color: $crazy-darkside;
+    font-size: 12px;
+    position: relative;
+    & p {
+        margin-bottom: 5px;
+    }
+    & .crazy-input {
+        border-radius: 4px;
+        margin-bottom: 5px;
+        border: 1px solid $crazy-lightgrey;
+        width: 100%;
+        height: 50px;
+        padding-left: 18px;
+        padding-right: 36px;
+        background-color: $crazy-white;
+        font-size: 14px;
+        outline: none;
+        cursor: pointer;
+        &::placeholder {
+            color: $crazy-mediumgrey;
+            letter-spacing: 0.3px;
+            font-size: 14px;
+        }
+        &[disabled] {
+            background-color: $crazy-background;
+            cursor: auto;
+            &:hover, &:focus {
+                padding-left: 18px;
+                padding-right: 36px;
+            }
+            &::placeholder {
+                color: $crazy-darkside;
+            }
+        }
+        &:hover, &:focus {
+            border: 2px solid $crazy-primary;
+            padding-left: 17px;
+            padding-right: 35px;
+            &[disabled] {
+                padding-left: 17px;
+                padding-right: 35px;
+            }
+        }
+        &.error {
+            border: 2px solid $crazy-red;
+            &:hover, &:focus {
+                padding-left: 18px;
+                padding-right: 36px;
+            }
+        }
+        &.success {
+            border: 2px solid $crazy-green;
+            &:hover, &:focus {
+                padding-left: 18px;
+                padding-right: 36px;
+            }
+        }
+    }
+    & .error-message {
+        color: $crazy-red;
+    }
+    & .success-message {
+        color: $crazy-green;
+    }
+    & .filler-message {
+        height: 21px;
+    }
+    & i {
+        position: absolute;
+        right: 15px;
+        top: 17px;
+        &.crazy-icon-cancel {
+            color: $crazy-red;
+        }
+        &.crazy-icon-check-small {
+            color: $crazy-green;
+        }
+    }
+}
+
+.crazy-bubbles-input-container {
+    border: 1px solid $crazy-lightgrey;
+    background-color: white;
+    min-height: 100px;
+    cursor: text;
+    & .active-element {
+        margin: 11px 0 0 11px;
+        border-radius: 14px;
+        border: 1px solid $crazy-primary;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+        padding: 0 25px 0 15px;
+        display: inline-block;
+        cursor: pointer;
+        color: $crazy-darkside;
+        position: relative;
+        &:hover {
+            border: 1px solid $crazy-red;
+            & i {
+                color: $crazy-darkside;
+            }
+        }
+        & i {
+            font-size: 8px;
+            position: absolute;
+            right: 8px;
+            top: calc(50% - 5px);
+            color: $crazy-mediumgrey;
+        }
+    }
+    & .text-input {
+        background-color: transparent;
+        padding: 0 15px;
+        margin: 11px 0 0 11px;
+        border: 0;
+        display: inline-block;
+    }
+    & .input-container {
+        position: relative;
+        width: max-content;
+        & .current-expert-add {
+            width: 300px;
+            padding: 10px;
+            position: absolute;
+            top: 100%;
+            background-color: #0a66b7;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}

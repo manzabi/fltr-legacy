@@ -1,0 +1,799 @@
+// TODO: ASK DELA ABOUT THE GENERAL SCROLLBAR AND THE MOBILE APPEARANCE
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    overflow: hidden !important;
+    // THOSE ARE THE STYLES FOR ALL THE SCROLLBARS INSIDE THE MAIN BODY
+    &::-webkit-scrollbar, *::-webkit-scrollbar {
+        width: 9px;
+        height: 9px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb, *::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #A0A8B9;
+    }
+    &::-webkit-scrollbar-track, *::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px transparent;
+        border-radius: 15px;
+        background-color: #EFEFEF;
+    }
+}
+#main-body {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: calc(100% - 61px);
+    width: calc(100% - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    &.no-scroll {
+        overflow-y: hidden;
+    }
+
+    &.banner-active {
+        height: calc(100% - 61px - 30px);
+    }
+
+    &.fullscreen-body {
+        width: 100%;
+        height: 100%;
+    }
+    &.no-sidebar {
+        width: 100%;
+    }
+
+
+}
+
+#main-content {
+    background-color: #fafafa;
+}
+
+.body-bg-grey {
+    background-color: $fluttr-light-grey !important;
+}
+
+// TODO: Check impact of this line in the project
+#container {
+    overflow: hidden;
+}
+
+.fluttr-hidden {
+    visibility: hidden;
+}
+html.touchevents #body {
+    position: relative !important;
+}
+
+html.touchevents #body > div {
+    position: relative !important;
+}
+
+html.default body #body {
+    position: relative !important;
+    z-index: 1;
+    margin-top: 70px;
+}
+#body {
+    background-color: $fluttr-light-grey !important;
+    padding: 0 !important;
+    &.body-full-size {
+        margin-left: 0px !important;
+    }
+    & .container-fluid {
+        padding-top: 0px !important;
+        & .recruiterProfileEditPage,
+        .companyInputContent {
+            margin-top: 0px;
+        }
+    }
+    &.banner-active {
+        margin-top: 80px !important;
+    }
+}
+
+html.default body #container > div:first-child#body {
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+.form-control {
+    //padding: 20px 10px;
+    border-radius: 5px !important;
+}
+
+.user-info .form-control {
+    height: 40px;
+}
+
+textarea.textareaPadding {
+    padding: 20px;
+}
+
+html.touchevents #body {
+    margin-top: 50px !important;
+    &.banner-active {
+        margin-top: 80px !important;
+    }
+}
+// html.default body #navbar~#body {
+//     margin-top: -100px !important;
+// }
+
+// @media (min-width: $screen-sm-min) {
+//     html.default body #navbar~#body {
+//         margin-top: 20px !important;
+//     }
+// }
+@media (max-width: $screen-sm-min) {
+    #body {
+        &.banner-active {
+            margin-top: 110px !important;
+        }
+    }
+//     html.default body #navbar~#body {
+//         margin-top: 20px !important;
+//     }
+}
+
+@media (min-width: $mobile-min ) and (max-width: $tablet-max) {
+    .xs-hidden {
+        display: none !important;
+    }
+    #tooltip {
+        display: none !important;
+    }
+}
+
+.sidebar-btn>a {
+    background: $fluttr-green !important;
+}
+
+.panel-nomarginTop {
+    margin-top: -25px;
+}
+
+.panel-padding-vertical {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.panel-border-bottom {
+    border-bottom: 1px solid $fluttr-light-grey;
+}
+
+.div-no-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.fullContent {
+    min-height: 100vh;
+}
+
+@media (min-width: $screen-sm-min) {
+    .vertical-align {
+        display: flex;
+        flex-direction: row;
+    }
+    .vertical-align>[class^="col-"],
+    .vertical-align>[class*=" col-"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Optional, to align inner items
+                                     horizontally inside the column */
+    }
+    .vertical_flex {
+        flex-direction: column;
+    }
+    .vertical-flex-left {
+        display: initial !important;
+        text-align: left;
+    }
+    .vertical-flex-align-left {
+        justify-content: initial !important;
+        text-align: left;
+    }
+    .vertical-flex-align-right {
+        justify-content: flex-end !important;
+        text-align: right;
+    }
+    .vertical-flex-right {
+        align-items: flex-end !important;
+        justify-content: flex-end !important;
+    }
+    .vertical-flex-left-full {
+        align-items: flex-start !important;
+    }
+    .vertical-flex-right-full {
+        align-items: flex-end !important;
+    }
+}
+
+.button-distance {
+    margin-left: $fluttr-button-distance;
+}
+
+input.validation-error-class {
+    border: 1px solid $fluttr-red !important;
+    /* red */
+}
+
+input.valid {
+    border: 1px solid $fluttr-validation-ok !important;
+    /* red */
+}
+
+.valid {
+    border: 1px solid $fluttr-validation-ok !important;
+    /* red */
+}
+
+.validation-error-class {
+    color: $fluttr-red !important;
+    /* red */
+}
+
+.fluttrOrange {
+    color: $fluttr-orange !important;
+}
+
+.fluttrGreen {
+    color: $fluttr-green !important;
+}
+
+.fluttrGreenBg {
+    background-color: $fluttr-green;
+}
+
+.fluttrRed {
+    color: $fluttr-red !important;
+}
+
+.fluttrCaca {
+    color: $fluttr-caca !important;
+}
+
+.fluttrBlue {
+    color: $fluttr-blue !important;
+}
+
+.fluttrBlueBg {
+    background-color: $fluttr-blue !important;
+}
+
+.fluttrYellow {
+    color: $fluttr-yellow !important;
+}
+
+.fluttrDarkOrange {
+    color: $fluttr-dark-orange !important;
+}
+
+.fluttrViolet {
+    color: $fluttr-violet !important;
+}
+
+.fluttrVioletBg {
+    background-color: $fluttr-violet !important;
+}
+
+.fluttrDarkGrey {
+    color: $fluttr-dark-grey !important;
+}
+
+.fluttrBlack {
+    color: $fluttr-black !important;
+}
+
+.fluttrWhite {
+    color: $fluttr-white !important;
+}
+
+.fluttrWhiteBg {
+    background-color: $fluttr-white !important;
+}
+
+.fluttrGreyBg {
+    background-color: $fluttr-grey !important;
+}
+
+.fluttrEsmeraldGreen {
+    color: $fluttr-esmerald-green !important;
+}
+
+.fluttrEsmeraldGreenBg {
+    background-color: $fluttr-esmerald-green !important;
+}
+
+@include generate-button("btn-fluttrViolet", $fluttr-violet, white);
+@include generate-button("btn-fluttrDarkOrange", $fluttr-dark-orange, white);
+@include generate-button("btn-fluttrOrange", $fluttr-orange, white);
+@include generate-button("btn-fluttrYellow", $fluttr-yellow, white);
+@include generate-button("btn-fluttrGreen", $fluttr-green, white);
+@include generate-button("fluttr-esmerald-green", $fluttr-esmerald-green, white);
+@include generate-button("btn-fluttrRed", $fluttr-red, white);
+@include generate-button("btn-fluttrBlue", $fluttr-blue, white);
+/* Global Styles */
+
+.containerSection {
+    margin-top: 20px;
+}
+
+.noPadding {
+    padding: 0 !important;
+}
+
+.noPaddingRight {
+    padding-right: 0 !important;
+}
+
+@media (max-width: $screen-sm-min) {
+    .containerSection {
+        padding: 0;
+    }
+    .noMarginLateralMobile {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .nopaddingMobileRight {
+        padding-right: 0px;
+    }
+    .nopaddingMobileLeft {
+        padding-left: 0px;
+    }
+    .paddingMobileTop {
+        padding-top: 20px;
+    }
+    .paddingMobile {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .text-left-sm {
+        text-align: left;
+    }
+    .text-right-sm {
+        text-align: right;
+    }
+    .text-center-sm {
+        text-align: center;
+    }
+    .containerSubTitle {
+        margin: 20px 20px;
+    }
+    .imageEmpty {
+        width: 80%;
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .text-center-md {
+        text-align: center;
+    }
+    .text-right-md {
+        text-align: right;
+    }
+    .text-left-md {
+        text-align: left;
+    }
+    .containerSubTitle {
+        margin: 20px 0px;
+    }
+    .imageEmpty {
+        width: 50%;
+    }
+}
+
+.summaryTitle {
+    color: $fluttr-black;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.summarySubTitle {
+    color: $fluttr-black;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.summarySubTitleLittle {
+    color: $fluttr-black;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.summarySubTitleStrong {
+    color: $fluttr-black;
+    line-height: 1.2em;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.textLittle {
+    color: $fluttr-black;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.textStrong {
+    color: $fluttr-black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.textStrongBig {
+    color: $fluttr-black;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.sectionTitle {
+    color: $fluttr-black;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.sectionTitlePopup {
+    color: $fluttr-black;
+    font-weight: 700;
+    font-size: 1.9em !important;
+}
+
+.sectionTitleStrong {
+    color: $fluttr-black;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.sectionTitleSuperStrongBig {
+    color: $fluttr-black;
+    font-size: 2.6em;
+    font-weight: 700;
+}
+
+.sectionTitleMedium {
+    color: $fluttr-dark-grey;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.sectionTitleBig {
+    color: $fluttr-dark-grey;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.sectionTitleLittle {
+    color: $fluttr-black;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.sectionTitleSuperLittle {
+    color: $fluttr-black;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.sectionTitleLittleSlim {
+    color: $fluttr-black;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+.sectionBordered {
+    border: 1px solid $fluttr-light-grey;
+    background-color: white;
+    padding: 15px 15px 15px 15px;
+}
+
+.sectionBorderedDoubleHeader {
+    border: 2px solid $fluttr-light-grey;
+    background-color: $fluttr-light-grey;
+    padding: 10px 15px 10px 15px;
+}
+
+.sectionBorderedDoubleContainer {
+    border: 2px solid $fluttr-light-grey;
+    background-color: white;
+    padding: 15px 15px 15px 15px;
+}
+
+.sectionBorderedPaddingBottom {
+    border: 1px solid $fluttr-light-grey;
+    background-color: white;
+    padding: 15px 15px 50px 15px;
+}
+
+.sectionInternal {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.sectionInternalSlim {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.bordered {
+    border: 1px solid $fluttr-light-grey;
+    background-color: white;
+}
+
+.bordered-2 {
+    border: 2px solid $fluttr-light-grey;
+    background-color: white;
+}
+
+.bordered-right {
+    border-right: 1px solid $fluttr-light-grey;
+}
+
+.img-rounded {
+    border-radius: 50%;
+}
+
+.icon-medium {
+    font-size: 1.5em;
+}
+
+.icon-right-padding {
+    margin-right: 5px;
+}
+
+/* Components */
+
+.userName {
+    color: $fluttr-black;
+    font-size: 16px;
+}
+
+.userNameLittle {
+    color: $fluttr-black;
+    font-size: 14px;
+}
+
+.position {
+    color: $fluttr-black;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.opportunity-company {
+    font-size: 18px;
+    font-weight: 300;
+    color: $fluttr-black;
+}
+
+.opportunity-title {
+    color: $fluttr-black;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.zoomable {
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+}
+
+.cursorLink {
+    cursor: pointer;
+}
+
+/* Form */
+
+.form-label {
+    color: $fluttr-black;
+    font-size: 16px;
+    font-weight: 400;
+    & .mandatory-field {
+        color: $fluttr-red;
+        font-weight: bolder;
+        padding: 0px 0.3em;
+    }
+}
+
+.form-field-error {
+    color: $fluttr-red !important;
+    ;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.form-tab-error {
+    border: 1px solid $fluttr-red !important;
+}
+
+/* Jcrop */
+
+.jcrop-holder {
+    margin: auto;
+}
+
+.containerMaxSize {
+    max-width: 1170px;
+    margin: auto;
+}
+
+/* Tooltip */
+
+.tooltip.top .tooltip-inner {
+    background-color: $fluttr-grey;
+    color: $fluttr-black;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: $fluttr-grey;
+}
+
+.tooltip.in {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+/* Modal */
+
+.modalTitle {
+    color: $fluttr-black;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 1.3em;
+}
+
+.modalSubtitle {
+    color: $fluttr-black;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+/* Tags */
+
+.tagFluttr {
+    background-color: $fluttr-blue;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    white-space: pre-wrap;
+    &.category-tag {
+        background-color: #417505;
+    }
+}
+
+/* hover */
+
+.hoverAlpha {
+    &:hover {
+        opacity: 0.6 !important;
+    }
+}
+
+.fa-button {
+    cursor: pointer;
+    font-size: 16px;
+    color: #3498db;
+}
+
+@media (max-width: 989px) {
+    .navbar-nav .open .dropdown-menu {
+        background-color: #fff !important;
+        position: fixed !important;
+    }
+    html.default body #notifications-menu+.dropdown-menu,
+    html.default body #rss-menu+.dropdown-menu {
+        right: auto !important;
+        left: 0% !important;
+        top: 50px !important;
+        width: 100vw !important;
+    }
+    .header-menu.collapse-left.menu-default.dropdown.open {
+        &::after {
+            right: 18px;
+            top: -31px;
+            content: '';
+            position: relative;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid #2ECC71;
+            z-index: 12000;
+        }
+    }
+    html.default body .header-menu>.dropdown-menu:after {
+        display: none;
+    }
+    .nav .navbar-nav {
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+}
+
+.hr-text {
+    margin: 20px 0px;
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: .5;
+    &:before {
+        content: ''; // use the linear-gradient for the fading effect
+        // use a solid background color for a solid bar
+        background: linear-gradient(to right, transparent, #818078, transparent);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+    }
+    &:after {
+        content: attr(data-content);
+        position: relative;
+        display: inline-block;
+        color: black;
+        padding: 0 .5em;
+        line-height: 1.5em; // this is really the only tricky part, you need to specify the background color of the container element...
+        color: #818078;
+        background-color: #fcfcfa;
+    }
+}
+
+.no-pointer {
+    cursor: default !important;
+}
+
+.text-black {
+    color: $fluttr-black;
+}
+
+input::placeholder, textarea::placeholder, .public-DraftEditorPlaceholder-root .public-DraftEditorPlaceholder-inner {
+    color: #95a5a6;
+}
+textarea, select, input, button {
+    outline: none !important;
+}
+
+.fluttr-box-card {
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: white;
+    max-width: 298px;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin-bottom: 20px;
+    &:hover {
+        box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 2px 12px rgba(0,0,0,.06), 0 8px 14px rgba(0,0,0,.04), 0 12px 16px rgba(0,0,0,.02);
+    }
+}
+
+.react-pdf__Page__canvas {
+    width: 100% !important;
+    height: unset !important;
+    max-width: 612px;
+    margin: auto;
+    border: 1px solid #f1f1f1;
+    border-top: 0;
+    border-bottom: 0;
+    &:first-child {
+        border-top: 1px solid #f1f1f1;
+    }
+    &:last-child {
+        border-bottom: 1px solid #f1f1f1;
+    }
+}

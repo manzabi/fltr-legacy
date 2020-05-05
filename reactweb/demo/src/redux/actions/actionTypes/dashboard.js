@@ -1,0 +1,3 @@
+module.exports = {
+    DASHBOARD_CHANGE_TAB_KEY : 'DASHBOARD_CHANGE_TAB_KEY'
+};

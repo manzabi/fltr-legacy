@@ -1,0 +1,67 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalDecorators": true,
+            "modules": true
+        },
+        "ecmaVersion": 7,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "no-unused-vars":"off",
+        "no-useless-escape":"off",
+        "indent": [
+            "warn",
+            4,
+            { "SwitchCase": 1 }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "semi": [
+            "error"
+        ],
+        "eqeqeq": "warn",
+        "curly": "warn",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-uses-react": "error",
+        "strict": "off"
+    },
+    "overrides": [
+        {
+            "files": [
+                "src/*.js"
+            ],
+            "excludedFiles": [
+                "*.test.js",
+                "tmp/*",
+                "tools/*",
+                "test/*",
+                "public/*",
+                "dist/*"
+            ]
+        }
+    ],
+    "globals": {
+        "moment": false,
+        "$": false,
+        "Messenger": false
+    }
+}

@@ -1,0 +1,228 @@
+.template-preview-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    & .template-title {
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.22;
+        text-align: left;
+        color: $fluttr-black;
+    }
+    & .template-image-container {
+        width: 48%;
+    }
+    & .template-general-container {
+        width: 48%;
+    }
+    .template-image-container, .template-general-container {
+        padding: 0;
+    }
+    & ul {
+        padding-left: 0px;
+    }
+    & p {
+        margin-bottom: 11px;
+        color: $fluttr-black;
+    }
+}
+
+
+.template-preview-body {
+    background-color: white;
+    padding: 30px 15% 30px 15%;
+    margin-bottom: 100px;
+    & img {
+        max-width: 80%;
+        display: block;
+        margin: auto;
+    }
+    & .freemium-bottom-unlock {
+        margin-top: 30px;
+        & h2 {
+            margin: 0;
+            line-height: 1.6;
+        }
+    }
+    & h2 {
+        margin-top: 0;
+        font-weight: bold;
+        text-align: left;
+        color: $fluttr-black;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    & h3 {
+        margin-top: 0;
+        font-weight: bold;
+        text-align: left;
+        color: $fluttr-black;
+    }
+    & .body-container {
+        font-size: 18px;
+        text-align: left;
+        line-height: 1.58;
+        color: $fluttr-black;
+        margin-bottom: 20px;
+    }
+    & .template-button-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 100px;
+        padding-right: 30%;
+        background-color: rgba(149, 165, 166, 0.8);
+    }
+}
+
+.template-preview-page {
+    &.content-small {
+        width: calc(100% - 350px)
+    }
+}
+.template-preview-page {
+    position: relative;
+    & .bottom-unlock-bar {
+        display: flex;
+        justify-content: space-between;
+        color: $fluttr-black;
+        align-items: center;
+        &:not(.locked) {
+            margin-top: 50px;
+            align-items: baseline;
+        }
+        & .upsell-section {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & .slot-counter {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                & span {
+                    display: block;
+                    background-color: #d8d8d8;
+                    color: #4a4a4a;
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    padding-top: 18px;
+                    margin: 10px;
+                    &.used {
+                        background-color: #4a90e2;
+                        color: white;
+                    }
+                }
+            }
+            & p {
+                margin-bottom: 0px;
+            }
+            & .btn-fluttr {
+                display: block;
+                min-width: 150px;
+                width: 100%;
+                padding: 0;
+            }
+        }
+        .template-actions-section {
+            text-align: center;
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &.locked {
+            position: relative;
+            padding-top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,.15);
+            width: 110%;
+            margin-left: -5%;
+            padding: 5%;
+            border-radius: 5px;
+            &:before {
+                content: '';
+                position: absolute;
+                margin-top: -181px;
+                height: 150px;
+                width: 100%;
+                display: block;
+                background-image: linear-gradient(to bottom,rgba(255,255,255,0) 0,#fff 100%);
+            }
+        }
+
+        &.upgrade {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & * {
+                margin: 0;
+            }
+            & > i {
+                font-size: 40px;
+                color: #f5a623;
+                margin-bottom: 26px;
+            }
+            & p {
+                margin: auto;
+                margin-bottom: 35px;
+                width: 80%;
+                text-align: center;
+                font-size: 18px;
+            }
+            & .upgrade-actions {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.template-preview-body {
+    & .go-back {
+        z-index: 101;
+        position: fixed;
+        top: 90px;
+        left: 20px;
+        cursor: pointer;
+        color: $fluttr-black;
+        & i {
+            font-size: 25px;
+            display: block;
+            margin-right: 15px;
+        }
+        & span {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .template-preview-head {
+        & .template-image-container, & .template-general-container {
+            width: 100%;
+        }    
+    }
+}
+
+@media (max-width: $screen-md-max) {
+    .template-preview-page {
+        width: calc(100% - 100px);
+        &.content-small {
+            width: calc(100% - 270px)
+        }
+    }
+}

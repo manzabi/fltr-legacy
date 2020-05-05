@@ -1,0 +1,99 @@
+.crazy-cropper {
+    & .crazy-cropper-container {
+        overflow: hidden;
+    }
+    // CROPPER TYPES DEFINITIONS
+    &.profile-picture-crop {
+        & .cropper-view-box {
+            border-radius: 50%;
+        }
+    }
+    // END OF TYPES
+    & .cropper-view-box {
+        background-color: white;
+        outline: none;
+    }
+    & .cropper-center {
+        display: none;
+    }
+    & .cropper-face {
+        background-color: transparent;
+    }
+    & .cropper-bg {
+        background: white;
+    }
+    & .cropper-modal {
+        opacity: unset;
+        background-color: rgba(0, 0, 0, 0.73);
+    }
+    & .cropper-bottom-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 22px;
+        & .actions-container {
+            display: flex;
+            align-items: center;
+            & .other-actions-container {
+                display: flex;
+                align-items: center;
+                margin-left: 26px;
+                & .action-icon {
+                    color: $crazy-orange;
+                    font-size: 30px;
+                    cursor: pointer;
+                    margin-left: 10px;
+                    display: inline-flex;
+                    align-items: baseline;
+                }
+            }
+            & .zoom-container {
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & .zoom-button {
+                    border: 2px solid $crazy-orange;
+                    border-radius: 100%;
+                    color: $crazy-orange;
+                    font-size: 15px;
+                    text-align: center;
+                    padding: 7.5px;
+                    user-select: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+                & input {
+                    width: calc(100% - 84px);
+                }
+            }
+        }
+        & .button-container {
+            & .crazy-button {
+                margin-left: 7px;
+            }
+        }
+    }
+}
+
+.crazy-modal.crazy-cropper .crazy-modal-content {
+    padding-top: 0;
+}
+
+@media screen and (max-width: $mobile-max) {
+    .cropper-bottom-box {
+        flex-wrap: wrap;
+        & > * {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+        & .button-container {
+            & .crazy-button {
+                margin: 5px 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.opportunityChallengeConfigurationSummaryComponent{
+  .left-column{
+    color : $fluttr-black;
+    font-size: 1.6em;
+    font-weight: 400;
+  }
+
+  .right-column{
+    color : $fluttr-black;
+    font-size:1.2em;
+    font-weight: 300;
+  }
+
+  .icon-help{
+    cursor:pointer;
+    margin-left: 10px;
+  }
+
+}
+
+.opportunityConfigurationConfirmModal{
+  .img-wrapper{
+    width:100%;
+    margin: 25px auto;
+    overflow: hidden;
+    border-radius:50%;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      border-radius:50%;
+      width:40vh;
+      height:40vh;
+    }
+
+  }
+
+  h2 {
+    color : $fluttr-black;
+    font-size:1.5em;
+    font-weight: 300;
+  }
+
+  h3 {
+    margin-top: 10px;
+    color : $fluttr-black;
+    font-size:1em;
+    font-weight: 300;
+  }
+}

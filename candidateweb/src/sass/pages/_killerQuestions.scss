@@ -1,0 +1,118 @@
+.killer-questions-component {
+    text-align: center;
+}
+
+.fluttr-talent-form {
+    display: inline-block;
+    width: 66.4%;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: calc(100vh - 60px);
+    & .btn {
+        width: 140px;
+    }
+}
+
+.fluttr-killerquestion {
+    box-shadow:0 0 4px 0 rgba(0, 0, 0, 0.45);
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.killer-questions-component {
+    background-color:white;
+}
+
+.answer-area {
+    display: flex;
+    flex-grow: row;
+    justify-content: center;
+    margin: auto 35px auto 0;
+    & .btn {
+        margin: 0 20px;
+        &.btn-green {
+            background-color: transparent;
+            color: $fluttr-black;
+            border: 2px solid $fluttr-green;
+        }
+        &.btn-inverse {
+            border-width: 2px;
+        }
+    }
+}
+
+.question-detail {
+    color: #2c3e50;
+    text-align: left;
+    font-weight: bold;
+    &.is-required::after {
+        content: " *";
+        color: #ff6073;
+    }
+}
+.fluttr-talent-form-instructions{
+    text-align: left;
+    font-weight: normal;
+    line-height: 1.88;
+    color: #2c3e50;
+}
+
+.send-button-container {
+    text-align: right;
+    & .btn {
+        font-size: 19px;
+        font-weight: bold;
+        width: 160px;
+        height: 50px;
+    }
+}
+
+.back-btn-container {
+    text-align: left;
+    padding-top: 25px;
+    padding-left: 5%;
+    & .btn {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        & i {
+            font-size: 25px;
+            margin-right: 3px;
+        }
+    }
+}
+
+@media (min-width: $mobile-min) and (max-width: $tablet-max) {
+    .fluttr-killerquestion {
+        flex-direction: column;
+    }
+    .answer-area {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & .btn {
+            margin: 0;
+        }
+    }
+    .answer-area {
+        margin: 0;
+    }
+    .fluttr-talent-form {
+        width: 90%;
+        & .btn {
+            width: 112px;
+        }
+    }
+    .send-button-container {
+        text-align: center;
+        & .btn {
+            font-size: 19px;
+            font-weight: bold;
+            width: 160px;
+            height: 50px;
+        }
+    }
+} 

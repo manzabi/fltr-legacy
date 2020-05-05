@@ -1,0 +1,244 @@
+.test-manager {
+    padding-top: 30px;
+    background-color: white;
+    & .fluttr-text-small {
+        font-weight: bold;
+    }
+    & .btn-link {
+        color: $fluttr-black;
+    }
+}
+
+.attitude-test-container {
+    text-align: center;
+    min-width: $mobile-min;
+}
+
+.attitude-questions-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+
+.attitude-questions-array {
+    margin-top: 40px;
+}
+
+.attitude-card {
+    border-top:1px solid $fluttr-caca;
+    text-align: center;
+    margin-bottom: 15px;
+    & .card-question {
+        color: #2c3e50;
+    }
+}
+.attitude-card-circles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.circle {
+    cursor: pointer;
+}
+
+.circle-lg {
+    width: 29px;
+    height: 29px;
+    border-radius: 29px;
+}
+
+.circle-md {
+    width: 23px;
+    height: 23px;
+    border-radius: 23px;
+}
+
+.circle-sm {
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+}
+
+.circle-red {
+    border: solid 4px #ffb7bf;
+    &.selected {
+        border: solid 4px #e45e5e;
+        background-color: #e45e5e;
+    }
+}
+
+.circle-green {
+    border: solid 4px #a2e4d7;
+    &.selected {
+        border: solid 4px #1abc9c;
+        background-color: #1abc9c;
+    }
+}
+
+.circle-grey {
+    border: solid 4px #dddddd;
+    &.selected {
+        background-color: #dddddd;
+    }
+}
+
+.disagree {
+    color: #e45e5e;
+}
+
+.agree {
+    color: #1abc9c;
+}
+
+.progress-container {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    height: 80px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.31);
+    & .progress-container-firstrow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0px auto;
+    }
+    & .progress-bar {
+        width: 50%;
+        height: 8px;
+        margin: 10px auto;
+        border-radius: 50px;
+        position: relative;
+        background-color: lightgrey;
+        & .bar {
+            height: 100%;
+            background-color: #ffa602;
+            border-radius: inherit;
+            transition: width .2s ease-in;
+        }
+    }
+    & .timer {
+        color: $fluttr-caca;
+    }
+}
+
+.attitude-card-agreedisagree-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card-question-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 60px;
+    & > div {
+        width: 20px;
+        min-height: 1px;
+    }
+    i {
+        text-align: center;
+        width: 20px;
+    }
+}
+
+.fas.fa-exclamation {
+    color: #ffa602;
+    font-size: 14px;
+}
+
+select {
+    margin-right: 100px;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 30px;
+    & option {
+        font-weight: bold;
+    }
+}
+
+.first-row-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//-----------------------MOBILE MEDIA QUERY
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .attitude-questions-container {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .test-manager {
+        & .btn-link {
+            visibility: hidden;
+        }
+    }
+    .attitude-card .card-question {
+        margin: 22px auto;
+    }
+    
+    .progress-container {
+        & .progress-container-firstrow {
+            width: 90%;
+        }
+        & .progress-bar {
+            width: 90%;
+        }
+    }
+    .agree, .disagree {
+        display: none;
+    }
+
+    .attitude-card-circles {
+        margin-bottom: 40px;
+        margin-top: 10px;
+    }
+
+    .circle.circle-lg.circle-red {
+            &::after {
+                content: 'disagree';
+                position: absolute;
+                top: calc(100% + 15px);
+                left: -4px;
+                color: #e45e5e;
+                font-size: 12px;
+                font-weight: bold;
+            }
+    }
+
+    .circle.circle-lg.circle-green {
+        &::after {
+            content: 'agree';
+            position: absolute;
+            top: calc(100% + 15px);
+            right: -4px;
+            color: #1abc9c;
+            font-size: 12px;
+            font-weight: bold;
+        }
+}
+    .circle {
+        position: relative;
+    }
+    .first-row-buttons-container {
+        height: 20px;
+        justify-content: space-around;
+        & select {
+            margin-right: 40px;
+        }
+    }
+}

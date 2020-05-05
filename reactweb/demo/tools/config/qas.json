@@ -1,0 +1,6 @@
+{
+  "serverUrl": "https://qas.fluttr.in",
+  "webLoginPage": "https://qas.fluttr.in/login",
+  "webLogoutPage": "https://qas.fluttr.in/bizAroundSite/logout",
+  "intercomKey": "xpow9zok"
+}

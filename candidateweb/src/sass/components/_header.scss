@@ -1,0 +1,327 @@
+.header {
+    z-index: 9999;
+    position: fixed;
+    top: 0px;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+    -moz-transition: opacity 0.2s ease-in-out;
+    width: 100%;
+    background-color: rgba(50, 50, 50,0.9);
+    color: white;
+    & * {
+        z-index: 9999;
+    }
+    &.header-collapsed {
+        opacity: 0;
+        z-index: -1;
+    }
+    & .header-container {
+        display: flex;
+        align-items: center;
+        & .menu-container {
+            padding: 0px 3.5%;
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & .brand-container{
+                justify-content: flex-start;
+                align-items: center;
+                & .brand-image {
+                    padding-bottom: 15px;
+                    padding-right: 10px;
+                }
+                & .brand-name {
+                    padding: 0px;
+                    font-size: 16px;
+                }
+            }
+            & .header-landing-button {
+                width: 50%;
+                min-width: 300px;
+                max-width: 400px;
+                & .btn {
+                    display: block;
+                    margin: auto;
+                    padding-top: 9px;
+                    padding-bottom: 9px;
+                    font-size: 16px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+.brand-container{
+    display: none;
+}
+
+.fluttr-navbar {
+    & > * {
+        z-index: 9999 !important;
+    }
+    & .header-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0,0,0,0.75);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & .menu-container {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 10px;
+            & .btn {
+                margin: 0 15px;
+            }
+            &.toggle{
+                position: fixed;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: #333;
+                overflow: auto;
+                z-index: 9999;
+                transition: all .1s ease-out;
+                & .user-menu  {
+                    display: none;
+                }
+                a:not(:first-child) {
+                    display: block;
+                    margin: 20px;
+                    &.menu-toggle {
+                        margin: 0px;
+                    }
+                }
+                & .btn {
+                    display: block;
+                }
+            }
+            & a {
+                color: white;
+                display: block;
+                text-decoration: none;
+                border-bottom: 3px solid transparent;
+                transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+                font-size: 16px;
+                font-weight: 400;
+                font-stretch: normal;
+                &.menu-active {
+                    border-bottom: 3px solid $fluttr-green;
+                }
+            }
+            & a:first-child {
+                position: absolute;
+                top: 10px;
+                left: 15px;
+            }
+            & a:not(:first-child) {
+                display: none;
+                margin: 0 15px !important;
+                padding: 5px 0 !important;
+                &.menu-toggle {
+                    display: block;
+                    position: absolute;
+                    top: 7px;
+                    left: 10px;
+                    color: white;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.user-menu {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    & .user-details {
+        color: white;
+        display: flex;
+        align-items: center;
+        min-width: 150px;
+        cursor: pointer;
+        & img {
+            border-radius: 100%;
+            margin-right: 8px;
+        }
+        & i {
+            display: block;
+            margin-left: 5px;
+            font-size: 15px;
+            height: 100%;
+            padding: 0 5px;
+        }
+    }
+    & .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: none;
+    }
+    &.toggle .dropdown-menu {
+        display: block;
+        width: 100%;
+        background-color: rgba(0,0,0,0.75);
+        & .menu-item {
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $fluttr-caca;
+            transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+            cursor: pointer;
+            &:not(:first-child) {
+                border-top: 1px solid white;
+            }
+            &:hover {
+                background-color: rgba(202, 202, 202, .9);
+                color: white;
+            }
+        }
+    }
+}
+
+
+
+//-----------------------MOBILE MEDIA QUERY
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .fluttr-navbar {
+        & .header-container {
+            & .menu-container {
+                & a:not(:first-child) {
+                    display: none;
+                    &.menu-toggle {
+                        display: block;
+                    }
+                }
+                & .btn {
+                    display: none;
+                }
+            }
+        }
+    }
+    & .brand-image {
+        margin-left: 50px;
+    }
+}
+//-----------------------TABLET MEDIA QUERY
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    .brand-container{
+        display: flex;
+    }
+    .fluttr-navbar {
+        & .header-container {
+            & .menu-container {
+                & a:not(:first-child) {
+                    display: none;
+                    &.menu-toggle {
+                        display: block;
+                    }
+                }
+                & .btn {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    & .brand-image {
+        margin-left: 50px;
+    }
+}
+//-----------------------DESKTOP SMALL MEDIA QUERY
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+    .header {
+        & .header-container {
+            & .menu-container {
+                & .header-landing-button {
+                    & .btn {
+                        margin-right: 0px;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+    
+    .fluttr-navbar {
+        & .header-container {
+            & .menu-container {
+                display: flex;
+                align-items: center;
+                & a {
+                    display: block;
+                    margin: 0px;
+                    padding: 0px 15px;
+                }
+                & a:not(:first-child) {
+                    display: block;
+                    &.menu-toggle {
+                        display: none;
+                    }
+                }
+                & .list.navbar {
+                    & li a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .brand-container{
+        display: block;
+    }
+}
+//-----------------------DESKTOP LONG MEDIA QUERY
+@media (min-width: $desktop-lg-min) {
+    .fluttr-navbar {
+        & .header-container {
+            & .menu-container {
+                display: flex;
+                align-items: center;
+                & a {
+                    display: block;
+                    margin: 0px;
+                    padding: 0px 15px;
+                }
+                & a:not(:first-child) {
+                    display: block;
+                    &.menu-toggle {
+                        display: none;
+                    }
+                }
+                & .list.navbar {
+                    & li a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .brand-container{
+        display: block;
+    }
+}

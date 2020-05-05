@@ -1,0 +1,126 @@
+.crazy-searchbar {
+    position: relative;
+    height: 49px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: $crazy-white;
+    border: 1px solid $crazy-lightgrey;
+    color: $crazy-primary;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding:0;
+    &:hover, &.open, &.typing {
+        border: 2px solid $crazy-primary;
+        & .writing-container {
+            & .crazy-input {
+                padding-left: 17px;
+                padding-right: 39px;
+            }
+        }
+        & .options-wrapper {
+            width: calc(100% + 2px);
+            top: 51px;
+            right: -1px;
+        }
+    }
+    &.disabled {
+        background-color: $crazy-lightgrey;
+        border: 2px solid $crazy-lightgrey;
+    }
+    & .writing-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        & .crazy-icon {
+            color: $crazy-darkside;
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            right: 13px;
+            top: calc(50% - 9px);   
+        }
+        & .crazy-input {
+            border-radius: 4px;
+            border: none;
+            width: 100%;
+            height: 30px;
+            padding-left: 18px;
+            background-color: $crazy-white;
+            font-size: 14px;
+            color: $crazy-darkside;
+            font-weight: normal;
+            padding-right: 40px;
+            cursor: pointer;
+            &::placeholder {
+                color: $crazy-mediumgrey;
+                font-size: 12px;
+            }
+            &[disabled] {
+                background-color: $crazy-lightgrey;
+                cursor: auto;
+                &::placeholder {
+                    color: $crazy-darkside;
+                }
+            }
+        }
+    }
+    & .options-wrapper {
+        z-index: 2;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+        position: absolute;
+        background-color: $crazy-white;
+        top: 52px;
+        right: 0px;
+        border-radius: 4px;
+        max-height: calc(4 * 42px);
+        width: 100%; 
+        & .option {
+            height: 54px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            position: relative;
+            cursor: pointer;
+            & p {
+                font-weight: normal;
+                color: $crazy-darkside;
+                line-height: 1.4;
+            }
+            & .profile-pic {
+                width: 30px;
+                margin-left: 18px;
+                margin-right: 20px;
+            }
+            & .filler {
+                width: 18px;
+            }
+            &:hover {
+                background-color: $crazy-primary;
+                & p {
+                    color: $crazy-white;
+                }
+            }
+            &.selected {
+                color: $crazy-primary;
+                font-weight: bold;
+                &:hover p{
+                    color: $crazy-white;
+                }
+            }
+            &.first {
+                margin-top: 13px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            &.last {
+                margin-bottom: 13px;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;            
+            }
+        }
+    }
+}

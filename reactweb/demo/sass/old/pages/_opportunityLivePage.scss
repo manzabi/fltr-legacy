@@ -1,0 +1,109 @@
+//OLD
+.opportunity-live-page {
+    display: flex;
+    align-items: stretch;
+    min-height: calc(100vh - 50px);
+    & .live-content {
+        width: calc(100% - 350px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &.full-width {
+            width: 100%;
+        }
+        & img {
+            display: block;
+            width: 60%;
+            margin: auto;
+        }
+        & h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        & p {
+            text-align: center;
+            color: $fluttr-black;
+        }
+        & .opportunity-url {
+            width: 50%;
+            min-width: 500px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            & .url-content {
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                & span {
+                    display: block;
+                    padding: 13px 17px;
+                    &:first-child {
+                        background-color: white;
+                        border: 1px solid #979797;
+                        border-right: 0;
+                        color: $fluttr-black;
+                        height: 52px;
+                        line-height: 29px;
+                        width: calc(100% - 115px);
+                        overflow: hidden;
+                    }
+                    &:last-child {
+                        background-color: #3498db;
+                        color: white;
+                        width: 115px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        & .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+            width: 50%;
+            margin: auto;
+            & button {
+                display: block;
+                width: 45%;
+                padding: 23px 11px;
+                background-color: white;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 15px;
+                color: $fluttr-black;
+                display: flex;
+                align-items: center;
+                & i {
+                    font-size: 28px;
+                    margin-right: 10px;
+                    &.fa-twitter-square {
+                        color: #00B4F4
+                    }
+                    &.fa-linkedin {
+                        color: #0076B7
+                    }
+                    &.fa-facebook-square {
+                        color: #39559F
+                    }
+                }
+            }
+        }
+    }
+    & .related-articles {
+        width: 350px;
+        background-color: white;
+        padding: 25px 50px;
+        & > p {
+            width: 95%;
+            margin: auto;
+            display: block;
+            text-align: center;
+            margin-bottom:  50px;
+            margin-top: 30px;
+            & span {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

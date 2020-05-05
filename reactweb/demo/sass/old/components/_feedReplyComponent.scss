@@ -1,0 +1,29 @@
+.feed-reply-item-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px 20px 0px 20px;
+    & .user-image-container {
+        margin-top: 8px;
+        width: 31px;
+        // background-color: #f8fafa;
+        padding: 5px 3px;
+        & img {
+            border-radius: 100px;
+        }
+    }
+    & .reply-container {
+        padding: 15px;
+        width: calc(100% - 31px - 15px);
+        background-color: white;
+        & .user-description-container {
+            & p {
+                margin: 0;
+                padding: 0;
+                &:last-child {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

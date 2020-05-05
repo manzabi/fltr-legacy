@@ -1,0 +1,352 @@
+.recruiter-candidate-card {
+    padding: 20px 17px 16px;
+    position: relative;
+    background-color: $crazy-white;
+    &:not(.card-small):not(.card-list) {
+        cursor: pointer;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15); 
+        border: 1px solid #e9e9e9;
+        &:hover {
+            box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.22);
+            &:active {
+                box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15); 
+            }
+        }
+    }
+    & .crazy-icon-discard {
+        &.active {
+            color: $crazy-red !important;
+            &:hover {
+                color: $crazy-mediumgrey;
+            }
+            &.loading {
+                color: #FFC3C3 !important;
+            }
+        }
+        &:hover {
+            color: $crazy-red;
+        }
+        &.loading {
+            color: #FFC3C3 !important;
+        }
+    }
+    & .crazy-icon-bookmark-plain {
+        color: $crazy-correct;
+        &:hover {
+            color: $crazy-mediumgrey;
+        }
+    }
+    &.card-small {
+        & .experts-reviewed {
+            font-size: 12px;
+            position: absolute;
+            left: calc(100% - 15px);
+            top: 3px;    
+            color: $crazy-lightgrey;
+            &.dark {
+                color: $crazy-darkside;
+            }
+        }   
+        & .card-score {
+            & .tooltip-bubble {
+                top: calc(100% + 10px);
+            }
+        }
+    }
+    &.card-list {
+        padding: 11px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+        }
+        & > p, & i, & > div {
+            margin: 0;
+            height: 1em;
+            line-height: 1em;
+        }
+        & .actions-container {
+            display: flex;
+            min-width: 50px;
+            justify-content: space-between;
+            & .crazy-icon {
+                cursor: pointer;
+                font-size: 16px;
+            }
+        }
+        & .score-value {
+            min-width: 50px;
+            display: inline-block;
+            text-align: left;
+        }
+        & .profile-pic {
+            margin-left: 26px;
+        }
+        & .candidate-name {
+            margin-left: 21px;
+            min-width: 135px;
+            max-width: 135px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        & .card-score {
+            font-size: 20px;
+            margin-left: 14px;
+            margin-right: 55px;
+            min-width: 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            & .crazy-icon {
+                font-size: 11px;
+                position: absolute;
+                left: -14px;
+                bottom: 7px;
+            }
+        }
+        & .challenge-status {
+            text-transform: capitalize;
+            font-size: 14px;
+            width: 120px;
+            text-align: left;
+            margin: 0;
+            height: 1em;
+            line-height: 1em;
+        }
+        & .candidate-scores {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-grow: 1;
+            padding-right: 11px;
+            & .score-section {
+                padding: 0 10px 0 0;
+                min-width: 200px;
+                // TRICKY FIX by default when use flex grow, elements with the same grow index
+                // will grow from the current width to use all the available space.
+                // Elements with the same base width will have the same final width,
+                // but elements with different base width wont have the same width.
+                flex-grow: 1;
+                width: 100px;
+                &:hover {
+                    background-color: $crazy-background;
+                    border-radius: 4px;
+                }
+                & > :first-child:not(.bar-container) {
+                    width: 100%;
+                    padding: 0 0 0 5px;
+                }
+            }
+            & .bar-container {
+                margin: 0;
+                min-width: 60px;
+                & .bar {
+                    width: 100%;
+                }
+            }
+        }
+        & .date-container {
+            width: 105px;
+            flex-grow: 0;
+            margin: 0;
+            text-align: left;
+        }
+    }
+    & .candidate-card-control-panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .card-buttons {
+            width: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & .crazy-icon {
+                font-size: 20px;
+            }
+            & .tooltip-icon-candidate-card {
+                & .tooltip-bubble {
+                    bottom: calc(100% + 11px);
+                    min-width: unset;
+                    &.tooltip-bottom {
+                        top: 100%;
+                        bottom: unset;
+                    }
+                }
+            }
+        }
+        & .card-numbers {
+            width: max-content;
+            & h2 {
+                color: $crazy-lightgrey;
+                margin: 0;
+            }
+            & .card-score {
+                text-align: center;
+                position: relative;
+                padding-right: 20px;
+                & .card-score-tooltip {
+                    & .tooltip-bubble {
+                        bottom: calc(100% + 11px);
+                    }
+                }
+                & .experts-reviewed-tooltip {
+                    position: absolute;
+                    left: calc(100% - 15px);
+                    top: -7px;
+                    & .tooltip-bubble {
+                        bottom: calc(100% + 5px);
+                        height: max-content;
+                    }
+                    & .experts-reviewed {
+                        font-size: 12px;
+                        color: $crazy-lightgrey;
+                        &.dark {
+                            color: $crazy-darkside;
+                        }
+                    }
+                }
+                & .crazy-icon {
+                    position: absolute;
+                    color: $crazy-pink;
+                    font-size: 13px;
+                    top: 7px;
+                    left: -18px;
+                }
+            }
+        }
+    }
+    & .candidate-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        & .challenge-status {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 5px;
+            &.pending {
+                color: $crazy-mediumgrey;
+            }
+            &.error {
+                color: $crazy-error;
+            }
+            &.submitted {
+                color: $crazy-correct;
+            }
+            & span {
+                cursor: pointer;
+            }
+        }
+        & .crazy-icon {
+            position: absolute;
+            color: $crazy-darkside;
+            cursor: pointer;
+            font-size: 16px;
+            bottom: 25px;
+            right: -5px;
+        }
+    }
+    & .crazy-separator {
+        margin: 0;
+    }
+    & .candidate-scores {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: auto -17px;
+    }
+    & .score-section {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 40px;
+        cursor: pointer;
+        padding-left: 24px;
+        padding-right: 18px;
+        &:hover {
+            background-color: #f0f0f0;
+            & .bar-container .bar {
+                background-color: $crazy-white;
+            }
+        }
+        & .score-title {
+            margin: 0;
+            min-width: 80px;
+        }
+        & .submitted-text, & .pending-text, & .expired-text {
+            margin: 0;
+            font-size: 12px;
+            width: 100%;
+            padding: 0 24px;
+        }
+        & .pending-text {
+            color: $crazy-mediumgrey;
+        }
+        & .submitted-text {
+            color: $crazy-correct;
+        }
+        & .expired-text {
+            color: $crazy-error;
+        }
+        & .bar-container {
+            width: 75%;
+            min-width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-right: 26px;
+            margin-left: 26px;
+            & .bar {
+                height: 5px;
+                position: relative;
+                background-color: #f4f4f4;
+                width: 90%;
+                & .bar-content {
+                    height: 5px;
+                    z-index: 1;
+                    border-radius: 16px;
+                    &.orange {
+                        background-color: $crazy-orange;
+                    }
+                    &.primary {
+                        background-color: $crazy-primary;
+                    }
+                    &.lightgrey {
+                        background-color: $crazy-lightgrey;
+                    }
+                }
+            }
+        }
+        & .score {
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0;
+            min-width: 35px;
+        }
+    }
+    & .challenge-status {
+        text-transform: uppercase;
+    }
+}
+
+.candidates-list  {
+    min-width: max-content;
+    & .candidates-list-grid {
+        grid-gap: 29px;
+        width: 100%;
+    }
+}
+
+.candidate-list-container-grid .crazy-grid-parent.candidates-list {
+    padding: 0;
+}
+
+.crazy-grid.candidates-list-grid.list-view {
+    grid-row-gap: 9px;
+}

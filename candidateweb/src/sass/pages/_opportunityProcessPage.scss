@@ -1,0 +1,152 @@
+.talent-opportunity-process-component {
+    max-width: 760px;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 25px;
+    position: relative;
+    padding-bottom: 36px;
+    & h3 {
+        text-align: center;
+        font-size: 14px;
+    }
+    &::after {
+        content: '';
+        width: 95%;
+        position: absolute;
+        top: 0;
+        left: 2.5%;
+        height: 3px;
+        background-color: #d9d9d9;
+    }
+    & .opportunity-step {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding-left: 20px;
+        margin-right: 16px;
+        min-height: 64px;
+        flex-wrap: wrap;
+        & .opportunity-description {
+            display: flex;
+            align-items: center;
+            width: calc(100% - 120px);
+        }
+        & .step-description {
+            margin-left: 20px;
+            & p {
+                margin: 3px;
+            }
+        }
+        & .step-button-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        & .process-step {
+            font-weight: bold;
+            border-width: 2px;
+            border-style: solid;
+            border-color: $fluttr-caca;
+            border-radius: 100%;
+            width: 29px;
+            height: 29px;
+            min-width: 29px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $fluttr-caca;
+            &.active-step {
+                color: $fluttr-black;
+                border-color: $fluttr-orange;
+                &:before {
+                    content: '';
+                    height: 100%;
+                    width: 4px;
+                    background-color: $fluttr-orange;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+            &.completed-step {
+                color: $fluttr-green;
+                border-color: $fluttr-green;
+            }
+
+            &.declined-step {
+                color: $fluttr-red;
+                border-color: $fluttr-red;
+            }
+        }
+    }
+    .opportunity-process-message {
+        margin-top: 36px;
+        padding: 0 100px;
+        text-align: center;
+        font-size: 2px;
+
+    }
+    & .challenge-expire-time {
+        color: $fluttr-orange;
+    }
+    .opportunity-process-complete {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        & img {
+            margin-bottom: 23px;
+        }
+        & p {
+            max-width: 80%;
+            margin-bottom: 0;
+            margin-top: 3px;
+            text-align: center;
+            &:first-child {
+                margin-top: 20px;
+            }
+        }
+        & .leaderboard {
+            color: $fluttr-orange;
+            margin-top: 23px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.opportunity-full-card-component {
+    max-width: 760px;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: white;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.31);
+}
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .talent-opportunity-process-component {
+        & .opportunity-step {
+            & .opportunity-description {
+                width: 100%;
+            }
+            & .step-button-container {
+                width: 100%;
+                justify-content: center;
+                & .btn {
+                    margin: 22px 0;
+                    &[disabled] {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .process-steps-container {
+        & > h3 {
+            padding: 0 20px;
+        }
+    }
+}

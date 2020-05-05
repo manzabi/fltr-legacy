@@ -1,0 +1,14 @@
+.fluttr-badge {
+    padding: 2px 10px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    &-category {
+        background-color: #417505
+    }
+    &-skill {
+        background-color: #3498DB
+    }
+}

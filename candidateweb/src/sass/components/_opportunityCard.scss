@@ -1,0 +1,100 @@
+.opportunity-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    & .company-logo {
+        width: 122px;
+        & img {
+            width: 87px;
+            height: 87px;
+            margin: 0 9px 0 17px;
+        }
+    }
+    & .card-contaner {
+        width: calc(100% - 150px);
+        position: relative;
+        padding-top: 47px;
+        margin-bottom: 20px;
+        & h3 {
+            margin-top: 0;
+        }
+        & .opportunity-expire {
+            position: absolute;
+            top: 0px;
+            right: 19px;
+            color: #95a5a6;
+            font-size: 12px;
+            & i {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.opportunity-details-mobile {
+    margin: 0 20px;
+    max-height: 0;
+    transition: max-height .3s cubic-bezier(0, 0, 0, 1.01);
+    overflow: hidden;
+    &.toggled {
+        transition: max-height .3s cubic-bezier(1, 0.05, 1, 1);
+        max-height: 500px;
+    }
+}
+
+.opportunity-card .card-contaner , .opportunity-details-mobile {
+    & .opportunity-details-body {
+        color: $fluttr-black;
+        & i {
+            margin-right: 5px;
+        }
+        & p {
+            display: inline-block;
+            margin: 0;
+            margin-right: 35px;
+            font-size: 12px;
+        }
+        & > *:last-child {
+            margin-bottom: 15px;
+        }
+    }
+    & .description-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: $fluttr-green;
+        margin-right: 18px;
+        margin-left: auto;
+        width: max-content;
+        cursor: pointer;
+        & i {
+            font-size: 20px;
+            padding-top: 3px;
+        }
+        & p {
+            font-size: 12px;
+            margin: 0;
+            padding-right: 5px;
+        }
+    }
+}
+
+.description-toggle {
+    text-align: center;
+    width: 40px;
+    font-size: 20px;
+}
+
+@media (min-width: $mobile-min) and (max-width: $tablet-max) {
+    .opportunity-card {
+        & .company-logo {
+            width: 102px;
+            & img {
+                width: 67px;
+                height: 67px;
+                margin: 0 9px 0 17px;
+            }
+        }
+    }
+}

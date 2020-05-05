@@ -1,0 +1,35 @@
+.reviewCompletedBanner {
+
+  h2.reviewCompletetBannerTitle{
+    text-align:center;
+    color: white;
+    font-weight: 700;
+  }
+
+  h3.reviewCompletetBannerSubTitle{
+    text-align:center;
+    color: white;
+    font-weight: 400;
+    margin-top:0;
+  }
+
+
+  .wrap {
+    width: 100%;
+    height:auto;
+    margin: auto;
+    position:relative;
+  }
+
+  .text_over_image {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    color:#fff;
+    height:100px;
+  }
+
+}

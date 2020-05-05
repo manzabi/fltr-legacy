@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+#project-root {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    opacity: 1 !important;
+    transition: opacity 0.5s;
+}
+
+.leadinModal-content {
+  overflow: hidden !important;
+}
+
+.leadinModal-preview {
+  z-index: 998 !important;
+}
+
+.cookieConsent {
+  background: rgba(43, 55, 59, 0.8);
+  font-size: 14px;
+  & > p {
+    margin: 0px;
+  }
+}
+
+@media (max-width: $tablet - 1px) {
+  .cookieConsent {
+    min-height: 79px;
+    & > p {
+      width: calc(100% - 80px - 50px - 70px);
+    }
+  }
+}

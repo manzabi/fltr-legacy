@@ -1,0 +1,63 @@
+.recruiterOpportunityDetailContent {
+    
+    .nav-tabs {
+        background-color: $fluttr-white;
+        border-bottom: 1px solid $fluttr-light-grey;
+        font-size: 1.3em;
+        padding-top: 2em;
+        
+        li {
+            a {
+                border-radius: 0;
+                
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    
+    
+    .nav-tabs > li.active > a {
+        border: 1px solid $fluttr-light-grey;
+        background-color: $fluttr-light-grey;
+        color: $fluttr-black;
+        border-radius: 0;
+        font-weight: 700;
+        
+        &:hover {
+            border: 1px solid $fluttr-light-grey;
+        }
+    }
+    
+    .tab-content{
+        background-color: $fluttr-light-grey;
+    }
+    
+    .recruiterCandidatesComponentContent{
+        margin-top: 0px !important;
+    }
+    
+    .opportunity-header-card{
+        background-color: $fluttr-white;
+    }
+    
+    .opportunity-detail-header-status{
+        font-size: 1.5em;
+        color: $fluttr-black;
+    }
+}
+
+.recruiter-opportunity-buttons {
+    & .btn {
+        height: auto;
+    }
+}
+
+.recruiter-opportunities-filter {
+    margin-top: 10px;
+    & button {
+        margin-right: 13px;
+        margin-bottom: 13px;
+    }
+}

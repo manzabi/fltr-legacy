@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/modules/swagger-codegen-cli-j7/fltr-swagger-codegen-cli-j7.iml" filepath="$PROJECT_DIR$/modules/swagger-codegen-cli-j7/fltr-swagger-codegen-cli-j7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/swagger-codegen-j7/fltr-swagger-codegen-j7.iml" filepath="$PROJECT_DIR$/modules/swagger-codegen-j7/fltr-swagger-codegen-j7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/swagger-codegen-maven-plugin-j7/fltr-swagger-codegen-maven-plugin.iml" filepath="$PROJECT_DIR$/modules/swagger-codegen-maven-plugin-j7/fltr-swagger-codegen-maven-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fltr-swagger-codegen-project-j7.iml" filepath="$PROJECT_DIR$/fltr-swagger-codegen-project-j7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/swagger-generator-j7/fltr-swagger-generator-j7.iml" filepath="$PROJECT_DIR$/modules/swagger-generator-j7/fltr-swagger-generator-j7.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,54 @@
+.opportunity-dashboard-panel{
+  .opp-dashboard-counter{
+    font-size: 30px;
+  }
+
+  .opp-dashboard-header{
+    > a {
+      line-height: 1.5 !important;
+      padding-top: 15px;
+    }
+  }
+
+  .opp-dashboard-description{
+    white-space: normal;
+    font-size: 0.9em;
+  }
+
+  tr:first-child {
+    td {
+      border-top: none;
+    }
+  }
+
+  tr {
+    td > a {
+      text-transform: none;
+    }
+
+    td:first-child {
+      width: 70%;
+    }
+  }
+
+  .opportunity-timer{
+    font-size: 10px;
+  }
+
+  .opportunity-judge-ok{
+    font-size: 10px;
+    color: $fluttr-green;
+  }
+
+  .header-value{
+    font-size: 28px;
+    font-weight: 400;
+  }
+
+  .header-label{
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+
+}

@@ -1,0 +1,296 @@
+.boarding-flow-page {
+  height: 100%;
+  & .boarding-flow-menu-container {
+    height: calc(100%);
+    background-color: #34495e;
+    width: 350px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+  }
+  & .boarding-flow-content-container {
+    height: calc(100%);
+    width: calc(100% - 350px);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    & .skipBoarding {
+      display: block;
+      width: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    & .boarding-body {
+      height: 90%;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      &.custom-bg {
+        align-items: center;
+        background-color: transparent;
+        background: #eef5fb; /* Old browsers */
+        background: -moz-linear-gradient(90deg, rgba(238,241,251, 1) 0%, rgba(242,254,250, 1) 49%, rgba(242,254,250, 1) 49%, rgba(242,254,250, 1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(90deg, rgba(238,241,251, 1) 0%,rgba(238,241,251, 1) 49%,rgba(242,254,250, 1) 49%,rgba(242,254,250, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(90deg, rgba(238,241,251, 1) 0%,rgba(238,241,251, 1) 49%,rgba(242,254,250, 1) 49%,rgba(242,254,250, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+    }
+    & .step-description {
+      text-align: center;
+      padding: 0px 40px;
+      width: 70%;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 80px;
+      position: relative;
+    }
+    & .boarding-controls {
+      z-index: 100;
+      height: 10%;
+      background-color: #ecf0f1;
+      border: solid 1px #979797;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 100px;
+    }
+  }
+  & .boarding-flow-final {
+    height: calc(100%);
+    width: calc(100% - 350px);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    & .boarding-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+$baseline: 1.5rem;
+$step-line-width: rem(4px);
+
+.boarding-flow-menu-container {
+  & ul {
+    list-style: none;
+    padding-left: 0px;
+  }
+  & section {
+    display: block;
+    position: relative;
+  }
+
+  & section:before {
+    content: '';
+    width: $step-line-width;
+    position: absolute;
+    background: #eee;
+    // Shift the .step margin, plus circle radius,
+    // plus half the width of myself.
+    left: $baseline*3 - $step-line-width/2;
+    top: 0;
+    bottom: $baseline*4;
+  }
+
+  & .step, .chilldren-step {
+    min-height: $baseline;
+    margin-left:$baseline;
+    position: relative;
+    padding-left:$baseline*3;
+    line-height: $baseline*4;
+    cursor: pointer;
+    color: #9b9b9b;
+  }
+  & .chilldren-step {
+    line-height: $baseline*2;
+    font-size: 16px;
+  }
+  & .step:before {
+    content: attr(data-step);
+    display: block;
+    height: $baseline*2;
+    width: $baseline*2;
+    background: transparent;
+    border: 3px solid #9b9b9b;
+    margin: $baseline 0;
+    text-align: center;
+    font-size: 2rem;
+    align-self: center;
+    line-height: 2.7rem;
+    border-radius: $baseline;
+    position: absolute;
+    left: 0;
+    color: #9b9b9b;
+    top: 0;
+  }
+  & section {
+    & ul {
+      display: none;
+    }
+    &.category-active ul {
+      display: block;
+    }
+  }
+  & .step-active {
+    color: #8A81E1;
+  }
+  & .step-active.step:before {
+    border: 3px solid $fluttr-esmerald-green;
+    color: $fluttr-esmerald-green;
+  }
+
+  & .chilldren-step:before {
+    content: attr(data-step);
+    display: block;
+    height: $baseline;
+    width: $baseline;
+    margin: $baseline/4 $baseline/2;
+    background: #9b9b9b;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: $baseline*2;
+    border-radius: $baseline;
+    position: absolute;
+    left: 0;
+    color: white;
+    top: 0;
+  }
+  & .step-active.chilldren-step:before {
+    background: $fluttr-esmerald-green;
+  }
+}
+.boarding-flow-start-component {
+  background: url('https://s3.eu-west-3.amazonaws.com/fluttr-files/all/website/images/boarding/boarding-init.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: fixed;
+  padding: 0 20%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $fluttr-black;
+}
+
+.boarding-title {
+  color: #243342;
+  margin-top: 12px;
+}
+.boarding-body {
+  color: #243342;
+  margin-bottom: 0;
+}
+
+.boarding-skip-modal {
+  & .modal-header {
+    border: 0px;
+    & h2 {
+      font-size: 21px;
+      text-align: center;
+      color: #4a4a4a;
+      margin-bottom: 100px;
+    }
+  }
+  & .button-container {
+    display: flex;
+    justify-content: space-around;
+    & btn {
+      display: block;
+    }
+  }
+}
+
+.boarding-gift-modal {
+  background-image: url('https://s3.eu-west-3.amazonaws.com/fluttr-files/all/website/images/boarding/boarding-complete.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  & .gift-container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & img {
+      width: 100%;
+      display: block;
+    }
+    & h2 {
+      width: 70%;
+      position: absolute;
+      height: 48px;
+      font-size: 24px;
+      text-align: center;
+      color: #e67333;
+      top: 135px;
+    }
+    & button {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+#animated-reward {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+@media (min-width: 1024px) and (max-width: 1151px) {
+  .boarding-gift-modal {
+    & .gift-container {
+      & h2 {
+        top: 75px;
+      }
+    }
+  }
+}
+//-----------------------MOBILE MEDIA QUERY
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+  .boarding-flow-start-component {
+    padding: 0 10%;
+    background: url('https://s3.eu-west-3.amazonaws.com/fluttr-files/all/website/images/boarding/boarding-mobile-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+//-----------------------TABLET MEDIA QUERY
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .boarding-flow-start-component {
+    width: 90%;
+    margin: auto;
+    background: url('https://s3.eu-west-3.amazonaws.com/fluttr-files/all/website/images/boarding/boarding-mobile-bg.jpg');
+    background-position: center;
+    background-repeat: cover;
+    background-size: cover;
+  }
+}
+//-----------------------DESKTOP SMALL MEDIA QUERY
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+
+}
+//-----------------------DESKTOP LONG MEDIA QUERY
+@media (min-width: $desktop-lg-min) {
+
+}

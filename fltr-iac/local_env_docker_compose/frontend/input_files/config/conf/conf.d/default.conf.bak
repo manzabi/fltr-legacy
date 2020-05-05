@@ -1,0 +1,28 @@
+server {
+    listen              8081;
+
+    location / {
+        root   /usr/share/nginx/console;
+        index  index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+}
+server {
+    listen              8083;
+
+    location / {
+        root   /usr/share/nginx/talent;
+        index  index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+server {
+    listen              8082;
+
+    location / {
+        root   /usr/share/nginx/website;
+        index  index.html index.htm;
+        try_files $uri $uri/ /index.html;
+    }
+}

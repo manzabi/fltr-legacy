@@ -1,0 +1,36 @@
+.challenge-upsell-modal {
+    display: flex;
+    align-items: stretch;
+    height: 517px;
+    width: 1200px;
+    max-width: 90vw;
+    margin: 0;
+    & img {
+        display: block;
+        height: 517px;
+        width: 600px;
+    }
+    & .upsell-content {
+        padding: 0 20px;
+        text-align: center;
+        & h2 {
+            margin: 100px 0 36px 0;
+        }
+        & ul {
+            text-align: left;
+            & li {
+                margin-bottom: 18px;
+            }
+            margin-bottom: 50px;
+        }
+        & .button-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & button {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.opportunityInputContent{
+  .companyLogo{
+    border: 1px solid #eee;
+    width:100%;
+  }
+
+  .checkbox-inline{
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .input-salary{
+    border-radius: 0 !important;
+    text-align: right;
+  }
+
+  .input-salary-sx{
+    border-bottom-left-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    background: white;
+    border: 2px solid #ddd;
+    border-right: 0px;
+
+  }
+  .input-salary-dx{
+    border-bottom-right-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    background: white;
+    border: 2px solid #ddd;
+    border-left: 0px;
+  }
+}

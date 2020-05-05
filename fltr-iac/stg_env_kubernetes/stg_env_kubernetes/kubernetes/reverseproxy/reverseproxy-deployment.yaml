@@ -1,0 +1,46 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: reverseproxy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: reverseproxy
+    spec:
+      containers:
+      - name: reverseproxy
+        image: eu.gcr.io/stg-env-228711/fluttr-architecture-image-repository/reverseproxy:15042019_6
+        ports:
+        - containerPort: 443
+        - containerPort: 80
+        - containerPort: 8080
+          protocol: TCP
+        env:
+          - name: WATCH_PATHS
+            value: "/etc/nginx/conf.d/ /etc/nginx/ssl"
+        volumeMounts:
+        - mountPath: /etc/nginx/ssl
+          name: secret-volume
+        - mountPath: /etc/nginx/conf.d/
+          name: configmap-volume
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+      volumes:
+      - name: secret-volume
+        secret:
+           secretName: stg-nginx-certs-keys
+      - name: configmap-volume
+        configMap:
+            name: stg-nginxconfigmap

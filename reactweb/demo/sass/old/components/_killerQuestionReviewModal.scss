@@ -1,0 +1,27 @@
+.killer-questions-review-modal {
+    padding-bottom: 100px;
+    & .question-overview {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 25px;
+        color: $fluttr-black;
+        font-size: 18px;
+        & p {
+            margin: 0;
+            & strong {
+                margin-left: 15px;
+            }
+        }
+        & i {
+            font-size: 30px;
+            margin-left: 30px;
+        }
+    }
+    & .summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 25px;
+    }
+}

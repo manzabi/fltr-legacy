@@ -1,0 +1,70 @@
+version: '3'
+services:
+    reverseproxy:
+        image: nginx-proxy
+        build: ./reverseproxy/
+        ports:
+            - 80:80
+        restart: always
+        depends_on:
+            - wildfly
+    postgres:
+        image: mdillon/postgis:9.6
+        container_name: postgres
+        environment:
+            - LC_ALL=C.UTF-8
+            - POSTGRES_DBNAME=bizaround
+            - POSTGRES_USER=bizaround
+            - POSTGRES_PASS=bizaround
+            - POSTGRES_PORT=5432
+        volumes:
+            - $PWD/postgresql/input_files/import-postgres.sql:/docker-entrypoint-initdb.d/import-postgres.sql
+            - $PWD/output_files/postgres_data:/var/lib/postgresql/data
+        ports:
+            - 5432:5432
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin
+        depends_on:
+            - postgres
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=biagio@fluttr.in
+            - PGADMIN_DEFAULT_PASSWORD=admin
+            - SCRIPT_NAME=/pga
+        ports:
+            - 8070:80
+    wildfly:
+        image: fluttras
+        container_name: wildfly
+        build: ./wildfly/
+        environment:
+            - DB_HOST=postgres
+            - DB_PORT=5432
+            - DB_NAME=bizaround
+            - DB_USER=bizaround
+            - DB_PASS=bizaround
+            - DS_NAME=postgresDS
+            - JNDI_NAME=java:jboss/datasources/postgresDS
+            - SPRING_PROFILES_ACTIVE=development
+            - JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+            - BIZAROUND_ENVIRONMENT=local
+        depends_on:
+            - postgres
+        volumes:
+            - $PWD/output_files/logs:/opt/jboss/wildfly/standalone/log
+            - $PWD/output_files/fluttrdata:/opt/jboss/wildfly/fluttrdata
+            #- jboss-conf:/opt/jboss/wildfly/standalone/configuration
+        ports:
+            - 8080:8080
+            - 9990:9990
+    weblogs:
+        image: opencell/alpine-tailon
+        container_name: tailon
+        ports:
+            - 8071:8080
+        depends_on:
+            - wildfly
+        volumes:
+            - $PWD/output_files/logs:/logs/
+volumes:
+    jboss-conf: {}

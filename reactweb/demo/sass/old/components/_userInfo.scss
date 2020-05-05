@@ -1,0 +1,15 @@
+.user-info-box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .inbox-avatar-name {
+    padding-left: 30px;
+  }
+  .user-info-position {
+    padding-top:8px;
+  }
+  .user-info-level {
+    margin-left: 20px;
+    color: $fluttr-blue;
+  }
+}

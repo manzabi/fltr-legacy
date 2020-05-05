@@ -1,0 +1,12 @@
+.reviewComponent {
+
+  .nav-tabs {
+    background-color: $fluttr-light-grey;
+    border-bottom: 1px solid $fluttr-light-grey;
+
+  }
+
+  .nav-tabs > li.active > a {
+    border: 1px solid white;
+  }
+}

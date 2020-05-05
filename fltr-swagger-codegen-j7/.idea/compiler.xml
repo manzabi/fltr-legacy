@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="fltr-swagger-codegen-maven-plugin" />
+        <module name="fltr-swagger-codegen-cli-j7" />
+        <module name="fltr-swagger-codegen-j7" />
+        <module name="fltr-swagger-generator-j7" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="fltr-swagger-codegen-cli-j7" target="1.6" />
+      <module name="fltr-swagger-codegen-j7" target="1.7" />
+      <module name="fltr-swagger-codegen-maven-plugin" target="1.6" />
+      <module name="fltr-swagger-codegen-project-j7" target="1.6" />
+      <module name="fltr-swagger-generator-j7" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

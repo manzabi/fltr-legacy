@@ -1,0 +1,132 @@
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+.btn {
+  position: relative;
+    border-radius: 100px;
+    padding: 13px 40px;
+    font-size: 20px;
+    font-weight: normal;
+    border: 0px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &.btn-red {
+        color: white;
+        background-color: #e74c3c;
+        border-color: #e74c3c;
+
+    }
+    &.btn-blue {
+        background-color: $fluttr-blue;
+        border-color: $fluttr-blue;
+        color: white;
+    }
+    &.btn-orange {
+        background-color: #ffa600;
+        border-color: #ffa600;
+        color: white;
+        border-radius: 50px;
+    }
+    &.btn-black {
+        background-color: #333;
+        color: #979797;
+    }
+    &.btn-green{
+      background-color: rgba(26, 188, 156, .9);
+      color: white;
+    }
+    &.btn-full-page {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+    &.btn-md {
+      height: 36px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 16px;
+    }
+    &.btn-small {
+        width: 120px;
+        height: 30px;
+        padding: 5px 0px;
+        font-size: 16px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &.btn-center {
+      display: block;
+      margin: auto;
+    }
+    &.loading {
+      cursor: wait;
+      &::after {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 40%;
+        left: 90%;
+        width: 30px;
+        height: 30px;
+        margin-top: -10px;
+        margin-left: -10px;
+        border-radius: 50%;
+        border-top: 2px solid #fff;
+        border-right: 2px solid transparent;
+        animation: spinner .6s linear infinite;
+      }
+    }
+}
+a.link-as-button {
+  display: block;
+}
+
+.fa-linkedin-in {
+  color: #fff;
+}
+
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+  .btn {
+    &.btn-right, &.btn-left {
+      display: block;
+      margin: auto;
+    }
+  }
+}
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+  .btn {
+    &.btn-right, &.btn-left {
+      display: block;
+      margin: auto;
+    }
+  }
+}
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+  .btn {
+    &.btn-right {
+      display: block;
+      margin-left: auto;
+    }
+    &.btn-left {
+      display: block;
+      margin-right: auto;
+    }
+  }
+}
+@media (min-width: $desktop-lg-min){
+  .btn {
+    &.btn-right {
+      display: block;
+      margin-left: auto;
+      margin-right: 0px;
+    }
+    &.btn-left {
+      display: block;
+      margin-right: auto;
+      margin-left: 0px;
+    }
+  }
+}

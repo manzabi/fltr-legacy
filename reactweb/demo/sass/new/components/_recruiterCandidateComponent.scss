@@ -1,0 +1,240 @@
+.recruiterCandidatesComponent{
+    & .notifications-container {
+        & .new-candidates-banner {
+            height: 36px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 19px;
+            padding-right: 19px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            &:last-child {
+                margin-bottom: 26px;
+            }
+
+            & p, & h2 {
+                color: #FFFFFF;
+                margin: 0;
+            }
+
+            &.blue {
+                background-color: #00C0E6;
+
+                &:hover, &.active {
+                    background-color: #03ADCF;
+                }
+
+                &.inactive {
+                    background-color: mix(#03ADCF, #FFFFFF, 45);
+                }
+            }
+
+            &.orange {
+                background-color: #FFB500;
+
+                &:hover, &.active {
+                    background-color: #FF9001;
+                }
+
+                &.inactive {
+                    background-color: mix(#FF9001, #FFFFFF, 45);
+                }
+            }
+
+            &.green {
+                background-color: #5CD687;
+
+                &:hover, &.active {
+                    background-color: #4BC576;
+                }
+
+                &.inactive {
+                    background-color: mix(#4BC576, #FFFFFF, 45);
+                }
+            }
+
+            & .left-side, & .right-side {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+    }
+    & .opportunity-filters {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        //margin-bottom: 10px;
+        & .opportunity-filters-container {
+            & .selected-container {
+                padding: 0 0 0 7px;
+            }
+        }
+        & .opportunity-filters-container, & .sort-dropdown-container, & .opportunity-tags-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            & #candidate-searchbar{
+                height: 34px;
+                border-radius: 5px;
+                background-color: #ededed;
+                border-color: transparent;
+                &:hover, &.open {
+                    background-color: white;
+                    border-color: $crazy-primary;
+                }
+                &.typing {
+                    & .writing-container {
+                        padding: 0 11px;
+                        background-color: transparent;
+
+                        & input {
+                            background-color: transparent;
+                            padding: 0;
+                        }
+                        & .crazy-icon {
+                            display: none;
+                            left: 13px;
+                            right: unset;
+                        }
+                    }
+                }
+                & .writing-container {
+                    padding-left: 40px;
+                    padding-right: 11px;
+                    background-color: transparent;
+                    color: $crazy-mediumgrey;
+                    & input {
+                        background-color: transparent;
+                        padding: 0;
+                        color: $crazy-mediumgrey;
+                        &::placeholder {
+                            color: $crazy-mediumgrey;
+                        }
+                    }
+                    & .crazy-icon {
+                        left: 9px;
+                        right: unset;
+                        color: $crazy-mediumgrey;
+                    }
+                }
+                & .options-wrapper {
+                    top: 26px;
+                }
+            }
+            & > p {
+                margin: 0 10px 0 0;
+            }
+            & .crazy-searchbar, & .fake-selected-member {
+                width: 270px;
+            }
+            & .fake-selected-member {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+                border-radius: 4px;
+                height: 36px;
+                padding: 0 11px;
+                cursor: pointer;
+                border: 2px solid $crazy-primary;
+                & p {
+                    margin: 0;
+                }
+                & i {
+                    color: #2C3E50;
+                    font-size: 12px;
+                    display: flex;
+                    &.crazy-icon-cancel {
+                        font-size: 8px;
+                    }
+                }
+            }
+            & .filters-tooltip {
+                font-size: 12px;
+            }
+            & .btn-fluttr {
+                margin-right: 10px;
+                font-size: 14px;
+            }
+            & .options-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & .crazy-tooltip {
+                    &:first-child {
+                        & .tooltip-bubble {
+                            left: 15px;
+                            transform: translateX(-38%);
+                            &:after {
+                                left: 39%;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        & .tooltip-bubble {
+                            left: 15px;
+                            transform: translateX(-38%);
+                            &:after {
+                                left: 43%;
+                            }
+                        }
+                    }
+                }
+                & .tooltip-bubble {
+                    top: calc(100% + 14px);
+                }
+                & .crazy-button {
+                    color: $crazy-mediumgrey;
+                    &:active {
+                        background-color: transparent;
+                    }
+                    &.selected {
+                        color: $crazy-primary;
+                        font-weight: bold;
+                    }
+                    &:hover {
+                        color: $crazy-primary;
+                    }
+                }
+            }
+        }
+        & label {
+            margin-right: 13px;
+            margin-bottom: 0;
+        }
+    }
+    & .no-filters-section {
+        & .list-container {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.form-control.rbt-input{
+    height: 43px;
+    border-radius: 4px;
+    border: solid 1.5px #d8d8d8;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+    font-size: 12px;
+    & ::placeholder {
+        color: #a0a8b9;
+    }
+}
+.rbt-input-wrapper{
+    float:left;
+    width: 90%;
+}
+.rbt-aux{
+    float:right;
+}

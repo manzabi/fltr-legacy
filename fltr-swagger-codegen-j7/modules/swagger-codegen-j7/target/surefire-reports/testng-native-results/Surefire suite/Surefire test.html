@@ -1,0 +1,474 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>79/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue May 28 12:40:11 CEST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>1 seconds (1428 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testAdditionalProperties()'><b>testAdditionalProperties</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testApiPackage()'><b>testApiPackage</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testArtifactId()'><b>testArtifactId</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testArtifactVersion()'><b>testArtifactVersion</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testDynamicProperties()'><b>testDynamicProperties</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testFromFile()'><b>testFromFile</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testGroupId()'><b>testGroupId</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testImportMappings()'><b>testImportMappings</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testInstantiationTypes()'><b>testInstantiationTypes</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testInvokerPackage()'><b>testInvokerPackage</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testLanguageSpecificPrimitives()'><b>testLanguageSpecificPrimitives</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testLibrary()'><b>testLibrary</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SwaggerYamlGenerator@78a773fd</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.DartClientCodegen@57c03d88</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.NodeJSServerCodegen@16aa8654</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.PythonClientCodegen@6d7fc27</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SwiftCodegen@45ac5f9b</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SinatraServerCodegen@135606db</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.TizenClientCodegen@518caac3</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.PhpClientCodegen@68034211</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.CsharpDotNet2ClientCodegen@4f74980d</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.TypeScriptAngularClientCodegen@6c372fe6</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.FlashClientCodegen@58594a11</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.AkkaScalaClientCodegen@2a3888c1</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.PerlClientCodegen@4167d97b</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.ObjcClientCodegen@14fa86ae</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SpringMVCServerCodegen@6e15fe2</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.AsyncScalaClientCodegen@68f1b17f</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.JaxRSServerCodegen@1722011b</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.JavaInflectorServerCodegen@57ad2aa7</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.StaticDocCodegen@5b3f61ff</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.AndroidClientCodegen@3e2059ae</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SwaggerGenerator@398dada8</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SilexServerCodegen@7cb502c</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.StaticHtmlGenerator@275bf9b3</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.TypeScriptNodeClientCodegen@1b8a29df</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.CSharpClientCodegen@4fbe37eb</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.RubyClientCodegen@12a94400</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.JavaClientCodegen@6a47b187</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.Qt5CPPGenerator@2049a9c1</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.ScalatraServerCodegen@1ef6d34c</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByFullQualifiedName()'><b>testLoadByFullQualifiedName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.ScalaClientCodegen@46271dd6</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SwaggerYamlGenerator@11bb571c</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.DartClientCodegen@7c51f34b</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.NodeJSServerCodegen@5495333e</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.PythonClientCodegen@2a225dd7</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SwiftCodegen@61eaec38</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SinatraServerCodegen@125290e5</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.TizenClientCodegen@6fa34d52</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.PhpClientCodegen@57576994</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.CsharpDotNet2ClientCodegen@616ac46a</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.TypeScriptAngularClientCodegen@67b9b51a</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.FlashClientCodegen@1205bd62</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.AkkaScalaClientCodegen@7ef27d7f</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.PerlClientCodegen@490caf5f</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.ObjcClientCodegen@6337c201</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SpringMVCServerCodegen@5c669da8</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.AsyncScalaClientCodegen@31920ade</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.JaxRSServerCodegen@1d483de4</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.JavaInflectorServerCodegen@4032d386</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.StaticDocCodegen@28d18df5</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.AndroidClientCodegen@934b6cb</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SwaggerGenerator@55cf0d14</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.SilexServerCodegen@3b74ac8</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.StaticHtmlGenerator@27adc16e</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.TypeScriptNodeClientCodegen@b83a9be</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.CSharpClientCodegen@2609b277</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.RubyClientCodegen@1fd14d74</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.JavaClientCodegen@563e4951</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.Qt5CPPGenerator@4066c471</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.ScalatraServerCodegen@2b175c00</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.CodegenConfigLoaderTest.testLoadByName()'><b>testLoadByName</b><br>Test class: io.swagger.codegen.CodegenConfigLoaderTest<br>Parameters: io.swagger.codegen.languages.ScalaClientCodegen@3eb81efb</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.CodegenConfigLoaderTest@5a8e6209</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testModelPackage()'><b>testModelPackage</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testSkipOverwrite()'><b>testSkipOverwrite</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.DefaultGeneratorTest.testSkipOverwrite()'><b>testSkipOverwrite</b><br>Test class: io.swagger.codegen.DefaultGeneratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.DefaultGeneratorTest@61f8bee4</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testSystemProperties()'><b>testSystemProperties</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testTemplateDir()'><b>testTemplateDir</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testTypeMappings()'><b>testTypeMappings</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+<tr>
+<td title='io.swagger.codegen.config.CodegenConfiguratorTest.testVerbose()'><b>testVerbose</b><br>Test class: io.swagger.codegen.config.CodegenConfiguratorTest</td>
+<td></td>
+<td>0</td>
+<td>io.swagger.codegen.config.CodegenConfiguratorTest@1d16f93d</td></tr>
+</table><p>
+</body>
+</html>

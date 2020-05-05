@@ -1,0 +1,39 @@
+.recruiterOpportunityTrello {
+
+  .userName{
+    font-size:1em;
+  }
+
+  /* stars*/
+
+  /* trello */
+
+  .kjauoa{
+    min-width: 20%;
+  }
+
+  .hNTmYK{
+    height: 95vh;
+    max-height: 95vh;
+    background-color: $fluttr-light-grey
+  }
+
+  .candidateTrelloCard{
+    .rightSide{
+      padding-right:0;
+    }
+
+    .starRatingContainer{
+      &:hover{
+        cursor:pointer;
+      }
+
+      .dv-star-rating-star{
+        cursor:pointer !important;
+        font-size: 1.4em;
+        margin: 5px 1px 0px 1px;
+      }
+    }
+
+  }
+}

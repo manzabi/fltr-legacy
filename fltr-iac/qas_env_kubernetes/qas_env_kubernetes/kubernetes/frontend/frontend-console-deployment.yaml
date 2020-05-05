@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: frontend-console
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: frontend-console
+    spec:
+      containers:
+        - name: frontend-console
+          image: giantswarm/dummy-image:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8080

@@ -1,0 +1,5 @@
+/dist
+/node_modules
+/src/routes/old-template
+**/*.css
+**/*.scss

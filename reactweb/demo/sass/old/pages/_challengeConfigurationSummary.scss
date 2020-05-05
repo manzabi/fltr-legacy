@@ -1,0 +1,19 @@
+.challenge-configuration-summary {
+    background-color: white;
+    // Expert list
+    & .judge-list-container {
+        & .judge-list-item {
+            display: flex;
+            align-items: center;
+            & img {
+                width: 40px;
+            }
+            & div {
+                width: calc(100% - 40px);
+                & p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.container {
+    box-sizing: border-box;
+}
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $tablet-max) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (min-width: $desktop-lg) {
+  .container {
+    width: 60%;
+    margin: auto;
+  }
+}

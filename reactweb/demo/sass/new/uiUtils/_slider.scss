@@ -1,0 +1,92 @@
+@function makelongshadow($color, $size) {
+    $val: 5px 0 0 $size $color;
+    
+    @for $i from 6 through 240 {
+      $val: #{$val}, #{$i}px 0 0 $size #{$color};
+    }
+    
+    @return $val;
+}
+
+.crazy-slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    min-height: 50px;
+    overflow: hidden;
+    width: 100%;
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    &::-webkit-slider-runnable-track {
+        background: $crazy-orange;
+        content: '';
+        height: 4px;
+        border-radius: 2px;
+    }
+    &::-webkit-slider-thumb {
+        height: 14px;
+        width: 14px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: $crazy-orange;
+        margin-top: -5px;
+        border-radius: 50%;
+        box-shadow: makelongshadow($crazy-lightgrey, -5px);
+    }
+    &::-moz-range-track {
+        width: 240px;
+        height: 4px;
+        border-radius: 2px;
+    }
+    &::-moz-range-thumb {
+        height: 14px;
+        width: 14px;
+        background: $crazy-orange;
+        margin-top: -5px;
+        border-radius: 50%;
+        position: relative;
+    }
+    &::-moz-range-progress {
+        height: 4px;
+        border-radius: 2px;
+        background: $crazy-orange;
+        border: 0;
+        margin-top: 0;
+    }
+    &::-ms-track {
+        background: transparent;
+        border: 0;
+        border-color: transparent;
+        border-radius: 0;
+        border-width: 0;
+        color: transparent;
+        height: 4px;
+        border-radius: 2px;
+        margin-top: 10px;
+        width: 240px;
+    }
+    &::-ms-thumb {
+        height: 14px;
+        width: 14px;
+        background-color: $crazy-orange;
+        margin-top: -5px;
+        border-radius: 50%;
+    }
+    &::-ms-fill-lower {
+        background-color: $crazy-orange;
+        border-radius: 0;
+    }
+    &::-ms-fill-upper {
+        background-color: $crazy-lightgrey;
+        border-radius: 0;
+    }
+    &::-ms-tooltip {
+        display: none; 
+    }
+}

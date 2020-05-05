@@ -1,0 +1,52 @@
+@mixin fluttr-font($size, $lineHeight) {
+    font-size: $size;
+    line-height: $lineHeight;
+    color: $fluttr-black;
+}
+
+.fluttr-header-big, .fluttr-header-md, .fluttr-header-small {
+    font-weight: bold;
+}
+
+.fluttr-text-big, .fluttr-text-md, .fluttr-text-small {
+    font-weight: normal;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .fluttr-header-big { @include fluttr-font(30px, 1.2); }
+    .fluttr-header-md { @include fluttr-font(20px, 1.2); }
+    .fluttr-header-small { @include fluttr-font(18px, 1.2); }
+    .fluttr-text-big { @include fluttr-font(18px, 1.6); }
+    .fluttr-text-md { @include fluttr-font(16px, 1.6); }
+    .fluttr-text-small { @include fluttr-font(14px, 1.6); }
+}
+
+@media (min-width: $tablet) and (max-width: $tablet-max) {
+    .fluttr-header-big { @include fluttr-font(30px, 1.2); }
+    .fluttr-header-md { @include fluttr-font(21px, 1.2); }
+    .fluttr-header-small { @include fluttr-font(18px, 1.2); }
+    .fluttr-text-big { @include fluttr-font(18px, 1.6); }
+    .fluttr-text-md { @include fluttr-font(16px, 1.6); }
+    .fluttr-text-small { @include fluttr-font(14px, 1.6); }
+}
+
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+    .fluttr-header-big { @include fluttr-font(30px, 1.2); }
+    .fluttr-header-md { @include fluttr-font(28px, 1.2); }
+    .fluttr-header-small { @include fluttr-font(21px, 1.2); }
+    .fluttr-text-big { @include fluttr-font(20px, 1.6); }
+    .fluttr-text-md { @include fluttr-font(18px, 1.6); }
+    .fluttr-text-small { @include fluttr-font(16px, 1.6); }
+}
+@media (min-width: $desktop-lg) {
+    .fluttr-header-big { @include fluttr-font(40px, 1.2); }
+    .fluttr-header-md { @include fluttr-font(32px, 1.2); }
+    .fluttr-header-small { @include fluttr-font(24px, 1.2); }
+    .fluttr-text-big { @include fluttr-font(21px, 1.6); }
+    .fluttr-text-md { @include fluttr-font(18px, 1.6); }
+    .fluttr-text-small { @include fluttr-font(16px, 1.6); }
+}

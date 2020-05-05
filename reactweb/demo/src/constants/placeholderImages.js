@@ -1,0 +1,1 @@
+export const USER_PLACEHOLDER = 'https://files.fluttr.in/cdn/img/app/user/placeholder_profile_square_2x.jpg'

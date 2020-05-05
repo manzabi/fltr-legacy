@@ -1,0 +1,35 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.17.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: reverseproxy
+  name: reverseproxy
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: reverseproxy
+    spec:
+      containers:
+      - image: eu.gcr.io/exalted-entity-163908/fluttr-architecture-image-repository/fluttrproxynginx2:prd
+        name: reverseproxy
+        ports:
+        - containerPort: 80
+        resources: {}
+        volumeMounts:
+        - mountPath: /home/bizaround/webnginx
+          name: reverseproxy-claim0
+      restartPolicy: Always
+      volumes:
+      - name: reverseproxy-claim0
+        persistentVolumeClaim:
+          claimName: reverseproxy-claim0
+status: {}

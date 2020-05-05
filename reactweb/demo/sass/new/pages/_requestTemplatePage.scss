@@ -1,0 +1,35 @@
+.request-template-page {
+    & .close-button-wrapper {
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        margin-top: 47px;
+        & .close-button {
+            position: absolute;
+            right: -152px;
+            font-size: 12px;
+            user-select: none;
+            cursor: pointer;
+            &:after {
+                content: '\68';
+                font-family: fluttr-icon-set;
+                position: relative;
+                left: 8px;
+                top: 2px;
+                font-size: 12px;
+            }
+        }
+    }
+    & .request-template-card {
+        background-color: $crazy-white;
+        padding: 30px;
+        border: 1px solid $crazy-lightgrey;
+        margin-top: 50px;
+    }
+    & #form-container {
+        background-color: $crazy-white;
+        & .hs-form-iframe {
+            width: 100%;
+        }
+    }
+}

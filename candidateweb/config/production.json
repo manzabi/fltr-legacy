@@ -1,0 +1,6 @@
+{
+    "serverUrl": "https://www.fluttr.in",
+    "webLoginPage": "https://www.fluttr.in/bizAroundSite/signinWeb",
+    "webLogoutPage": "https://www.fluttr.in/bizAroundSite/logout",
+    "env": "production"
+}

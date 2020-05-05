@@ -1,0 +1,521 @@
+.recruiterCandidateCard{
+    padding: 32px 15px 15px 15px;
+    position: relative;
+    & .crazy-row {
+        grid-gap: 10px 0 !important;
+    }
+    & .recruiter-section-vertical{
+        padding-bottom: 10px;
+    }
+    &:hover {
+        & .user-profile-image-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+        }
+    }
+    & .user-profile-image-container {
+        width: 100px;
+        height: 100px;
+        margin: 10px auto;
+        transition: width cubic-bezier(0.075, 0.82, 0.165, 1) .5s,
+        margin cubic-bezier(0.075, 0.82, 0.165, 1) .5s,
+        height cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+        & img {
+            border-radius: 100px;
+        }
+    }
+    & .card-head-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 100%;
+        & .badge {
+            margin-top: 8px;
+        }
+    }
+    & .card-body-container {
+        margin: 0;
+        padding: 0;
+    }
+    & .candidate-reviews-section {
+        margin-top: 18px;
+        & * {
+            margin: 0;
+        }
+        & > div {
+            margin-top: 11px;
+        }
+        & .review-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            & p {
+                font-weight: bold;
+            }
+        }
+        & .review-score {
+            margin: auto;
+            width: 100%;
+            display: block;
+            // min-height: 40px;
+        }
+    }
+}
+.condidate-controls-contaner {
+    display: flex;
+    justify-content: space-around;
+    width: 24px;
+    position: relative;
+    left: 20px;
+    & > * {
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0 6px;
+    }
+    & i.disabled {
+        cursor: default;
+        opacity: .3;
+    }
+}
+@media only screen and (max-width: $screen-xs-max) and (min-width: 1px) {
+    .candidate-card-cv-modal {
+        & .candidateProfile {
+            width: 55%;
+            margin: auto;
+        }
+    }
+    .recruiterCandidateCardContainer.col-sm-6:nth-child(2n+1) {
+        clear: both;
+    }
+}
+@media only screen and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+    .candidate-card-cv-modal {
+        & .candidateProfile {
+            width: 25%;
+            margin-left: 37.5%;
+        }
+    }
+    .recruiterCandidateCardContainer.col-sm-6:nth-child(2n+1) {
+        clear: both;
+    }
+}
+@media only screen and (min-width: $screen-md-min) {
+    .candidate-card-cv-modal {
+        & .candidateProfile {
+            height: 90%;
+            width: 90%;
+            height: 90%;
+            margin-left: 50%;
+        }
+    }
+    .recruiterCandidateCardContainer.col-md-3:nth-child(4n+1) {
+        clear: both;
+    }
+}
+.candidateProfile {
+    margin: auto;
+    width: 45%;
+}
+.candidate-card-cv-modal {
+    position: relative;
+}
+
+.recruiterCandidateCardNoTopPadding{
+    padding: 10px 10px 10px 10px !important;
+    
+    .delete-icon-candidate{
+        font-size: 1.5em;
+    }
+    
+}
+
+/* Invitation card */
+.recruiterCandidateCardNoPadding{
+    padding: 0 !important;
+    
+    .delete-icon-candidate{
+        font-size: 1.2em;
+    }
+    
+    .invitation-user-wrapper{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        
+        .invitation-user-name{
+            color: $fluttr-black;
+            font-size: 1.2em;
+            font-weight: 400;
+            margin-bottom: 2em;
+            white-space: normal;
+            text-align: center;
+            overflow: hidden;
+            height: 2.4em !important;
+            line-height: 1.3;
+        }
+        
+        .invitation-user-email{
+            color: $fluttr-black;
+            font-size: 0.7em;
+            font-weight: 300;
+            text-align: center;
+        }
+    }
+}
+
+.recruiterCandidateCard{
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px 10px 10px 10px;
+    
+    .candidateName{
+        color: $fluttr-black;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .phoneContact{
+        color: $fluttr-black;
+        background-color: $fluttr-light-grey;
+        border-radius: 5px;
+        font-size: 13px;
+        transition: background-color 1s ease-out;
+        font-weight: 400;
+        padding: 5px 10px;
+        
+        &:hover{
+            background-color: $fluttr-grey;
+            cursor: pointer;
+        }
+    }
+    .candidateContact{
+        color: $fluttr-black;
+        background-color: $fluttr-light-grey;
+        border-radius: 5px;
+        font-size: 13px;
+        transition: background-color 1s ease-out;
+        font-weight: 400;
+        padding: 0 10px;
+        
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: block;
+        overflow: hidden;
+        
+        
+        &:hover{
+            background-color: $fluttr-grey;
+            cursor: pointer;
+        }
+    }
+    
+    .btn-asess{
+        margin: auto;
+        display: block;
+        //text-transform: none;
+        //font-size: 1em;
+    }
+    
+    .starRatingContainer{
+        &:hover{
+            cursor:pointer;
+        }
+        
+        .dv-star-rating-star{
+            cursor:pointer !important;
+        }
+    }
+    
+    .candidate-ranking-alternative{
+        color: $fluttr-black;
+        font-size: 13px;
+        font-weight: 400;
+        
+    }
+    
+    .candidate-status-div{
+        width:100%;
+    }
+    
+    .icon-notes{
+        color: $fluttr-yellow !important;  
+    }
+    
+    .candidate-icon-review{
+        font-size : 1.5em;
+    }
+    
+    .candidate-icon-note{
+        font-size : 1.3em;
+    }
+    
+    .dv-star-rating-star{
+        font-size: 1.4em;
+        margin: 5px 1px 0px 1px;
+    }
+    
+    .dv-star-rating-empty-star{
+        display:none;
+    }
+    
+    .dropdown-menu .divider {
+        margin-top: 0px;
+    }
+    
+    .candidate-note-number{
+        color: $fluttr-black;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    
+    .notesContainer{
+        position: relative;
+        height: 24px;
+        margin-right: 11px;
+        &:after {
+            content: attr(data-notes);
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            color: $fluttr-black;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+    }
+    
+    
+    .fluttr-bookmark {
+        position: relative;
+        font-size: $ribbonwidth;
+        color: $ribboncolor;
+        &:hover{
+            color: $ribboncolorSelected;
+            cursor: pointer;
+        }
+        &.ribbon-loading {
+            color: $ribboncolorLoading;
+            opacity: 0.5;
+            animation: pulsate 2s ease-out;
+            animation-iteration-count: infinite;
+            
+        }
+        &.ribbon-selected {
+            color: $ribboncolorSelected;  
+        }
+    }
+    
+    .dropdownUser{
+        padding:0 !important;
+        
+        .caret{
+            display: none;
+        }
+        
+        &:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        
+    }
+    
+    .dropdown-menu-right{
+        width: 250px;
+    }
+    
+    .candidate-note-link{
+        
+        &:hover{
+            color: $fluttr-orange;
+            cursor:pointer;
+        }
+    }
+    
+    .candidateRole{
+        color: $fluttr-black;
+        font-weight: 400;
+        font-size: 1.3em;
+        line-height: 1em;
+    }
+    
+}
+
+.rankComponent {
+    .starBadge{
+        &:hover{
+            animation: spin 3s infinite;
+            cursor: pointer;
+        }
+    }
+    
+    .candidateRank{
+        color: $fluttr-black;
+        font-size: 2.5em;
+        font-weight: 700;
+    }
+}
+
+.recruiterReviewCvModal{
+    & .candidate-review-cv-profile {
+        border-radius: 100px;
+    }
+    
+    .dv-star-rating-star{
+        font-size: 2.5em;
+    }
+    
+    .modal-reviewcv-candidate-name{
+        color: $fluttr-black;
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .user-social-cv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-reviewcv-recruiter-you{
+        color: $fluttr-black;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    
+}
+
+.recruiterReviewTalentModal{
+    
+    .modal-reviewtalent-judge-review{
+        & .profile-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & img {
+                height: unset !important;
+            }
+        }
+    }
+
+    .dv-star-rating-star{
+        font-size: 3em;
+    }
+
+}
+
+.modal-notes-date{
+    width:100%;
+    color: $fluttr-black;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align:right;
+    padding: 0px 0px 20px 0px;
+}
+
+.modal-generic-feedback{
+    color: $fluttr-black;
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+.modal-generic-container-feedback{
+    border: 1px solid #888;
+    border-radius: 5px;
+    align-items: initial;
+    display:block !important;
+    padding-bottom:10px;
+    text-align: center;
+}
+
+.modal-generic-container-feedback-menu{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal-generic-expert-name{
+    color: $fluttr-black;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.modal-generic-expert-position{
+    color: $fluttr-black;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.three-points-icon{
+    font-size : 1.3em;
+    color: $fluttr-dark-grey;
+}
+
+.dropDownMenuThreeDots{
+    padding:0 !important;
+    
+    .caret{
+        display: none;
+    }
+    
+    &:hover{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    
+}
+.tooltip.top .tooltip-inner{
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
+    text-align: left;
+}
+.tooltip.top .tooltip-arrow{
+    color: white;
+}
+.recruiter-message {
+    color: #333;
+    text-align: center;
+}
+.recruiter-evaluation{
+    text-align: center;
+    position: relative;
+}
+.cv-submission-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    & .btn {
+        width: 200px;
+        display: block;
+    }
+}
+
+.scroll-top-container {
+    position: sticky;
+    bottom: 15px;
+    right: 15px;
+    background-color: #333;
+    box-shadow: 0 0 15px white, 10px 10px 50px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 100px;
+    margin-left: auto;
+    margin-right: 0;
+    cursor: pointer;
+    z-index: 9999;
+}

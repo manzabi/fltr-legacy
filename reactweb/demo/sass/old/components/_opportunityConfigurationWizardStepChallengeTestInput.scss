@@ -1,0 +1,35 @@
+.opportunityConfigurationWizardStepChallengeTestInput{
+  h1.challenge-form-label{
+    font-size: 1.2em;
+    color: $fluttr-black;
+    margin: 0;
+    font-weight: 400;
+  }
+  .label-padding{
+    padding-bottom:10px;
+  }
+  h2.challenge-form-label{
+    font-size: 1em;
+    color: $fluttr-black;
+    margin: 10px 0;
+    font-weight: 300;
+  }
+
+  .challenge-form-info-icon{
+    margin-left:0.5em;
+    cursor:pointer;
+  }
+
+  .challenge-form-delete-icon{
+    margin-left:0.5em;
+    cursor:pointer;
+    font-size: 1.5em;
+  }
+
+  @media (max-width: $screen-sm-min) {
+  }
+
+  @media (min-width: $screen-sm-min) {
+  }
+}
+

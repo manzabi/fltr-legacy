@@ -1,0 +1,164 @@
+html.default body #sidebar {
+    display: relative;
+    height: 100%;
+    z-index: 101;
+    margin-top: 50px;
+    left: 0 !important;
+    &.banner-active {
+        margin-top: 80px;
+    }
+    .expired {
+        color: red;
+    }
+    .section-title {
+        color: rgba(137, 148, 155, 0.8);
+        text-transform: uppercase;
+        font-size: 1em;
+        margin-top: 0px;
+    }
+    hr {
+        border: 0px;
+        border-color: rgba(0, 0, 0, 0);
+        border-bottom: 1px solid rgba(137, 148, 155, 0.4);
+        margin-bottom: 15px;
+    }
+    margin-top: $navbar-height;
+    .rubix-timeline-view {
+        .rubix-timeline-title {
+            background: none;
+            padding: 4px 0px;
+        }
+        .rubix-timeline-body li:before {
+            box-shadow: 0px 0px 0px 6px #2c3e50;
+        }
+    }
+    .sidebar-nav-container>.sidebar-nav.recruiter-menu {
+        margin-bottom: 0px;
+    }
+    .sidebar-nav-container.expert-menu {
+        padding-top: 15px;
+    }
+    .sidebar-nav-container>.sidebar-nav {
+        >li {
+            >a {
+                >.rubix-icon,
+                >rubix-icon>.rubix-icon {
+                    font-size: 25px;
+                    margin-top: -4px;
+                    margin-right: 10px !important;
+                }
+            }
+        }
+        >li.active {
+            >a {
+                >.rubix-icon,
+                >rubix-icon>.rubix-icon {
+                    color: $navbar-icon-active;
+                }
+            }
+            &:after {
+                border-right: 10px solid $fluttr-green;
+            }
+        }
+    }
+    #avatar {
+        text-align: center;
+        background: transparent !important;
+    }
+    #sidebar-container {
+        height: 100% !important; // overflow-y: auto !important;
+        margin-top: 50px;
+        // overflow-x: auto !important;
+        // overflow: auto !important;
+        overflow-x: hidden;
+        display: block !important;
+        position: relative !important;
+        top: 0px !important;
+        /* --------SIDEBAR SCROLLBAR MODIFICATIONS TO ABOID HORIZONTAL OVERFLOW------------ */
+        /* width */
+        // ::-webkit-scrollbar {
+        //     width: 4px;
+        // }
+        //
+        // /* Track */
+        // ::-webkit-scrollbar-track {
+        //     background: rgba(0,0,0,0);
+        //     border-radius: 1.5px;
+        // }
+        //
+        // /* Handle */
+        // ::-webkit-scrollbar-thumb {
+        //     background: #f1f1f1;
+        //     border-radius: 10px;
+        // }
+        //
+        // /* Handle on hover */
+        // ::-webkit-scrollbar-thumb:hover {
+        //     background: #555;
+        // }
+    }
+    .navigation-contaier {
+        margin-top: 20px;
+    }
+    .company-content {
+        width: 100%;
+        height: 100px; //background: rgba(0, 0, 0, 0.4);
+        margin: 0px;
+        padding: 0px;
+    }
+    .company-name {
+        color: $fluttr-white;
+        font-size: 1.3em;
+        font-weight: 400;
+        margin-left: 5px;
+        line-height: 1.2;
+    }
+    .company-back {
+        background: rgba(0, 0, 0, 0.4);
+        margin: 5px 10px 5px 10px;
+        border-radius: 5px;
+    }
+    .company-slot {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 5px;
+        border-radius: 5px;
+        min-width: 1.8em;
+        text-align: center;
+    }
+    .company-card {
+        flex-wrap: wrap;
+    }
+    & .sidebar-user-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &>* {
+            display: block;
+        }
+        &>img {
+            width: 63px;
+            height: 63px;
+            border-radius: 100px;
+            margin-top: 40px;
+        }
+        &>span {
+            font-size: 14px;
+            color: white;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    html.default body #sidebar {
+        transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+        left: 0;
+        z-index: 101;
+    }
+    #sidebar {
+        &.banner-active {
+            margin-top: 110px;
+        }
+    }
+}

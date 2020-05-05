@@ -1,0 +1,14 @@
+.candidate-opportunity-list {
+    max-width: 840px;
+    margin: auto;
+    padding: 0;
+    & .opportunity-list-title {
+        font-size: 12px;
+        padding: 2px;
+        padding-top: 30px;
+        border-bottom: 3px solid $fluttr-green;
+        display: inline-block;
+        margin-left: 40px;
+    }
+
+}

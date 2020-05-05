@@ -1,0 +1,46 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: reverseproxy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: reverseproxy
+    spec:
+      containers:
+      - name: reverseproxy
+        image: eu.gcr.io/qa-env-225712/fluttr-architecture-image-repository/fluttrproxynginx_250419_1:qas
+        ports:
+        - containerPort: 443
+        - containerPort: 80
+        - containerPort: 8080
+          protocol: TCP
+        env:
+          - name: WATCH_PATHS
+            value: "/etc/nginx/conf.d/ /etc/nginx/ssl"
+        volumeMounts:
+        - mountPath: /etc/nginx/ssl
+          name: secret-volume
+        - mountPath: /etc/nginx/conf.d/
+          name: configmap-volume
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+      volumes:
+      - name: secret-volume
+        secret:
+           secretName: qas-nginx-certs-keys
+      - name: configmap-volume
+        configMap:
+            name: qas-nginxconfigmap

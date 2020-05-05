@@ -1,0 +1,31 @@
+.activity-configuration .activity-configuration-grid {
+    padding-left: 27px;
+    padding-right: 27px;
+    & .activity-main-col {
+        padding: 41px 23px;
+        margin-top: 28px;
+        margin-bottom: 28px;
+        background-color: $crazy-white;
+        border: 1px solid $crazy-lightgrey;
+        & .slack-channel-list {
+            & .slack-link-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 -23px;
+                padding: 10px 23px;
+                & .item-detail {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    & p {
+                        margin: 0;
+                    }
+                }
+                &:hover {
+                    background-color: $crazy-background;
+                }
+            }
+        }
+    }
+}

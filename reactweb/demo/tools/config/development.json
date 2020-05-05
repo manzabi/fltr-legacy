@@ -1,0 +1,6 @@
+{
+  "serverUrl": "http://local.fluttr.in",
+  "webLoginPage": "http://local.fluttr.in/login",
+  "webLogoutPage": "http://local.fluttr.in/bizAroundSite/logout",
+  "intercomKey": "xpow9zok"
+}

@@ -1,0 +1,142 @@
+.crazy-signup {
+    height: 100%;
+    width: 100%;
+    background-color: $crazy-white;
+    padding: 0;
+    position: relative;
+    & .crazy-grid-parent {
+        padding-left: 0;
+    }
+    & .crazy-signup-form {
+        padding-top: 71px;
+        & h2 {
+            margin-bottom: 50px;
+            margin-top: 45px;
+        }
+        & .crazy-field {
+            margin-bottom: 40px;
+        }
+        & .crazy-signup-conditions {
+            width: 60%;
+            text-align: center;
+            color: $crazy-darkside;
+            font-size: 13px;    
+            margin: 7px auto 40px;
+            line-height: 1.69;  
+            & a {
+                color: $crazy-darkside;           
+            }   
+        }
+        & .crazy-button {
+            margin-left: calc((100% - 190px)/2);
+            margin-bottom: 80px;
+        }
+    }
+    & .existing-company-modal {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin-top: 35px;
+        & h2, p {
+            margin: 0 auto;
+        }
+    }
+    & .signup-close-button {
+        position: absolute;
+        top: 33px;
+        right: 30px;
+    }
+    & .image-slide {
+        & p {
+            color: white;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            width: 80%;
+            line-height: 1.61;
+            letter-spacing: 0.3px;
+        }
+        & .company {
+            font-style: normal;
+        }
+        & .quote {
+            font-size: 18px;
+        }
+        & .dot-bar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 58px;
+            margin: 35px auto 35px;
+            & .dot {
+                width: 9px;
+                height: 9px;
+                border-radius: 9px;
+                background-color: rgba(255, 255, 255, 0.47);
+                &.selected {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+.not-your-company-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    & p {
+        width: 75%;
+        margin-top: 0;
+        margin-bottom: 44px;
+    }
+    & .crazy-or {
+        color: $crazy-mediumgrey;
+        margin: 0 auto;
+        margin: 11px auto;
+    }
+}
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .crazy-signup {
+        & .crazy-signup-form {
+            & .crazy-button {
+                margin-left: calc((100% - 188px)/2);
+            }
+            & .crazy-signup-conditions {
+                width: 100%;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .not-your-company-modal {
+        & p {
+            width: 90%;
+        }
+    }
+}
+
+@media (min-width: $tablet-min) {
+    .crazy-signup {
+        &.crazy-container .crazy-grid-parent {
+            padding-left: 0;
+        }
+        & .crazy-grid {
+            row-gap: 0;
+        }
+    }
+}
+
+@media (min-width: $desktop-lg-min) {
+    .signup-header {
+        & span {
+            display: block;
+        }
+    }
+}

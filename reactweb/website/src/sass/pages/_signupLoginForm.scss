@@ -1,0 +1,197 @@
+.signup-login-form {
+  text-align: center;
+  height: 100vh;
+  & .row {
+    height: 100%;
+  }
+  & .component {
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  & .social-button-container {
+    & .btn {
+      border-radius: 10px;
+      background-color: #0077b5;
+      border: solid 1px #333333;
+      padding: 5px 0;
+      display: flex;
+      width: 100%;
+      color: white;
+      & span {
+        padding: 0px 10px;
+        align-self: center;
+        margin: auto;
+      }
+      & i {
+        font-size: 30px;
+        padding: 0px 10px;
+        border-right: 1px solid white;
+      }
+    }
+  }
+  .sign-up-features {
+    & p {
+      box-sizing: border-box;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    &.row {
+      justify-content: center;
+    }
+    text-align: left;
+    & img {
+      width: 40px;
+    }
+  }
+}
+#signup-form {
+  position: relative;
+  & input {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin: 10px auto;
+    width: 100%;
+    background-color: #fcfbfb;
+  }
+  & .btn {
+    width: 100%;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+  }
+}
+.input-validation-field {
+  position: relative;
+  & input {
+    border: solid 1px #333333;
+  }
+    &.field-validated {
+      & input {
+      border: 1px solid green;
+    }
+    &:before {
+      content: '\2713';
+      font-size: 30px;
+      position: absolute;
+      left: calc(100% + 10px);
+      top: -5px;
+      color: green;
+    }
+  }
+    &.field-error {
+      & input {
+      border: 1px solid red;
+    }
+    &:before {
+      content: '\2717';
+      position: absolute;
+      left: calc(100% + 10px);
+      top: -5px;
+      color: red;
+      font-size: 30px;
+    }
+  }
+  &.field-loading {
+    &:before {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 10px);
+      width: 20px;
+      height: 20px;
+      margin-top: -10px;
+      border-radius: 50%;
+      border-top: 2px solid blue;
+      border-right: 2px solid transparent;
+      animation: spinner .6s linear infinite;
+    }
+  }
+}
+
+.signup-complete-page {
+  box-sizing: border-box;
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(52,152,219); /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(133,189,226, .4) 0%, rgba(133,189,226, .4) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(133,189,226, .4) 0%,rgba(133,189,226, .4) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(133,189,226, .4) 0%,rgba(133,189,226, .4) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3498db', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.email-form-error {
+  color: red;
+  text-align: left;
+  margin: auto;
+}
+
+//-----------------------MOBILE & TABLET MEDIA QUERY
+@media (min-width: $mobile-min) and (max-width: $tablet-max) {
+  .sign-up-features {
+    & p {
+      padding-left: 20px;
+    }
+  }
+  .signup-login-form {
+    & .social-button-container {
+      & .btn {
+        width: 100%;
+      }
+    }
+  }
+  #signup-form {
+    & input {
+      width: 100%;
+    }
+    & .btn {
+      width: 100%;
+    }
+  }
+  .input-validation-field {
+      &.field-validated {
+      &:before {
+        left: calc(100% + 10px);
+      }
+    }
+      &.field-error {
+      &:before {
+        left: calc(100% + 10px);
+      }
+    }
+    &.field-loading {
+      &:before {
+        left: calc(100% + 10px);
+      }
+    }
+  }
+  .email-form-error {
+    width: 100%;
+  }
+}
+
+//-----------------------MOBILE MEDIA QUERY
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+
+}
+//-----------------------MOBILE MEDIA QUERY
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+
+}
+//-----------------------MOBILE MEDIA QUERY
+@media (min-width: $desktop-sm-min) and (max-width: $desktop-sm-max) {
+
+}
+//-----------------------MOBILE MEDIA QUERY
+@media (min-width: $desktop-lg-min) {
+
+}

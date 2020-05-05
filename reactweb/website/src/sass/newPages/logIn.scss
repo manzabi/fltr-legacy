@@ -1,0 +1,136 @@
+.crazy-signup, .crazy-login {
+    &.crazy-container.container-fluid .crazy-grid-parent {
+        padding-left: 0; 
+    }
+}
+
+.crazy-login {
+    height: 100%;
+    width: 100%;
+    background-color: $crazy-white;
+    padding: 0;
+    position: relative;
+    & .crazy-login-form {
+        padding-top: 71px;
+        & h2 {
+            margin-bottom: 16px;
+            margin-top: 50px;
+        }
+        & .crazy-login-subtitle {
+            color: $crazy-darkside;
+            font-size: 14px;
+            margin-bottom: 50px;
+            margin-top: 0;
+        }
+        & .crazy-field {
+            margin-bottom: 50px;
+        }
+        & .crazy-button {
+            margin-left: calc(50% - 90px);
+        }
+        & .linkedin-wrapper {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & .linkedin-question, & .linkedin-link {
+                display: inline-block;
+                margin: 0;
+            }
+            & .linkedin-question {
+                font-size: 14px;
+                margin-right: 12px;
+            }
+            & .linkedin-link {
+                color: #007ab9;
+                font-size: 12px;
+                font-weight: bold;
+                cursor: pointer;
+                &:before {
+                    content: '\69';
+                    font-family: fluttr-icon-set;
+                    position: relative;
+                    font-size: 17px;
+                    top: 4px;
+                    right: 2px;
+                }
+            }
+        }
+    }
+    & .login-close-button {
+        position: absolute;
+        top: 33px;
+        right: 30px;
+    }
+    & .image-slide {
+        & p {
+            color: white;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            width: 80%;
+            line-height: 1.61;
+            letter-spacing: 0.3px;
+        }
+        & .company {
+            font-style: normal;
+        }
+        & .quote {
+            font-size: 18px;
+        }
+        & .dot-bar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 58px;
+            margin: 35px auto 35px;
+            & .dot {
+                width: 9px;
+                height: 9px;
+                border-radius: 9px;
+                background-color: rgba(255, 255, 255, 0.47);
+                &.selected {
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+    .crazy-login {
+        & .crazy-login-form {
+            & .crazy-button {
+                margin-left: calc(50% - 100px);
+            }
+            & .linkedin-wrapper {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                & .linkedin-question, & .linkedin-link {
+                    display: inline-block;
+                    margin: 0;
+                }
+                & .linkedin-question {
+                    font-size: 14px;
+                    margin-bottom: 11px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet-min) {
+    .crazy-login {
+        &.crazy-container .crazy-grid-parent {
+            padding-left: 0;
+        }
+        & .crazy-grid {
+            row-gap: 0;
+        }
+    }
+}

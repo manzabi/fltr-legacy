@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: slackintegration
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: slackintegration
+    spec:
+      containers:
+        - name: slackintegration
+          image: giantswarm/dummy-image:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8090

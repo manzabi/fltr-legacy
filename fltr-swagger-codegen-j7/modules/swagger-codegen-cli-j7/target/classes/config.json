@@ -1,0 +1,8 @@
+{
+  "groupId":"com.fluttr",
+  "artifactId":"fltr-slackapi-client-j7",
+  "artifactVersion":"1.0.0-SNAPSHOT",
+  "apiPackage" : "com.fluttr.j7.api",
+  "modelPackage" : "com.fluttr.j7.model",
+  "invokerPackage" : "com.fluttr.j7.invoker"
+}

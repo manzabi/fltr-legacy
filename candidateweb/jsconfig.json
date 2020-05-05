@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+         "experimentalDecorators": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/routes/old-template",
+        "**/*.css"
+    ],
+    "include": [
+        "src/**", "src/redux/config/axiosInstances.js", "src/redux/config/axiosInstance.js", "src/redux/reducers/userReducers.js", "src/redux/actions/userActions.js, "src/common/components/Spinner.jsx", "src/common/components/ErrorBoundary.jsx", "src/common/Spinner.jsx"", "src/redux/reducers/processReducers.js", "src/redux/actions/processActions.js", "src/redux/actions/opportunityActions.js", "src/redux/reducers/opportunityReducers.js"
+    ]
+}

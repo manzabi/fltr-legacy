@@ -1,0 +1,504 @@
+.choose-template {
+    background-color: $crazy-white;
+    position: relative;
+    padding-top: 65px;
+    min-height: 100%;
+    & .close-button-wrapper {
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        & .close-button {
+            position: absolute;
+            right: 53px;
+            font-size: 12px;
+            user-select: none;
+            cursor: pointer;
+            &:after {
+                content: '\68';
+                font-family: fluttr-icon-set;
+                position: relative;
+                left: 8px;
+                top: 2px;
+                font-size: 12px;
+            }
+        }
+    }
+    & .tooltip-bottom {
+        top: calc(100% + 13px);
+    }
+    &.my-test {
+        background-color: transparent;
+        & .crazy-grid {
+            padding: 41px 20px;
+            background-color: #FFF;
+            border: 1px solid #D8D8D8;
+        }
+        & .go-to-library {
+            color: $crazy-primary;
+            font-weight: bold;
+        }
+    }
+    & .title {
+        margin-top: 0;
+    }
+    & .challenge-filter-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        margin-bottom: 16px;
+        & p {
+            margin: 0;
+        }
+        & .team-tooltip {
+            padding: 6px;
+            color: $crazy-white;
+            & p {
+                margin: 0;
+                text-align: center;
+            }
+        }
+        & .searchbar-children-wrapper {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 85%;
+            cursor: default;
+            &.no-team {
+                height: unset;
+                padding: 0px;
+            }
+            & .selected-team-searchbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & p {
+                    font-weight: normal;
+                    color: $crazy-darkside;
+                    margin: 0;
+                    font-size: 12px;
+                }
+                & i {
+                    color: $crazy-darkside;
+                    cursor: pointer;
+                    font-size: 8px;
+                    display: flex;
+                }
+            }
+            & .create-tag-text {
+                cursor: pointer;
+                padding-top: 10px;
+                color: $crazy-primary;
+                display: flex;
+                & i {
+                    font-size: 11px;
+                    display: flex;
+                    align-items: center;
+                }
+                & p {   
+                    color: $crazy-primary;
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+            & .team-title, & .team-option {
+                height: 42px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                position: relative;
+                & p {
+                    font-weight: normal;
+                    color: $crazy-darkside;
+                    margin: 0;
+                    font-size: 12px;
+                }
+            }
+            & .team-option {
+                padding-left: 43px;
+                cursor: pointer;
+                &:hover {
+                    background-color: $crazy-primary;
+                    & p {
+                        color: $crazy-white;
+                    }
+                }
+            }
+            & .team-title {
+                cursor: default;
+                padding-left: 19px;
+            }
+            & .skills-wrapper {
+                overflow-y: auto;
+                width: 100%;
+                height: 100px;
+                padding: 10px 0 0;
+                margin: 0;
+            }
+        }
+        & .reset-filters {
+            color: $crazy-primary;
+            cursor: pointer;
+            user-select: none;
+            margin-top: 13px;
+            white-space: nowrap;
+            font-weight: bold;
+            font-size: 12px;
+            &.disabled {
+                color: $crazy-mediumgrey;
+                cursor: auto;
+            }
+        }
+    }
+    & .close-button-choose-template {
+        position: absolute;
+        top: 33px;
+        right: 30px;
+    }
+    & .skills-wrapper {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 33px;
+        & .skill {
+            margin-right: 9px;
+            margin-bottom: 12px;
+            width: max-content;
+            height: 20px;
+            border-radius: 2px;
+            padding: 7px 12px;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            border: 2px solid $crazy-blue;
+            color: $crazy-blue;
+            position: relative;
+            cursor: pointer;
+            & span {
+                user-select: none;
+            }
+            & .cross-in-circle {
+                cursor: pointer;
+                border-radius: 50%;
+                height: 12px;
+                width: 12px;
+                background-color: #2C3E50;
+                position: absolute;
+                right: -6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: -6px;
+                visibility: hidden;
+                & .crazy-icon {
+                    color: $crazy-white;
+                    font-size: 6px;
+                }
+            }
+            &.selected {
+                color: $crazy-white;
+                background-color: $crazy-blue;
+                cursor: auto;
+                &:hover .cross-in-circle {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    & .template-list {
+        margin-top: 33px;
+        padding: 0 30px;
+        & .template {
+            &.my-challenges {
+                &:hover {
+                    & .box {
+                        box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.15), 0 6px 22px 0 rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(0,0,0,0), 0 6px 22px 0 rgba(0, 0, 0, 0.15);
+                    }
+                    & .template-buttons-wrapper {
+                        box-shadow: 0 0 0 0 rgba(0,0,0,0), 0 6px 22px 0 rgba(0, 0, 0, 0.15), 0 6px 22px 0 rgba(0, 0, 0, 0.15), 0 6px 22px 0 rgba(0, 0, 0, 0.15);
+                    }
+                }
+                &.attitude {
+                    & .box {
+                        & p {
+                            color: $crazy-darkside;
+                        }
+                        cursor: auto;
+                        background-color: transparent;
+                        background-image: url('https://s3.eu-west-3.amazonaws.com/fluttr-files/cdn/img/attitude-img.png');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    &:hover {
+                        & .box, & .template-buttons-wrapper {
+                            box-shadow: none;
+                        }
+                    }
+                }
+                & .box {
+                    margin-bottom: 0;
+                }
+                & .template-buttons-wrapper {
+                    height: 63px;
+                    width: 231px;
+                    max-width: 100%;
+                    background-color: $crazy-white;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid $crazy-lightgrey;
+                    border-top: none;
+                    padding-left: 13px;
+                    padding-right: 13px;
+                    position: relative;
+                    & .icons-wrapper {
+                        & .fluttr-context-menu-container {
+                            & i {
+                                font-size: 20px;
+                                font-weight: normal;
+                                color: $crazy-mediumgrey;
+                                display: block;
+                            }
+                        }
+                    }
+                    & .selected-text {
+                        color: $crazy-darkside;
+                        & p {
+                            margin: 0;
+                            position: relative;
+                            margin-left: 27px;
+                            &:before {
+                                content: '\63';
+                                font-family: fluttr-icon-set;
+                                position: absolute;
+                                left: -22px;
+                                top: calc(50% - 6px);
+                                color: $crazy-green;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            & .box {
+                width: 231px;
+                max-width: 100%;
+                height: 231px;
+                margin-bottom: 18px;
+                border: 1px solid $crazy-lightgrey;
+                cursor: pointer;
+                position: relative;
+                user-select: none;
+                background-color: rgba(35, 35, 35, 0.41);
+                padding: 22px;
+                &:hover {
+                    box-shadow: 0 20px 26px 0 rgba(0, 0, 0, 0.15), 0 4px 19px 0 rgba(0, 0, 0, 0.15);
+                    &:active {
+                        box-shadow: none;
+                    }
+                }
+                & h2, & p, & .template-skill {
+                    color: $crazy-white;
+                }
+                & h2 {
+                    margin: 0 auto;
+                    margin-bottom: 15px;
+                }
+                & .crazy-icon-unlock-alt {
+                    position: absolute;
+                    color: $crazy-white;
+                    top: 3px;
+                    left: 4px;
+                    font-size: 15px;
+                }
+                &.empty {
+                    background-color: $crazy-white;
+                    padding: 0;
+                    & h2 {
+                        margin: auto;
+                    }
+                    & p {
+                        position: absolute;
+                        text-align: center;
+                        top: calc(50% + 30px);
+                        width: 100%;
+                        color: $crazy-primary;
+                        margin-bottom: auto;
+                    }
+                    & i {
+                        position: absolute;
+                        font-size: 17px;
+                        top: calc(50% - 12px);
+                        right: calc(50% - 9px);
+                        color: $crazy-primary;
+                    }
+                    
+                }
+                & .template-skills-wrapper {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-bottom: 33px;
+                    & .template-skill {
+                        margin-right: 9px;
+                        margin-bottom: 8px;
+                        width: max-content;
+                        height: 20px;
+                        border-radius: 2px;
+                        padding: 7px 12px;
+                        font-size: 12px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        white-space: nowrap;
+                        background-color: transparent;
+                        border: 1px solid $crazy-white;
+                        position: relative;
+                        & span {
+                            user-select: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .no-content-template-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & .lens {
+            color: $crazy-mediumgrey;
+            font-size: 26px;
+        }
+        & p {
+            color: $crazy-mediumgrey;
+        }
+        & .reset-filters {
+            color: $crazy-primary;
+            text-decoration: underline;
+            text-decoration-color: $crazy-primary;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 12px;
+            &.disabled {
+                color: $crazy-mediumgrey;
+                cursor: auto;
+            }
+        }
+        & .template {
+            & .no-results-subtitle {
+                font-size: 12px;
+                color: $crazy-darkside;
+                display: block;
+            }
+            & .box {
+                width: 144px;
+                max-width: 100%;
+                height: 144px;
+                margin-bottom: 18px;
+                border: 1px solid $crazy-lightgrey;
+                cursor: pointer;
+                position: relative;
+                user-select: none;
+                background-color: rgba(35, 35, 35, 0.41);
+                padding: 22px;
+                &:hover {
+                    box-shadow: 0 20px 26px 0 rgba(0, 0, 0, 0.13), 0 4px 19px 0 rgba(0, 0, 0, 0.27);
+                    &:active {
+                        box-shadow: none;
+                    }
+                }
+                & h2, & p, & .template-skill {
+                    color: $crazy-white;
+                }
+                & h2 {
+                    margin: 0 auto;
+                    margin-bottom: 15px;
+                }
+                & .crazy-icon-unlock-alt {
+                    position: absolute;
+                    color: $crazy-white;
+                    top: 3px;
+                    left: 4px;
+                    font-size: 15px;
+                }
+                &.empty {
+                    background-color: $crazy-white;
+                    padding: 0;
+                    margin-right: auto;
+                    margin-left: auto;
+                    width: 231px;
+                    height: 231px;
+                    & h2 {
+                        margin: auto;
+                    }
+                    & p {
+                        position: absolute;
+                        text-align: center;
+                        top: calc(50% + 20px);
+                        width: 100%;
+                        color: $crazy-primary;
+                        margin-bottom: auto;
+                        font-size: 12px;
+                    }
+                    & i {
+                        position: absolute;
+                        font-size: 17px;
+                        top: calc(50% - 12px);
+                        right: calc(50% - 9px);
+                        color: $crazy-primary;
+                    }
+                }
+            }
+            & .subtitle {
+                display: none;
+            }
+        }
+    }
+    & .choose-template-footer {
+        text-align: center;
+        margin: 60px auto 40px;
+        & p {
+            font-size: 12px;
+        }
+        & .request {
+            color: $crazy-primary;
+            cursor: pointer;
+        }
+    }
+}
+
+.create-challenge-modal {
+    z-index: 9999999;
+    & .content {
+        margin: 20px 11px 15px;
+        & .crazy-grid {
+            padding: 0 20px;
+            width: calc(100% - 40px);
+        }
+        & .team-label {
+            font-size: 12px;
+            margin: 0px;
+            margin-bottom: -16px;
+        }
+        & .job-title {
+            margin-bottom: -7px;
+        }
+        & .crazy-button {
+            display: block;
+            margin-left: auto;
+            margin-top: 20px;
+        }
+    }
+}

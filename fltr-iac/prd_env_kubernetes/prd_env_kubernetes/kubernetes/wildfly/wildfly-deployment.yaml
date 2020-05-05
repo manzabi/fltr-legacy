@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: wildflyas
+spec:
+  selector:
+    matchLabels:
+      app: wildfly # Label selector that determines which Pods belong to the StatefulSet
+                 # Must match spec: template: metadata: labels
+  serviceName: "wildfly"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wildfly # Pod template's label selector
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: wildfly
+          image: eu.gcr.io/exalted-entity-163908/fluttr-architecture-image-repository/fluttras1:prd
+          env:
+          - name: BIZAROUND_ENVIRONMENT
+            value: prod
+          - name: DB_HOST
+            value: postgres
+          - name: DB_NAME
+            value: bizaround
+          - name: DB_PASS
+            value: bizaround
+          - name: DB_PORT
+            value: "5432"
+          - name: DB_USER
+            value: bizaround
+          - name: DS_NAME
+            value: postgresDS
+          - name: JAVA_TOOL_OPTIONS
+            value: -Dfile.encoding=UTF-8
+          - name: JNDI_NAME
+            value: java:jboss/datasources/postgresDS
+          - name: SPRING_PROFILES_ACTIVE
+            value: prd
+          ports:
+          - containerPort: 8080
+            name: "wfas"
+          - containerPort: 9990
+            name: "wfconsole"
+          volumeMounts:
+          - name: wildfly-storage-logs
+            mountPath: /opt/jboss/wildfly/standalone/log
+          - name: wildfly-storage-data
+            mountPath: /opt/jboss/wildfly/standalone/data
+  volumeClaimTemplates:
+    - metadata:
+        name: wildfly-storage-logs
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 1Gi
+    - metadata:
+        name: wildfly-storage-data
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 1Gi

@@ -1,0 +1,490 @@
+.fluttr-challenge-editor, .fluttr-form {
+    & input {
+        border: 2px solid transparent;
+    }
+    & .required-input {
+        &:after {
+            content: '*';
+            color: #d0021b;
+            margin-left: 10px;
+            font-size: 4rem;
+            vertical-align: top;
+            position: relative;
+            top: 3px;
+        }
+    }
+    .input-wraper {
+        &.input-error {
+            & .input-length-counter {
+                color: #d0021a !important;
+            }
+            & input {
+                border-color: #d0021a;
+                background-color: rgba(208, 2, 26, 0.1);
+            }
+        }
+    }
+    & .demo-editor {
+        border-color: transparent;
+        border-width: 2px;
+        border-style: solid;
+        min-height: 24vh;
+    }
+    & .input-error {
+        & .demo-editor {
+            background-color: rgba(208, 2, 26, 0.1) !important;
+            border-color: #d0021a;
+            border-width: 2px;
+            border-style: solid;
+        }
+    }
+
+    & .fluttr-input-frame {
+        border-radius: 10px;
+        background-color: rgba(52, 152, 219, .1);
+        margin: 5px 0px;
+        padding: 19px 121px;
+        color: black;
+        & #dropdownselecthorizontal {
+            width: 10em;
+            border-radius: 100px !important;
+            border: 0;
+            text-align-last: center;
+            background: white url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 90% 50%;
+            appearance: none;
+            outline-width: 0;
+            height: 45px;
+        }
+        & .input-wraper {
+            position: relative;
+            & input {
+                width: 100%;
+                padding: 15px;
+                font-size: 16px;
+                height: 52px;
+            }
+            & .checkbox-container {
+                display: flex;
+                & input {
+                    cursor: pointer;
+                    margin: 0;
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                }
+                & label {
+                    cursor: pointer;
+                    padding-left: 10px;
+                    margin: 0;
+                    margin-right: 25px;
+                    font-weight: 400;
+                }
+            }
+            & .input-length-counter {
+                position: absolute;
+                bottom: 2px;
+                right: 7px;
+                color: #95a5a6;
+            }
+        }
+        &.full-size-frame {
+            padding-left: 0px;
+            padding-right: 0px;
+            &:hover, &.active {
+                position: relative;
+                background-color: rgba(52, 152, 219, .25);
+            }
+            &.avoid-tip {
+                &:after, &:before {
+                    display: none;
+                }
+            }
+            & h3 {
+                padding: 10px 121px;
+            }
+        }
+        & .rdw-editor-toolbar {
+            display: none !important;
+        }
+        & .demo-wrapper.rdw-editor-wrapper {
+            background-color: white;
+        }
+        &.active,
+        &:hover {
+            position: relative;
+            background-color: rgba(52, 152, 219, .25);
+            &.avoid-tip {
+                &:after, &:before {
+                    display: none;
+                }
+            }
+            &:after {
+                content: attr(data-hint);
+                position: absolute;
+                width: 38%;
+                background-color: rgba(26, 188, 156, .4);
+                top: 0;
+                right: -41%;
+                padding: 20px;
+            }
+            &:before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-right: 10px solid rgba(26, 188, 156, .4);
+                position: absolute;
+                right: -3%;
+            }
+        }
+        &.active {
+            & .rdw-editor-toolbar {
+                display: flex !important;
+            }
+        }
+        & .challenge-task {
+            position: relative;
+            padding: 20px 121px;
+            & h3 {
+                background-color: rgba(65, 220, 255, .6);
+                padding: 6px 0px 6px 13px;
+                margin: 0;
+                margin-top: 15px;
+                & input {
+                    margin-left: 20px;
+                }
+                & span {
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+            }
+            & .rdw-editor-toolbar {
+                display: none !important;
+            }
+            &.active,
+            &:hover {
+                position: relative;
+                &:after {
+                    content: attr(data-hint);
+                    position: absolute;
+                    width: 38%;
+                    background-color: rgba(26, 188, 156, .4);
+                    top: 0;
+                    right: -41%;
+                    padding: 20px;
+                }
+                &:before {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-right: 10px solid rgba(26, 188, 156, .4);
+                    position: absolute;
+                    right: -3%;
+                }
+                &.active {
+                    & .rdw-editor-toolbar {
+                        display: flex !important;
+                    }
+                }
+            }
+        }
+    }
+    .requirement-add-container {
+        cursor: pointer;
+        padding: 10px 121px;
+        & .requirement-add-icon {
+            border: 2px solid #3498db;
+            color: #3498db;
+            padding: 7px 11px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer ;
+        }
+        & .requirement-add-text {
+            color: #333;
+            font-size: 20px;
+            padding-left: 20px;
+            cursor: pointer;
+        }
+
+    }
+}
+
+.challenge-configuration-editor {
+    background-color: #ecf0f1;
+}
+
+.submission-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.opportunity-template-list {
+    width: calc(100% - 100px);
+    & h2 {
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 1.06;
+        text-align: center;
+        color: black;
+    }
+    &.content-small {
+        width: calc(100% - 450px);
+    }
+}
+
+.template-list-empty {
+    & p {
+        font-size: 18px;
+        text-align: center;
+        color: black;
+    }
+    &:first-child p {
+        margin-bottom: 40px;
+    }
+}
+
+.task-controls {
+    height: 100%;
+    position: absolute;
+    right: 80px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & i {
+        display: block;
+        padding: 10px 5px;
+        font-size: 25px;
+        cursor: pointer;
+        &.disabled {
+            cursor: not-allowed;
+            color: lightgray;
+        }
+    }
+}
+
+.challenge-attachment-field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    & > * {
+        padding: 10px 50px 10px 0px;
+    }
+}
+
+#addAttachmentsForm, #addimageForm {
+    & span {
+        padding-left: 13px;
+        font-size: 16px;
+    }
+}
+
+.attachment-list {
+    & ul {
+        padding-left: 0px;
+        list-style: none;
+        & .attachment-detail {
+            display: flex;
+            align-items: center;
+            & .attachment-icon {
+                font-size: 32px;
+                color: #3498db;
+                width: 40px;
+                text-align: center;
+                margin-right: 25px;
+            }
+            & h4 {
+                width: 20em;
+                overflow: hidden;
+                font-size: 16px;
+                font-weight: 600;
+                color: #333333;
+            }
+            & a {
+                cursor: pointer;
+                display: block;
+                font-size: 20px;
+                color: #3498db;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+.fluttr-challenge-editor, .fluttr-form {
+    &.form-no-hints {
+        & .fluttr-input-frame, & .challenge-task {
+            &:before,&:after {
+                display: none !important;
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: $screen-sm-max) {   
+    .sidebar-card-item:nth-child(2n+1) {
+        clear: both;
+    }
+}
+@media (max-width: $screen-md-max) {   
+    .fluttr-challenge-editor, .fluttr-form {
+        & .fluttr-input-frame {
+            padding: 19px 20px;
+            &.full-size-frame h3 {
+                padding: 19px 20px;
+            }
+            & .challenge-task {
+                padding: 20px 40px;
+                & h3 {
+                    padding: 20px;
+                }
+            }
+        }
+    }
+
+    .task-controls {
+        right: 0;
+        top: 0;
+    }
+    .challenge-configuration-editor {
+        width: calc(90% - 70px);
+    }
+    .fluttr-challenge-editor, .fluttr-form {
+        & .fluttr-input-frame, & .fluttr-input-frame .challenge-task {
+            &.active,
+            &:hover {
+                &:after {
+                    width: 38%;
+                    right: -41%;
+                }
+            }
+        }
+    }
+    
+    .opportunity-template-list {
+        width: calc(100% - 70px);
+        &.content-small {
+            width: calc(100% - 360px);
+        }
+    }
+    .fluttr-challenge-editor, .fluttr-form {
+        & .requirement-add-container {
+            padding: 10px 50px;
+            text-align: left;
+        }
+
+    }
+    .fluttr-challenge-editor, .fluttr-form {
+        padding-right: 30% !important;
+        box-sizing: content-box;
+    }
+}
+
+.fluttr-form {
+    & .fluttr-dropdown {
+        min-width: 10em;
+        padding: 0 40px;
+        border-radius: 100px !important;
+        border: 0;
+        text-align-last: center;
+        background: white url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 90% 50%;
+        appearance: none;
+        outline-width: 0;
+        height: 45px;
+    }
+    & .input-error .fluttr-salary-input {
+        border-color: #d0021a;
+        background-color: rgba(208, 2, 26, 0.1);
+        & input {
+            background-color: transparent;
+        }
+    }
+    & .input-error .checkbox-container {
+        & input, & label {
+            color: #d0021a !important;
+            border-color: #d0021a;
+            // background-color: rgba(208, 2, 26, 0.1);
+        }
+    }
+    & .fluttr-salary-input {
+        border: 1px solid transparent;
+        display: flex;
+        background-color: white;
+        height: 40px;
+        padding: 4px 5px;
+        width: 14em;
+        border-radius: 10px;
+        &:before {
+            content: '€';
+        }
+        &:after {
+            content: '.000'
+        }
+        &:before, &:after {
+            color: #9b9b9b;
+            padding: 6px 16px;
+        }
+        & input {
+            border-width: 0px 1px;
+            border-color: #9b9b9b;
+            border-style: solid;
+            text-align: center;
+            width: 6em;
+            -webkit-appearance: textfield;
+            &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    }
+}
+.fluttr-challenge-editor {
+    & .go-back {
+        z-index: 101;
+        position: fixed;
+        top: 90px;
+        left: 20px;
+        cursor: pointer;
+        color: $fluttr-black;
+        & i {
+            font-size: 25px;
+            display: block;
+            margin-right: 15px;
+        }
+        & span {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .sidebar-card-item.col-md-4:nth-child(3n+1) {
+        clear: both;
+    }
+    .sidebar-card-item.col-md-6:nth-child(2n+1) {
+        clear: both;
+    }
+}
+@media (min-width: $screen-lg-min) {
+    .challenge-configuration-editor {
+        width: calc(90% - 100px);
+    }
+    .sidebar-card-item.col-md-4:nth-child(3n+1) {
+        clear: both;
+    }
+    .sidebar-card-item.col-md-6:nth-child(2n+1) {
+        clear: both;
+    }
+    .fluttr-challenge-editor, .fluttr-form {
+        padding-right: 30% !important;
+        box-sizing: content-box;
+    }
+}

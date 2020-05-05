@@ -1,0 +1,6 @@
+{
+    "serverUrl": "http://qa.fluttr.in",
+    "webLoginPage": "http://qa.fluttr.in/bizAroundSite/signinWeb",
+    "webLogoutPage": "http://qa.fluttr.in/bizAroundSite/logout",
+    "env": "staging"
+}

@@ -1,0 +1,93 @@
+//Primary colors
+$crazy-eggplant: #8A81E1;
+$crazy-white: #FFF;
+$crazy-darkside: #2C3E50 ;
+
+//Secondary colors
+$crazy-orange: #FFB500;
+$crazy-pink: #F36289;
+$crazy-blue: #00C0E6;
+
+//Old colors
+$crazy-green: #1ABC9C;
+//Status colors
+$crazy-red: #FF5656;
+$crazy-error: #FF5656;
+$crazy-correct: #5CD687;
+//grey colors
+$crazy-mediumgrey: #A0A8B9;
+$crazy-lightgrey: #D8D8D8;
+$crazy-background: #FAFAFA;
+
+// default colors
+$crazy-primary: $crazy-eggplant;
+
+//gradients
+
+$crazy-gradient-green: horizontal-gradient(#72D9C4 , #A6EDC8 );
+$crazy-gradient-pink: horizontal-gradient(#F15575 , #F884A3 );
+$crazy-gradient-orange: horizontal-gradient(#FFA300 , #FFDB61 );
+$crazy-gradient-blue: horizontal-gradient(#6A9EEF,#6A9EEF  );
+
+a {
+    color: $crazy-eggplant;
+}
+@mixin inverse($color) {
+  background-color: transparent;
+  color: $color;
+  border: 2px solid $color;
+  &:hover {
+    background-color: $color;
+    color: $crazy-white;
+    &:active {
+      background-color: lighten($color, 5%);
+      color: $crazy-white;
+    }
+  }
+  &.disabled {
+    color: $crazy-lightgrey;
+    border: 2px solid $crazy-lightgrey;
+  }
+}
+
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+    /* fallback/image non-cover color */
+    background-color: $from;
+  
+    /* Firefox 3.6+ */
+    background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* Safari 4+, Chrome 1+ */
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
+  
+    /* Safari 5.1+, Chrome 10+ */
+    background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* Opera 11.10+ */
+    background-image: -o-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* IE10+ */
+    background: -ms-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* Standard */
+    background: linear-gradient(to right, $from 0%, $to $stop);
+  
+    /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+  }
+
+@mixin color-pulse ($color1, $color2, $time: 2s) {
+    animation: pulse $time infinite;
+
+    @keyframes pulse {
+        0% {
+            color: $color1;
+        }
+        50% {
+            color: $color2;
+        }
+        100% {
+            color: $color1;
+        }
+    }
+}

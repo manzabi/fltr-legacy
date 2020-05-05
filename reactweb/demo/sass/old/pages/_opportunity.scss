@@ -1,0 +1,932 @@
+/* Opportunity Search */
+.opportunity-input-search {
+  height: 43px !important;
+}
+
+.btn-opp-search {
+  height: 43px;
+  background-color: white !important;
+  color: #222 !important;
+  border-color: #ccc !important;
+}
+
+.btn-opp-search:hover, .btn-opp-search:focus {
+  background-color: white !important;
+  color: #222 !important;
+  border-color: #ccc !important;
+}
+
+.btn-opp-search-icon {
+  height: 43px !important;
+  background-color: #feb440 !important;
+  color: white !important;
+  border-color: #ccc !important;
+}
+
+.btn-opp-search-icon > span {
+  padding: 0px 10px;
+}
+
+.btn-opp-search-icon:hover, .btn-opp-search-icon:focus {
+  background-color: #feb440 !important;
+  color: #eee !important;
+  border-color: #ccc !important;
+}
+
+/* Mixed */
+.opportunity-section h4{
+  font-weight: 300;
+}
+
+/* Opportunity detail page */
+svg.opportunity {
+  fill: rgba(80,160,200,0.85);
+  margin-right: 5px;
+  width: 20px;
+}
+
+.opportunity-date {
+  text-align: right;
+  padding-right: 50px;
+  padding-top: 20px;
+}
+
+.opportunity-title {
+  font-size: 30px;
+  line-height: 37px;
+  margin: 0 0 10px;
+  font-weight: 400;
+  padding-top: 5px;
+  color: #333333;
+  margin-bottom: 2px;
+}
+
+.opportunity-card-role{
+  color: #333333;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.opportunity-card-taglist{
+  margin-top: 10px;
+}
+
+.opportunity-card-content {
+  min-height: 210px;
+  height: 100%;
+}
+
+.opportunity-card-bottom {
+  background-color: #ECF0F1;
+  min-height: 75px;
+  height: 100%;
+}
+
+.opportunity-card-company {
+  font-size: 30px;
+  line-height: 37px;
+  margin: 0 0 10px;
+  font-weight: 300;
+  color: #333333;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.opportunity-card-values {
+  font-size: 13px;
+  overflow: hidden;
+  font-weight: 300;
+  color: #333;
+}
+
+.opportunity-property {
+  font-size: 18px;
+  color: #333;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 35px;
+}
+
+.opportunity-view {
+  font-size: 16px;
+  color: black;
+  font-weight: 300;
+}
+
+.opportunity-label {
+  font-size: 26px;
+  color: #333333;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+}
+
+.opp-points-label{
+  font-size: 13pt;
+  color: black;
+}
+.opp-points{
+  font-size: 20pt;
+  color: black;
+  font-weight: 400;
+}
+
+.opp-step{
+  font-weight: 700;
+}
+
+.opp-play-description{
+  text-align:left;
+  padding: 30px 40px;
+}
+.opp-play-description-center{
+  text-align:center;
+  padding: 30px 40px;
+}
+
+.opp-section-subtitle{
+  font-size: 22px;
+  color: #333;
+  font-weight: 700;
+}
+
+.headline-opportunity-play{
+  color: #333;
+  font-size: 18pt;
+}
+
+.opportunity-play-link{
+  color:black;
+  text-decoration: underline;
+  font-weight: 100;
+  padding-left: 20px;
+}
+
+.opportunity-play-link:hover{
+  color:#41dcff;
+  text-decoration: underline;
+}
+
+.opportunity-background {
+  background-repeat: no-repeat !important;
+  background-size: cover!important;
+}
+
+.opportunity-background-moved {
+  background-position: 0px -100px;
+}
+
+.opportunity-background-moved-2 {
+  background-position: 0px -200px;
+}
+
+.section-heading-description{
+  margin-top: 10px;
+  font-size: 12pt;
+}
+
+#modalOpenVideoTalent{
+  cursor: pointer;
+}
+
+// opportunity item : type,location,salary
+.opp-view{
+  font-size: 9pt;
+}
+
+.opportunityContainer{
+  height: 100%;
+  background-color: rgb(245, 245, 245);
+}
+
+.opp-list {
+  list-style: none;
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+.opp-list > li {
+  background-color: rgb(255, 255, 255);
+  padding: 0px;
+  margin: 0px 0px 30px;
+}
+
+.opp-list-shadow > li {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.opp-list-shadow > li:hover {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.opp-list > li > time {
+  display: inline-block;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: #41dcff;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.opp_label_CHALLENGE {
+  color: #2ECC71 !important;
+}
+.opp_CHALLENGE {
+  background-color: #2ECC71 !important;
+}
+.opp_label_CLOSED {
+  color: #8E44AD !important;
+}
+.opp_CLOSED {
+  background-color: #8E44AD !important;
+}
+.opp_FOUND {
+  background-color: #AAA !important;
+}
+.opp_label_REVIEW {
+  color: #E67333!important;
+}
+.opp_REVIEW {
+  background-color: #E67333 !important;
+}
+.opp_TO_INIT {
+  background-color: #ff9900 !important;
+}
+.opp_WAITING_EXPERTS {
+  background-color: #ff9900 !important;
+}
+.opp_label_WAITING_EXPERTS {
+  color: #ff9900 !important;
+}
+.statusLabelOpp {
+  color:black;
+  font-size: 16pt;
+  font-weight: 100;
+  line-height: 1;
+}
+.cover{
+  object-fit: cover;
+}
+
+.event-label {
+  margin-left: 10px;
+}
+
+.opportunity-tag-label {
+  margin-right: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+}
+
+.div-no-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.opp-play-countdown{
+  font-weight : 700;
+  font-size: 20px;
+}
+
+/* New */
+.statusOpp {
+  color:black;
+  font-size: 15pt;
+  font-weight: 400;
+}
+.section-heading-opportunity {
+  color:white;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 0 0px;
+  letter-spacing: .05em;
+  font-size: 34pt;
+  font-weight: 700;
+  line-height: 1.3em;
+  margin-top:20px;
+}
+
+.headline-opportunity {
+  font-size: 28pt;
+  padding: 2px 30px;
+  color : white;
+}
+
+.headline-opportunity-description {
+  font-size: 18pt;
+  color: white;
+  font-style: italic;
+}
+
+.opportunity-roleTitle{
+  color: #333333;
+  font-size : 36px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  line-height: 30pt;
+}
+
+@media (max-width: 767px) {
+  .oppInnerCard{
+    margin: 0px 15px 0px 15px;
+  }
+
+  .oppExtCard{
+    padding-bottom: 10px;
+  }
+
+  .section-heading-opportunity {
+    font-size: 25pt;
+  }
+
+  .headline-opportunity {
+    font-size: 20pt;
+  }
+
+  .headline-opportunity-description {
+    font-size: 16pt;
+  }
+
+  .btn-opp-watch{
+    margin-top:20px;
+  }
+
+  .opportunity-roleTitle{
+    font-size : 20pt;
+  }
+}
+
+@media (min-width: 768px) {
+  .opp-list > li {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 210px;
+    height: 100%;
+    padding: 0px;
+  }
+  .statusOpp {
+    line-height: 1;
+  }
+
+  .btn-opp-watch{
+    margin-left:20px;
+  }
+}
+
+
+.btn-CHALLENGE {
+  color: #000000;
+  background-color: #3FFD80;
+  border-color: #3FFD80;
+  border-radius: 5px !important;
+}
+
+.btn-CHALLENGE:hover,
+.btn-CHALLENGE:focus,
+.btn-CHALLENGE:active,
+.btn-CHALLENGE.active,
+.open .dropdown-toggle.btn-CHALLENGE {
+  color: #000000;
+  background-color: #B2FFCD;
+  border-color: #3FFD80;
+}
+
+.btn-CHALLENGE:active,
+.btn-CHALLENGE.active,
+.open .dropdown-toggle.btn-CHALLENGE {
+  background-image: none;
+}
+
+.btn-CHALLENGE.disabled,
+.btn-CHALLENGE[disabled],
+fieldset[disabled] .btn-CHALLENGE,
+.btn-CHALLENGE.disabled:hover,
+.btn-CHALLENGE[disabled]:hover,
+fieldset[disabled] .btn-CHALLENGE:hover,
+.btn-CHALLENGE.disabled:focus,
+.btn-CHALLENGE[disabled]:focus,
+fieldset[disabled] .btn-CHALLENGE:focus,
+.btn-CHALLENGE.disabled:active,
+.btn-CHALLENGE[disabled]:active,
+fieldset[disabled] .btn-CHALLENGE:active,
+.btn-CHALLENGE.disabled.active,
+.btn-CHALLENGE[disabled].active,
+fieldset[disabled] .btn-CHALLENGE.active {
+  background-color: #3FFD80;
+  border-color: #3FFD80;
+}
+
+.btn-CHALLENGE .badge {
+  color: #3FFD80;
+  background-color: #000000;
+}
+
+.btn-SIGN_UP {
+  color: #000000;
+  background-color: #3FFD80;
+  border-color: #3FFD80;
+  border-radius: 5px !important;
+}
+
+.btn-REVIEW {
+  color: #000000;
+  background-color: rgba(80,160,200,0.85)!important;
+  border-radius: 5px !important;
+}
+
+.btn-SIGN_UP:hover,
+.btn-SIGN_UP:focus,
+.btn-SIGN_UP:active,
+.btn-SIGN_UP.active,
+.open .dropdown-toggle.btn-SIGN_UP {
+  color: #000000;
+  background-color: #B2FFCD;
+  border-color: #3FFD80;
+}
+
+.btn-SIGN_UP:active,
+.btn-SIGN_UP.active,
+.open .dropdown-toggle.btn-SIGN_UP {
+  background-image: none;
+}
+
+.btn-SIGN_UP.disabled,
+.btn-SIGN_UP[disabled],
+fieldset[disabled] .btn-SIGN_UP,
+.btn-SIGN_UP.disabled:hover,
+.btn-SIGN_UP[disabled]:hover,
+fieldset[disabled] .btn-SIGN_UP:hover,
+.btn-SIGN_UP.disabled:focus,
+.btn-SIGN_UP[disabled]:focus,
+fieldset[disabled] .btn-SIGN_UP:focus,
+.btn-SIGN_UP.disabled:active,
+.btn-SIGN_UP[disabled]:active,
+fieldset[disabled] .btn-SIGN_UP:active,
+.btn-SIGN_UP.disabled.active,
+.btn-SIGN_UP[disabled].active,
+fieldset[disabled] .btn-SIGN_UP.active {
+  background-color: #3FFD80;
+  border-color: #3FFD80;
+}
+
+.btn-SIGN_UP .badge {
+  color: #3FFD80;
+  background-color: #000000;
+}
+
+/* Button Close */
+.btn-CLOSED {
+  color: #000000;
+  background-color: #AAA;
+  border-color: #AAA;
+  border-radius: 5px !important;
+}
+
+.btn-CLOSED:hover,
+.btn-CLOSED:focus,
+.btn-CLOSED:active,
+.btn-CLOSED.active,
+.open .dropdown-toggle.btn-CLOSED {
+  color: #000000;
+  background-color: #AAA;
+  border-color: #AAA;
+}
+
+.btn-CLOSED:active,
+.btn-CLOSED.active,
+.open .dropdown-toggle.btn-CLOSED {
+  background-image: none;
+}
+
+.btn-CLOSED.disabled,
+.btn-CLOSED[disabled],
+fieldset[disabled] .btn-CLOSED,
+.btn-CLOSED.disabled:hover,
+.btn-CLOSED[disabled]:hover,
+fieldset[disabled] .btn-CLOSED:hover,
+.btn-CLOSED.disabled:focus,
+.btn-CLOSED[disabled]:focus,
+fieldset[disabled] .btn-CLOSED:focus,
+.btn-CLOSED.disabled:active,
+.btn-CLOSED[disabled]:active,
+fieldset[disabled] .btn-CLOSED:active,
+.btn-CLOSED.disabled.active,
+.btn-CLOSED[disabled].active,
+fieldset[disabled] .btn-CLOSED.active {
+  background-color: #AAA;
+  border-color: #AAA;
+}
+
+.btn-CLOSED .badge {
+  color: #AAA;
+  background-color: #000000;
+}
+
+.opp-countdown-header {
+  background-color: #333;
+}
+
+.opp-countdown-title {
+  padding-top: 20px;
+  font-size: 17pt;
+  color: #FF6741;
+  padding-left: 10px;
+}
+
+/** Challenge **/
+.challenge-header-title{
+  color: white;
+  font-weight: 700;
+}
+
+.challenge-header-description{
+  color: white;
+}
+
+.challenge-header-container{
+  padding: 20px 10px;
+}
+
+.challenge-community-name{
+  margin-top: 20px;
+  font-size: 18pt;
+}
+
+.challenge-title{
+  font-size: 30px;
+  line-height: 40px;
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.challenge-description{
+  font-size: 20px;
+  color: #333;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 30px;
+}
+
+/** CountDown **/
+.clockdiv{
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 20px;
+}
+
+.clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  background: #333;
+  display: inline-block;
+}
+
+.clockdiv div > span{
+  padding: 8px;
+  border-radius: 3px;
+  background: #777;
+  display: inline-block;
+}
+
+.smalltext{
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-family: Lato;
+}
+
+/** CountDown small **/
+.clockdivsmall{
+  font-family: sans-serif;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.3em;
+  font-family: Lato;
+  margin-bottom: 30px;
+  border: 1px solid #555555;
+  background-color: #131313;
+  padding-top: 3px;
+}
+
+.clockdivsmall > div{
+  display: inline-block;
+  text-align: center;
+  padding: 2px;
+}
+
+.clockdivsmall div > span{
+  display: inline-block;
+  color:#fff;
+  font-weight:700;
+}
+
+.smalltextsmall{
+  text-align: center;
+  font-size: 10px;
+  font-family: Lato;
+}
+
+.statusSmall{
+  font-weight: 700;
+  color: #FF6741;
+}
+
+.col-padding-little{
+  padding: 2px;
+}
+
+/* Table players */
+#playerTable {
+  padding: 10px 0;
+}
+#playerTable h2{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+#playerTable table{
+  max-width:800px;
+  margin: 0 auto;
+}
+
+.tabwhite {
+  background: #fff;
+  width: 60%;
+  padding: 10px !important;
+}
+th.tabwhite {
+  background: #fff;
+  padding: 20px 10px !important;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+}
+.tabblue {
+  background: #cdeffe;
+  text-align: center;
+  color: #fff;
+}
+th.tabblue {
+  background: #039BE5;
+
+  padding: 20px 10px !important;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.tablightblue {
+  background: #9bdefd;
+  text-align: center;
+  color: #fff;
+}
+th.tablightblue {
+  background: #36bafc;
+
+  padding: 20px 10px !important;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.tabgreen {
+  background: #02e351;
+  text-align: center;
+  color: #fff;
+}
+.taborange {
+  background: #FFCB96;
+  text-align: center;
+  color: #fff;
+}
+.tabnormal {
+  text-align: center;
+  color: #fff;
+}
+th.tabgreen {
+  background: #00C853;
+  padding: 20px 5px !important;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.rightSign {
+  color: #1ab921;
+  background: #fff;
+  border-radius: 45px;
+  padding: 5px;
+  border: 2px solid;
+  box-shadow: 0px 0px 11px -5px #000;
+}
+.crossSign {
+  color: #de2315;
+  background: #fff;
+  border-radius: 45px;
+  padding: 5px 7px;
+  border: 2px solid;
+  box-shadow: 0px 0px 11px -5px #000;
+}
+.pendingSign {
+  color: #ff9900;
+  background: #fff;
+  border-radius: 45px;
+  padding: 5px 7px;
+  border: 2px solid;
+  box-shadow: 0px 0px 11px -5px #000;
+}
+.White-Yellow {
+  border-top: 0;
+  border-left: 75px solid #fff;
+  border-right: 75px solid #FEF200;
+  height: 5px;
+  width: 0px;
+}
+
+/** Progress **/
+.progress {
+  position: relative;
+  height: 25px;
+  color: #333 !important;
+}
+.progress > .progress-type {
+  position: absolute;
+  left: 0px;
+  font-weight: 400;
+  padding: 3px 30px 1px 10px;
+  //background-color: rgba(25, 25, 25, 0.2) !important;
+  height: 100%;
+}
+.progress-type-me {
+  font-weight: 800 !important;
+}
+.progress > .progress-completed {
+  position: absolute;
+  right: 0px;
+  padding: 3px 10px 2px;
+}
+
+.progress-bar-info{
+  background-color: #5bc0de !important;
+}
+
+.progress-bar-orange{
+  background-color: #FF9F1C !important;
+}
+
+.progress-bar-green{
+  background-color: #00C853 !important;
+}
+
+.progress-position{
+  float: left;
+  padding: 3px 5px;
+  font-weight: 700;
+  margin-right: 5px;
+  height: 25px;
+  width: 40px;
+  background-color: #eee;
+  border-radius: 5px;
+
+}
+
+.progress-row{
+  margin-bottom: 5px;
+}
+
+/* Review */
+.review-section-title{
+  color: #A3A3A3;
+  font-size: 30px;
+  margin: 20px 10px;
+  font-weight: 700;
+}
+
+.review-section-subtitle{
+  color: #A3A3A3;
+  font-size: 21px;
+  margin: 20px 10px;
+  font-weight: 300;
+}
+
+/* menu */
+.affix-top, .affix{
+  position: static;
+  width: 100%;
+}
+
+#sidebar.affix-top {
+  position: static;
+  width: 100%;
+}
+
+.affix-bottom {
+  position: absolute;
+}
+
+
+#sidebar.affix {
+  position: fixed;
+  top:70px;
+}
+
+.nav-stacked> li > a {
+  color: #A3A3A3;
+  font-weight: 400;
+}
+
+.nav-stacked> li.active > a {
+  background-color: #eee !important;
+  color: #333;
+}
+
+.nav-stacked >li>a:focus {
+  background: none;
+  outline: none;
+}
+
+/* Editor */
+.panel-default>.panel-heading {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  padding: 0 0 5px 0px !important;
+}
+
+.note-editor.note-frame {
+  border: 1px solid transparent !important;
+}
+
+.note-editor.note-frame .note-editing-area {
+  border: 1px solid #ccc !important;
+}
+
+.note-editor.note-frame .note-statusbar {
+  background-color: #fff !important;
+}
+
+/* Landing Judges */
+.landing-judges-box{
+  border: 1px solid #BBB;
+}
+
+.landing-judges-box > div {
+  padding: 10px 20px 40px 20px;
+}
+
+/* Congratulation judges */
+.congrat-judges-box {
+  border-bottom: 1px solid #BBB;
+}
+
+.congrat-judges-box > div{
+  padding: 10px 30px 40px 30px;
+  text-align:center;
+}
+
+.congrat-judges-box > div > p {
+  text-align:left;
+}
+
+.congrat-judges-separated-bottom {
+  border-bottom: 1px solid #BBB;
+}
+
+.congrat-section > div {
+  padding: 20px 50px 40px 50px;
+}
+
+.congrat-section > div > h2 {
+  margin-bottom : 0px;
+}
+
+.congrat-section > div > h4 {
+  font-size: 23px;
+  font-weight: 300;
+}
+
+.congrat-entry {
+  color: #333;
+  font-size: 18px;
+}
+
+.congrat-entry-value{
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.congrat-button-video {
+  position: absolute;
+  bottom: 100px;
+  right: 35%;
+}

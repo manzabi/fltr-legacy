@@ -1,0 +1,15 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos 
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Lanzar Chrome contra localhost",
+            "url": "http://web.local.fluttr.in/recruiter/landing?auth=eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOlsid2ViIiwibWUiLCJvcGVuIl0sInVzZXJfbmFtZSI6Im9zY21lZGdvbkBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6WyJCSVpfVVNFUiJdLCJqdGkiOiIxMjI4MjRjYi0yMTUwLTQ1ZDEtODQ1Mi1kNzdkZjU1NzE5NWUiLCJjbGllbnRfaWQiOiJwcm92YXMiLCJzY29wZSI6WyJzZWxlY3QiLCJyZWFkIiwid3JpdGUiXX0.g87KYwqrzBbbHuNVSb4Y1O9-nsdEanFrL9y3OsS3YnVmiw-gwv_CDRSTCY0R1hN3EQFmvtlL_8iUsB0z7J4Twj5sfEf_RTMM2NcfRhnNzV4f7RNxoIWEpvi5_Iq70YiE9kn1kcqwmyUUA0uNdxQtGQ1XVIngDRAUCPwgf8yPG0ckO5N_qGDERDB7PV4NKEyldmiXgmpmbg9D3-TrJAyPK0fXD6mUyZbLflF3imtJAW-vYqb5zvd5Zpr2_2QcNznT5Yg_HoQoUfeJehsoOfFFk4eS2cY2Rxhkx2Tlukof3QlAwo6x2QcGPTb8mqXL1Q-atY0k8q4KIkkUycKTwDxwMQ",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

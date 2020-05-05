@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: reverseproxyplus
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: reverseproxyplus
+    spec:
+      containers:
+      - name: reverseproxyplus
+        image: eu.gcr.io/devops-tools-228909/fluttr-architecture-image-repository/reverseproxyplus2505191:prd
+        ports:
+        - containerPort: 443
+        - containerPort: 80
+          protocol: TCP
+        env:
+          - name: WATCH_PATHS
+            value: "/etc/nginx/conf.d/"
+        volumeMounts:
+        - mountPath: /etc/nginx/conf.d/
+          name: configmap-volume
+      volumes:
+      - name: configmap-volume
+        configMap:
+            name: prd-nginxconfigmap

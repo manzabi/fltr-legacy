@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: websitesl
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: websitesl
+    spec:
+      containers:
+        - name: websitesl
+          image: giantswarm/dummy-image:latest
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 8099

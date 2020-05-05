@@ -1,0 +1,136 @@
+.opportunity-tag-container{
+    width: 90%;
+    & h2 {
+        margin-top: 110px;
+        text-align: center;
+    }
+    & .tagFluttr {
+        font-size: 16px;
+    }
+    & .opportunity-tag-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        & .autosugest-container, & .custom-input-container {
+            width: 48%;
+        }
+        & .custom-input-container {
+            padding: 20px 75px;
+            background-color: #d8e6ee;
+        }
+        & .autosugest-container {
+            & .fluttr-skills-autosugest {
+                padding: 33px 22px;
+                background-color: white;
+                min-height: 400px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                & .sugestion-section {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    &::after {
+                        content: '';
+                        flex-grow: 10000000000000;
+                    }
+                    & .skills-pagination-fix {
+                        content: '';
+                        flex-grow: 10000000000000;
+                    }
+                    & .tagFluttr {
+                        flex-grow: 1;
+                        min-width: 115px;
+                        display: block;
+                        margin-bottom: 11px;
+                        margin-right: 8px;
+                        border-radius: 3px;
+                    }
+                }
+                & .actions-section {
+                    & .skills-pagination {
+                        color: $fluttr-black;
+                        font-size: 16px;
+                        width: 100%;
+                        text-align: center;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        & > * {
+                            width: 30px;
+                            display: block;
+                        }
+                        & i {
+                            cursor: pointer;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        & .tags-input-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            & .tags-clear {
+                cursor: pointer;
+                color: #9b9b9b;
+            }
+        }
+    }
+    .react-tagsinput {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px 20px;
+        min-height: 40vh;
+    }
+    
+    .react-tagsinput-input{
+        width: 100%;
+    }
+    .react-tagsinput-tag{
+        background-color: #3498DB;
+        padding: 5px 10px 5px 10px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        line-height: 1em;
+        
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    .react-tagsinput-remove{
+        color: white;
+    }
+    
+    .react-tag-suggested {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    
+    .react-autosuggest__suggestions-container{
+        width: 100%;
+    }
+    
+    ul.react-autosuggest__suggestions-list {
+        position: absolute;
+        border : 1px solid #eee;
+        background-color: white;
+        z-index: 1;
+        min-width: 250px;
+        list-style-type: none;
+        padding-left:0px;
+        padding-right:0px;
+        
+        li {
+            cursor:pointer;
+            padding: 5px;
+            
+            &:hover {
+                background-color: $fluttr-light-grey;
+            }
+        }
+        
+    }
+}

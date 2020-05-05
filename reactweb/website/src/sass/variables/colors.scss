@@ -1,0 +1,71 @@
+$fluttr-black: #333;
+$fluttr-light-grey: #979797;
+$fluttr-blue:  #3498db;
+$fluttr-green:  #8A81E1;
+$fluttr-orange:  #ffb500;
+
+.fluttr-black {
+    color: $fluttr-black;
+}
+.fluttr-light-grey {
+    color: $fluttr-light-grey;
+}
+.fluttr-blue {
+    color: $fluttr-blue;
+}
+.fluttr-green {
+    color: $fluttr-green;
+}
+.fluttr-orange {
+    color: $fluttr-orange;
+}
+//Primary colors
+$crazy-eggplant: #8A81E1;
+$crazy-white: #FFF;
+$crazy-darkside: #2C3E50 ;
+
+//Secondary colors
+$crazy-orange: #FFB500;
+$crazy-pink: #F36289;
+
+//Error colors
+$crazy-error: #FF5656;
+
+//grey colors
+$crazy-mediumgrey: #C4C8D3;
+$crazy-lightgrey: #E9E9E9;
+$crazy-background: #FAFAFA;
+$crazy-green: #1abc9c;
+
+//gradients
+
+$crazy-gradient-green: horizontal-gradient(#72D9C4 , #A6EDC8 );
+$crazy-gradient-pink: horizontal-gradient(#F15575 , #F884A3 );
+$crazy-gradient-orange: horizontal-gradient(#FFA300 , #FFDB61 );
+$crazy-gradient-blue: horizontal-gradient(#6A9EEF,#6A9EEF  );
+
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+    /* fallback/image non-cover color */
+    background-color: $from;
+  
+    /* Firefox 3.6+ */
+    background-image: -moz-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* Safari 4+, Chrome 1+ */
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $from), color-stop($stop, $to));
+  
+    /* Safari 5.1+, Chrome 10+ */
+    background-image: -webkit-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* Opera 11.10+ */
+    background-image: -o-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* IE10+ */
+    background: -ms-linear-gradient(left, $from 0%, $to $stop);
+  
+    /* Standard */
+    background: linear-gradient(to right, $from 0%, $to $stop);
+  
+    /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+  }

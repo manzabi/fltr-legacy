@@ -1,0 +1,314 @@
+.fluttr-challenge-sidebar-container {
+    position: fixed;
+    right: -270px;
+    bottom: 0;
+    display: flex;
+    height: calc(100% - 50px);
+    z-index: 2;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+    &.banner-active {
+        height: calc(100% - 80px);
+    }
+    &.sidebar-open {
+        right: 0;
+    }
+    & .fluttr-challenge-sidebar-menu-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #273136;
+        & .challenge-menu-item {
+            min-height: 80px;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all linear 300ms;
+            & .sidebar-menu-icon {
+                text-align: center;
+                font-size: 40px;
+                display: block;
+                margin-bottom: 5px;
+                &.icon-blue {
+                    color: #3498db;
+                }
+                &.icon-green {
+                    color: #8A81E1;
+                }
+            }
+            &:hover, &.active {
+                background-color: #475156;
+                transition: all linear 300ms;
+            }
+            & i {
+                font-size: 25px;
+                padding-top: 20px;
+            }
+            & img {
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+    & .fluttr-challenge-sidebar-content {
+        overflow: auto;
+        background-color: #fff;
+        direction: rtl;
+        & .sidebar-infinite-scroll {
+            padding-bottom: 30px;
+        }
+        & .redux-infinite-scroll.sidebar-infinite-scroll {
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar {
+                width: 12px;
+                background-color: #F5F5F5;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-color: $fluttr-grey;
+            }
+        }
+        & h2 {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: left;
+            color: $fluttr-black;
+        }
+        &.sidebar-open {
+            width: 350px;
+        }
+        & .card-item {
+            direction: ltr;
+            padding: 10px 20px 0px 20px;
+            &.active-item {
+                & .card-container {
+                    border: 2px solid $fluttr-green;
+                    box-shadow: 0 0 transparent;
+                    & > * {
+                        float: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.templates-vertical-list {
+    display: flex;
+    flex-direction: column;
+    & h2 {
+        padding-left: 10%;
+    }
+}
+
+.template-card-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 212px;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    cursor: pointer;
+    color: $fluttr-black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 2px 12px rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+    & :first-child {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    & p {
+        margin: 0;
+        line-height: 1.2;
+    }
+}
+.scrach-text-hint {
+    direction: ltr;
+    color: #89949B;
+    padding-left: 10%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 100;
+    & p {
+        margin: 0;
+    }
+}
+
+.sidebar-card-item {
+    margin: auto;
+    margin-bottom: 20px;
+    &:hover .card-container{
+        box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 2px 12px rgba(0,0,0,.06), 0 8px 14px rgba(0,0,0,.04), 0 12px 16px rgba(0,0,0,.02);
+        transition: all cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+    }
+    & .template-relevance p {
+        font-size: 10px;
+        text-align: center;
+    }
+    & .card-container {
+        border-radius: 20px;
+        position: relative;
+        background-color: white;
+        max-width: 298px;
+        margin: auto; // min-width: 252px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 2px 12px rgba(0,0,0,.06);
+        border: 2px solid transparent;
+        cursor: pointer;
+        & .template-relevance {
+            margin-top: 10px;
+            padding-top: 10px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            margin-left: auto;
+            & .percentage-circle {
+                margin: auto;
+                font-size: 40px;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+        & .template-card-body {
+            background-color: #f8fafa;
+            padding: 25px 13px 8px 13px;
+            text-align: left;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
+}
+
+.sidebar-card-item {
+    & .card-title-small {
+        font-size: 16px;
+        text-align: left;
+        color: $fluttr-black;
+        margin-bottom: 2px;
+    }
+    & .card-title-big {
+        font-size: 20px !important;
+        font-weight: bold;
+        text-align: left;
+        color: $fluttr-black;
+        margin-bottom: 5px;
+        margin-top: 0px;
+        overflow: hidden;
+        min-height: 44px;
+        word-wrap: break-word;
+        padding: 0;
+    }
+    & .badge {
+        font-size: 12px;
+        margin-right: 10px !important;
+    }
+    & .card-section {
+        margin-bottom: 10px;
+    }
+    & p {
+        font-size: 14px;
+        color: $fluttr-black;
+        margin: 0;
+        & span {
+            font-weight: bold
+        }
+    }
+    & .ribbon {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        position: absolute;
+        &:after,
+        &:before {
+            position: absolute;
+            z-index: 1;
+            content: '';
+            display: block;
+            border: 4px solid #8A81E1;
+        }
+        & span {
+            background-color: #cdf4dd;
+            color: $fluttr-black;
+            position: absolute;
+            display: block;
+            width: 165px;
+            padding: 5px 0;
+            text-align: center;
+        }
+        &.ribbon-top-left {
+            top: -10px;
+            left: -10px;
+        }
+        &.ribbon-top-left::before,
+        &.ribbon-top-left::after {
+            border-top-color: transparent;
+            border-left-color: transparent;
+        }
+        &.ribbon-top-left::before {
+            position: absolute;
+            content: '';
+            top: 2px;
+            right: 2px;
+        }
+        &.ribbon-top-left::after {
+            position: absolute;
+            content: '';
+            bottom: 2px;
+            left: 2px;
+        }
+        &.ribbon-top-left span {
+            right: -10px;
+            top: 30px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.sidebar-infinite-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.fluttr-challenge-sidebar-container {
+    & .sidebar-card-item {
+        clear: both;
+        float: none;
+    }
+}
+
+@media (max-width: $screen-md-max) {
+    .fluttr-challenge-sidebar-container {
+        & .fluttr-challenge-sidebar-menu-container {
+            width: 90px;
+        }
+        & .fluttr-challenge-sidebar-content {
+            width: 270px;
+        }
+        & .sidebar-card-item {
+            padding: 0;
+        }
+    }    
+}
+@media (min-width: $screen-lg-min) {
+    .fluttr-challenge-sidebar-container {
+        right: -350px;
+        &.sidebar-open {
+            right: 0;
+        }
+    }
+    .fluttr-challenge-sidebar-container {
+        & .fluttr-challenge-sidebar-menu-container {
+            width: 100px;
+        }
+        & .fluttr-challenge-sidebar-content {
+            width: 350px;
+        }
+        & .sidebar-card-item {
+            padding: 0;
+        }
+    } 
+}

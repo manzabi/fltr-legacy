@@ -1,0 +1,15 @@
+.crazy-textarea-container {
+    .crazy-textarea {
+        border-radius: 4px;
+        border: solid 1px $crazy-lightgrey;
+        background-color: $crazy-white;
+        resize: none;
+        padding: 22px 20px;
+        font-family: Lato;
+        font-size: 14px;
+        color: $crazy-darkside;
+        &::placeholder {
+            color: $crazy-mediumgrey;
+        }
+    }
+}

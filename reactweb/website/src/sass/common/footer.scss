@@ -1,0 +1,55 @@
+.fluttr-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 0px;
+    background-color: rgba(149, 165, 166, .12);
+    width: 100%;
+    padding-bottom: 29.9px;
+    margin-top: 20px;
+    position: relative;
+    & .footer-container {
+        width: 100%;
+        padding-left: 50px;
+        box-sizing: border-box;
+        padding-top: 40px;
+        & .fluttr-info {
+            font-size: 20px;
+            font-weight: bold;
+            & :first-child {
+                position: absolute;
+                top: 10px;
+            }
+            & :last-child {
+                position: absolute;
+                bottom: 10px;
+            }
+            & * {
+                display: block;
+            }
+            & img {
+                margin-bottom: 20px;
+            }
+            & p {
+                color: #95a5a6;
+                font-size: 16px;
+                margin: 0px;
+            }
+        }
+        & .footer-menu {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            text-align: left;
+            & li {
+                color: #333;
+                min-width: 120px;
+                & a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

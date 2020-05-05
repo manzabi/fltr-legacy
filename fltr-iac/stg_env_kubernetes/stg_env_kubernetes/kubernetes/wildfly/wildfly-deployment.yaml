@@ -1,0 +1,36 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wildfly
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wildfly
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: wildfly
+          image: eu.gcr.io/stg-env-228711/fluttr-architecture-image-repository/fluttras_220319:latest
+          envFrom:
+            - configMapRef:
+                name: wildfly-config
+          ports:
+          - containerPort: 8080
+            name: "wfas"
+          - containerPort: 9990
+            name: "wfconsole"
+          volumeMounts:
+          - name: wildfly-storage-logs
+            mountPath: /opt/jboss/wildfly/standalone/log
+          - name: wildfly-storage-deployments
+            mountPath: /opt/jboss/wildfly/standalone/deployments
+      volumes:
+        - name: wildfly-storage-logs
+          persistentVolumeClaim:
+            claimName: wildfly-storage-logs-pv-claim
+        - name: wildfly-storage-deployments
+          persistentVolumeClaim:
+            claimName: wildfly-storage-deployments-pv-claim

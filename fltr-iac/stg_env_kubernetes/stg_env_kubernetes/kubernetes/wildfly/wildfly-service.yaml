@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: wildfly
+  name: wildfly-svc
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+    name: "wfas"
+  - port: 9990
+    protocol: TCP
+    targetPort: 9990
+    name: "wfconsole"
+  selector:
+    app: wildfly
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

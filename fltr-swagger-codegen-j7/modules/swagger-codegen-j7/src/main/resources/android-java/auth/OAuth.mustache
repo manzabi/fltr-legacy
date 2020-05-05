@@ -1,0 +1,220 @@
+package {{invokerPackage}}.auth;
+
+import {{invokerPackage}}.Pair;
+import {{invokerPackage}}.ApiException;
+
+import java.util.Map;
+import java.util.List;
+import java.util.Date;
+
+import org.apache.oltu.oauth2.client.OAuthClient;
+import org.apache.oltu.oauth2.client.URLConnectionClient;
+import org.apache.oltu.oauth2.client.request.OAuthClientRequest;
+import org.apache.oltu.oauth2.client.response.OAuthAccessTokenResponse;
+import org.apache.oltu.oauth2.common.exception.OAuthProblemException;
+import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
+import org.apache.oltu.oauth2.common.message.types.GrantType;
+import org.apache.oltu.oauth2.common.token.OAuthToken;
+import org.apache.oltu.oauth2.common.token.BasicOAuthToken;
+
+public class OAuth<T extends OAuth.AuthMethod> implements Authentication {
+
+    public enum OAuthApiErrors {
+        AUTHENTICATION_GENERIC (400, "Generic error"),
+        AUTHENTICATION_FAILED (401, "Failed to authenticate"),
+        AUTHENTICATION_EXPIRED (402, "Authentication expired, need to renew it"),
+        AUTHENTICATION_MISSING (403, "Authentication missing, try to renew it"),
+        ;
+
+        public final int code;
+        public final String message;
+
+        private OAuthApiErrors(int code, String message) {
+            this.code = code;
+            this.message = message;
+        }
+
+        public int getCode() {
+            return code;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+    }
+
+    private String clientId;
+    private String clientSecret;
+    private String tokenLocation;
+
+    private T authMethod;
+    private String alias;
+
+    private OAuthToken oauthToken;
+    private Date expirationDate;
+
+    public OAuth(String alias, String tokenLocation, String clientId, String clientSecret, T authMethod) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.tokenLocation = tokenLocation;
+        this.authMethod = authMethod;
+        this.alias = alias;
+    }
+
+    private OAuth() {}
+
+    public static OAuth<AuthMethod> resumeOAuth(String aliasAndRefreshToken, String tokenLocation, String clientId, String clientSecret) {
+        String alias = "";
+        String refreshToken = "";
+        String scopes = "";
+        try {
+            String[] parts = aliasAndRefreshToken.split("@");
+            if (parts.length == 3) {
+                alias = parts[0];
+                refreshToken = parts[1];
+                scopes = parts[2];
+            }
+        } catch (Throwable t) {}
+        OAuth<AuthMethod> auth = new OAuth<AuthMethod>();
+        auth.expirationDate = new Date();
+        auth.oauthToken = new BasicOAuthToken("", 1L, refreshToken, scopes);
+        auth.clientId = clientId;
+        auth.clientSecret = clientSecret;
+        auth.tokenLocation = tokenLocation;
+        auth.alias = alias;
+        auth.authMethod = null;
+        return auth;
+    }
+
+    public String getLongLastingOauth() {
+        return (alias != null ? alias : "-") + "@"
+                + (this.oauthToken != null && oauthToken.getRefreshToken() != null ? oauthToken.getRefreshToken() : "-") + "@"
+                + (this.oauthToken != null && oauthToken.getScope() != null ? oauthToken.getScope() : "-");
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
+    private OAuthToken getOauthToken() throws ApiException {
+        OAuthClient client = new OAuthClient(new URLConnectionClient());
+        OAuthClientRequest authRequest = null;
+        try {
+            if (oauthToken != null) {
+                if (expirationDate == null || new Date().before(expirationDate)) {
+                    return oauthToken;
+                } else if (oauthToken.getRefreshToken() != null) {
+                    authRequest = OAuthClientRequest.tokenLocation(tokenLocation)
+                            .setClientId(clientId)
+                            .setClientSecret(clientSecret)
+                            .setGrantType(GrantType.REFRESH_TOKEN)
+                            .setRefreshToken(oauthToken.getRefreshToken())
+                            .buildBodyMessage();
+                }
+            }
+            if (authRequest == null && authMethod != null) {
+                authRequest = authMethod.getRequestWithAuthParams(
+                        OAuthClientRequest.tokenLocation(tokenLocation)
+                                .setClientId(clientId)
+                                .setClientSecret(clientSecret)
+                );
+                authMethod = authMethod.isReusable() ? authMethod : null;
+            }
+            if (authRequest != null) {
+                this.expirationDate = new Date();
+                this.oauthToken = client.accessToken(authRequest).getOAuthToken();
+                if (oauthToken.getExpiresIn() != null) {
+                    this.expirationDate = new Date(this.expirationDate.getTime() + (oauthToken.getExpiresIn() * 1000)/* 1000 usec for a sec*/);
+                } else {
+                    this.expirationDate = null;
+                }
+                return oauthToken;
+            }
+
+            throw new ApiException(OAuthApiErrors.AUTHENTICATION_MISSING.code, OAuthApiErrors.AUTHENTICATION_MISSING.message);
+
+        } catch (OAuthProblemException e) {
+            authMethod = null;
+            throw new ApiException(OAuthApiErrors.AUTHENTICATION_FAILED.code, OAuthApiErrors.AUTHENTICATION_FAILED.message);
+        } catch (OAuthSystemException e) {
+            throw new ApiException(OAuthApiErrors.AUTHENTICATION_GENERIC.code, e.getMessage());
+        } catch (ApiException e) {
+            throw e;
+        } catch (Throwable t) {
+            throw new ApiException(OAuthApiErrors.AUTHENTICATION_GENERIC.code, t.getMessage());
+        }
+    }
+
+    public boolean hasRefreshToken() {
+        return oauthToken != null && oauthToken.getRefreshToken() != null;
+    }
+
+    public void renewAuthMethod(T authMethod) {
+        this.oauthToken = null;
+        this.authMethod = authMethod;
+    }
+
+    public abstract static class AuthMethod {
+        public abstract OAuthClientRequest getRequestWithAuthParams(OAuthClientRequest.TokenRequestBuilder tokenRequestBuilder) throws OAuthSystemException ;
+
+        public boolean isReusable() {return true;}
+    }
+
+    public static class PasswordAuthMethod extends AuthMethod {
+        private String username;
+        private String password;
+
+        public PasswordAuthMethod(String username, String password) {
+            this.username = username;
+            this.password = password;
+        }
+
+        public OAuthClientRequest getRequestWithAuthParams(OAuthClientRequest.TokenRequestBuilder tokenRequestBuilder) throws OAuthSystemException {
+            return tokenRequestBuilder.setGrantType(GrantType.PASSWORD)
+            .setUsername(username)
+            .setPassword(password)
+            .buildBodyMessage();
+        }
+    }
+
+    public static class CodeAuthMethod extends AuthMethod {
+        private String code;
+        private String redirectUri = null;
+
+        public CodeAuthMethod(String authCode) {
+            this.code = authCode;
+        }
+
+        public CodeAuthMethod(String authCode, String redirectUri) {
+            this.code = authCode;
+            this.redirectUri = redirectUri;
+        }
+
+        public OAuthClientRequest getRequestWithAuthParams(OAuthClientRequest.TokenRequestBuilder tokenRequestBuilder) throws OAuthSystemException {
+            if (this.redirectUri != null) {
+                tokenRequestBuilder.setRedirectURI(redirectUri);
+            }
+            return tokenRequestBuilder.setGrantType(GrantType.AUTHORIZATION_CODE)
+            .setCode(code)
+            .buildBodyMessage();
+        }
+
+        public boolean isReusable() {return false;}
+    }
+
+
+    public static class CredentialsAuthMethod extends AuthMethod {
+
+        public CredentialsAuthMethod(){}
+
+        public OAuthClientRequest getRequestWithAuthParams(OAuthClientRequest.TokenRequestBuilder tokenRequestBuilder) throws OAuthSystemException {
+            return tokenRequestBuilder.setGrantType(GrantType.CLIENT_CREDENTIALS)
+                .buildBodyMessage();
+        }
+    }
+
+    @Override
+    public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) throws ApiException {
+        headerParams.put("Authorization", "Bearer " + getOauthToken().getAccessToken());
+    }
+}

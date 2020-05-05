@@ -1,0 +1,48 @@
+doctype html
+html.default(dir=dir)
+  head
+    
+    //- Load sentry
+    script(src='https://cdn.ravenjs.com/3.25.2/raven.min.js', crossorigin='anonymous')
+    //- script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDhZ59btpwexEJc1x2xqXtuZgZCRTL498U&libraries=places&language=en', type='text/javascript')
+    script(src='https://unpkg.com/sweetalert/dist/sweetalert.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.550/pdf.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.550/pdf.worker.js')
+    //-
+    
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
+    title Fluttr Console
+
+    //- seo
+    meta(name='application-name', content='Fluttr')
+    meta(name='author', content='Fluttr professional network SL')
+    meta(name='description', content='Fluttr TalenQuest')
+    meta(name='keywords', content='fluttr, talenQuest')
+    meta(name='robots', content='index, follow')
+    meta(name='viewport', content='width=1360, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+
+    //- favicon
+    link(rel='apple-touch-icon', sizes='57x57', href='/favicons/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='/favicons/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='/favicons/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='/favicons/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='/favicons/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='/favicons/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='/favicons/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='/favicons/apple-icon-152x152.png')
+    meta(name='apple-mobile-web-app-title', content='Fluttr')
+
+    link(rel='icon', type='image/png', href='/favicons/favicon-96x96.png', sizes='96x96')
+    link(rel='icon', type='image/png', href='/favicons/favicon-16x16.png', sizes='16x16')
+    link(rel='icon', type='image/png', href='/favicons/favicon-32x32.png', sizes='32x32')
+    meta(name='msapplication-TileColor', content='#2ECC71')
+    meta(name='msapplication-TileImage', content='/favicons/ms-icon-144x144.png')
+
+    block pace-loader
+    block header
+    body.pace-big(data-version='4.1.0')
+    script(id='preloadedData', type='application/json')!=data
+    block content
+    block scripts
+    block stylesheets

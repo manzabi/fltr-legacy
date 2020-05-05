@@ -1,0 +1,12 @@
+version: '3'
+services:
+    fltrMsReverseProxy:
+        image: eu.gcr.io/exalted-entity-163908/fluttr-microservices-image-repository/reverseproxy:prd
+        build: ./reverseproxy/
+        ports:
+            - "80:80"
+    fltrMsControlRoom:
+        image: eu.gcr.io/qa-env-225712/fluttr-microservices-image-repository/fltrcontrolroom:prd
+        build: ./sbFltrControlRoom/
+        ports:
+            - "8090:8090"

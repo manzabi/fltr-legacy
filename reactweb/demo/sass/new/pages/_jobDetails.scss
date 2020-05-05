@@ -1,0 +1,20 @@
+.job-details {
+    & .job-details-label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    & .crazy-field, & .crazy-dropdown {
+        margin-bottom: 22px;
+    }
+    & .job-details-controls {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        & .save-button {
+            margin-left: 8px;
+        }
+    }
+    & .demo-wrapper.rdw-editor-wrapper {
+        margin-bottom: 22px;
+    }
+}

@@ -1,0 +1,259 @@
+.opportunityConfigurationWizardStepChallengeTest {
+    & .opportunity-configuration-container {
+        padding: 0 5%;
+    }
+    & .containerSection {
+        & .text-center{
+            margin-bottom: 40px;
+        }
+    }
+    & .summarySubTitleStrong {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.61;
+        text-align: left;
+        color: $fluttr-black;
+    }
+    & .sectionTitleStrong {
+        width: 233px;
+        height: 35px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: left;
+        color: #333333;
+    }
+    .selection-container {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px 20px 10px 20px;
+        text-align: center;
+        height: 100%;
+
+    }
+    h1 {
+        margin: 0;
+    }
+    h2 {
+        color: $fluttr-dark-grey;
+        font-size: 1.1em;
+        font-weight: 300;
+    }
+    .col-padding-little {
+        padding: 0 10px;
+    }
+    .button-div {
+        position: relative;
+        width: 100%;
+        padding-bottom: 2em;
+        text-align: center;
+    }
+    .button-div .childButton-div {
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        left: 0;
+        width: 100%;
+    }
+    .icon-div {
+        width: 100%;
+        padding: 0;
+    }
+    .icon-selection {
+        font-size: 3em;
+    }
+    .invitation-user {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+    }
+    .invitation-user-hover {
+        background-color: #eee;
+        &:hover {
+            border: 1px solid $fluttr-green;
+        }
+    }
+    .invitation-user-wrapper {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: block;
+        overflow: hidden;
+    }
+    .invitation-user-name {
+        color: $fluttr-black;
+        font-size: 1em;
+        font-weight: 300;
+    }
+    .picture-placeholder {
+        border: 1px solid #DDD;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: table;
+        i {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+    .caret {
+        display: none;
+    }
+    .dropdown {
+        ul {
+            //position: relative;
+            right: 0;
+            left: auto;
+            max-width: 30vw;
+            padding: 15px 10px 10px 10px;
+        }
+    }
+    .challenge-configuration-split {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+}
+.fluttr-card {
+    width: 250px;
+    min-height: 250px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    text-align: center;
+    &.card-lg {
+        width: 300px;
+        min-height: 300px;
+    }
+    & .selection-container {
+        padding: 20px;
+        justify-content: flex-start;
+        &:hover {
+            & ul {
+                color: white;
+            }
+        }
+    }
+    & .card-detail {
+        & ul {
+            list-style: none;
+            text-align: left;
+            padding: 0;
+            & li {
+                border-bottom: 1px solid #d4d4d5;
+                padding: 10px;
+                &:first-child {
+                    border-top: 1px solid #d4d4d5;
+                    font-weight: 600;
+                }
+                &:last-child {
+                    border: 0;
+                }
+                &.explanation-field {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+    & .image-container {
+        font-size: 48px;
+        padding: 0;
+        margin: 0;
+    }
+    &.card-green .selection-container {
+        border-color: #8A81E1;
+        & .card-detail {
+            & h3 {
+                color: #8A81E1;
+            }
+        }
+        & .image-container {
+            color: #8A81E1;
+        }
+        &:hover{
+            background-color: #8A81E1;
+            & .image-container {
+                color: white;
+            }
+            & .card-detail {
+                & h3 {
+                    color: white;
+                }
+            }
+        }
+    }
+    &.card-blue .selection-container {
+        border-color: #3498db;
+        & .card-detail {
+            & h3 {
+                color: #3498db;
+            }
+        }
+        & .image-container {
+            color: #3498db;
+        }
+        &:hover{
+            background-color: #3498db;
+            & .image-container {
+                color: white;
+            }
+            & .card-detail {
+                & h3 {
+                    color: white;
+                }
+            }
+        }
+    }
+    &.card-orange .selection-container {
+        border-color: #e67333;
+        & .card-detail {
+            & h3 {
+                color: #e67333;
+            }
+        }
+        & .image-container {
+            color: #e67333;
+        }
+        &:hover{
+            background-color: #e67333;
+            & .image-container {
+                color: white;
+            }
+            & .card-detail {
+                & h3 {
+                    color: white;
+                }
+            }
+        }
+    }
+    & .selection-container {
+        border-radius: 5px;
+        background-color: #ffffff;
+        border-width: 1px;
+        border-style: solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+        height: 100%;
+        &:hover {
+            box-shadow: 0 2px 7px rgba(51, 51, 51, 0.6);
+        }
+        & h1 {
+            text-align: center;
+            color: black;
+            margin-top: 0;
+        }
+        & h2 {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.4;
+            text-align: center;
+            color: black;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.pac-container {
+    margin-bottom: 15px;
+    background-color: white;
+    & .pac-item {
+        border-top: 1px solid #e0e0e0;
+        color: #8C8C8C;
+        padding: 5px 15px;
+        cursor: pointer;
+        &.pac-item-active {
+            background-color: #f3f3f3
+        }
+        & .pac-matched, & .pac-item-query {
+            font-weight: 700;
+        }
+        & .pac-matched {
+            color: $fluttr-black;
+            margin-left: 15px;
+        }
+    }
+    & img {
+        display: block;
+        width: 150px;
+        margin-left: auto;
+    }
+}
+.location-search-input.fluttr-input.loading:after {
+    top: 50%;
+    left: 95%;
+}

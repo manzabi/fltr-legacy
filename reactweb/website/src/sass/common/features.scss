@@ -1,0 +1,33 @@
+.feature-container {
+    & .feature-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        & .feature-section {
+            box-sizing: border-box;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &.flex-reverse{
+            flex-direction: row-reverse;
+        }
+        & div {
+            & img {
+                display: block;
+                margin: auto;
+            }
+        }
+        & .small {
+            font-weight: 100;
+        }
+    }
+    & :last-child .feature-section {
+        margin-bottom: 0px;
+    }
+}
+
+.feature-title {
+    color: #333;
+}

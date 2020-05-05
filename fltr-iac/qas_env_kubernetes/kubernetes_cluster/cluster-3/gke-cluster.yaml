@@ -1,0 +1,12 @@
+imports:
+- path: templates/cluster.jinja        
+  name: cluster.jinja
+
+resources:                             
+- name: fltr-stg-kube
+  type: cluster.jinja        
+  properties:
+    description: "Fluttr STG kube cluster"
+    zones:
+    - europe-west4-a
+    initialNodeCount: 1

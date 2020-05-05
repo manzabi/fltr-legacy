@@ -1,0 +1,886 @@
+
+/home/oscraker/projects/fluttr/reactweb/demo/server.babel.js
+   29:1  warning  Expected indentation of 4 spaces but found 2   indent
+   30:1  warning  Expected indentation of 8 spaces but found 4   indent
+   31:1  warning  Expected indentation of 12 spaces but found 6  indent
+   32:1  warning  Expected indentation of 16 spaces but found 8  indent
+   33:1  warning  Expected indentation of 12 spaces but found 6  indent
+   34:1  warning  Expected indentation of 16 spaces but found 8  indent
+   35:1  warning  Expected indentation of 12 spaces but found 6  indent
+   36:1  warning  Expected indentation of 8 spaces but found 4   indent
+   37:1  warning  Expected indentation of 12 spaces but found 6  indent
+   38:1  warning  Expected indentation of 8 spaces but found 4   indent
+   39:1  warning  Expected indentation of 12 spaces but found 6  indent
+   40:1  warning  Expected indentation of 16 spaces but found 8  indent
+   41:1  warning  Expected indentation of 12 spaces but found 6  indent
+   42:1  warning  Expected indentation of 8 spaces but found 4   indent
+   43:1  warning  Expected indentation of 4 spaces but found 2   indent
+  105:5  error    Unexpected console statement                   no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/chat.js
+  21:9  warning  Expected { after 'if' condition  curly
+  22:9  warning  Expected { after 'if' condition  curly
+  23:9  warning  Expected { after 'if' condition  curly
+  24:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/components/CommonConfirmModal.js
+  31:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/components/CommonModal.js
+  27:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/components/DropDown.js
+  32:79  warning  Expected '===' and instead saw '=='  eqeqeq
+  40:11  warning  Expected { after 'else'              curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/components/FullheightIframe.js
+  51:13  error  Unexpected console statement  no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/components/LocationSearchInput.js
+   26:9   warning  Expected { after 'if' condition  curly
+  124:35  warning  Expected { after 'else'          curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/components/SkillsInputComponent.js
+  24:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/components/TemplateMailEditor.js
+  47:11  error  Unexpected console statement  no-console
+  53:11  error  Unexpected console statement  no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/header.js
+   60:86  warning  Expected '===' and instead saw '=='  eqeqeq
+   82:86  warning  Expected '===' and instead saw '=='  eqeqeq
+  155:9   warning  Expected { after 'if' condition      curly
+  275:53  warning  Expected '!==' and instead saw '!='  eqeqeq
+  305:9   warning  Expected { after 'if' condition      curly
+  358:38  warning  Expected '!==' and instead saw '!='  eqeqeq
+  373:38  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/HeaderLimitBanner.js
+   52:17  warning  Expected { after 'if' condition  curly
+   56:21  warning  Expected { after 'if' condition  curly
+   97:13  warning  Expected { after 'if' condition  curly
+  166:13  warning  Expected { after 'if' condition  curly
+  173:13  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/sidebar.js
+  192:11  warning  Expected { after 'else'  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/statistics.js
+  44:17  error  'Chart' is not defined  no-undef
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/timerUtils.js
+   45:17  warning  Expected '===' and instead saw '=='  eqeqeq
+   49:16  warning  Expected '!==' and instead saw '!='  eqeqeq
+   86:13  warning  Expected '!==' and instead saw '!='  eqeqeq
+  100:13  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/common/utils.js
+   72:35  warning  Expected '===' and instead saw '=='  eqeqeq
+   82:19  warning  Expected '!==' and instead saw '!='  eqeqeq
+   88:23  warning  Expected '===' and instead saw '=='  eqeqeq
+  148:5   warning  Expected { after 'if' condition      curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/constants/challengeDuration.js
+  57:2  error  Missing semicolon  semi
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/constants/notificationType.js
+   5:8   warning  Strings must use singlequote                   quotes
+  24:1   warning  Expected indentation of 4 spaces but found 8   indent
+  25:1   warning  Expected indentation of 8 spaces but found 12  indent
+  26:1   warning  Expected indentation of 8 spaces but found 12  indent
+  27:1   warning  Expected indentation of 4 spaces but found 8   indent
+  28:1   warning  Expected indentation of 8 spaces but found 12  indent
+  29:1   warning  Expected indentation of 8 spaces but found 12  indent
+  30:1   warning  Expected indentation of 4 spaces but found 8   indent
+  31:1   warning  Expected indentation of 8 spaces but found 12  indent
+  32:1   warning  Expected indentation of 8 spaces but found 12  indent
+  33:1   warning  Expected indentation of 4 spaces but found 8   indent
+  34:1   warning  Expected indentation of 8 spaces but found 12  indent
+  35:1   warning  Expected indentation of 8 spaces but found 12  indent
+  36:1   warning  Expected indentation of 4 spaces but found 8   indent
+  37:1   warning  Expected indentation of 8 spaces but found 12  indent
+  38:1   warning  Expected indentation of 8 spaces but found 12  indent
+  39:1   warning  Expected indentation of 4 spaces but found 8   indent
+  40:1   warning  Expected indentation of 8 spaces but found 12  indent
+  41:1   warning  Expected indentation of 8 spaces but found 12  indent
+  42:1   warning  Expected indentation of 4 spaces but found 8   indent
+  43:1   warning  Expected indentation of 8 spaces but found 12  indent
+  44:1   warning  Expected indentation of 8 spaces but found 12  indent
+  45:1   warning  Expected indentation of 4 spaces but found 8   indent
+  46:1   warning  Expected indentation of 8 spaces but found 12  indent
+  47:1   warning  Expected indentation of 8 spaces but found 12  indent
+  48:1   warning  Expected indentation of 4 spaces but found 8   indent
+  49:1   warning  Expected indentation of 8 spaces but found 12  indent
+  50:1   warning  Expected indentation of 8 spaces but found 12  indent
+  51:1   warning  Expected indentation of 4 spaces but found 8   indent
+  52:1   warning  Expected indentation of 8 spaces but found 12  indent
+  52:13  error    Unexpected console statement                   no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/constants/opportunityJudgeStatus.js
+   9:12  warning  Expected '===' and instead saw '=='  eqeqeq
+  11:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  13:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  15:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  17:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  25:12  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/constants/opportunityJudgeType.js
+   8:12  warning  Expected '===' and instead saw '=='  eqeqeq
+  10:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  12:19  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/constants/plans.js
+  309:5   warning  Expected { after 'if' condition  curly
+  310:10  warning  Expected { after 'if' condition  curly
+  311:10  warning  Expected { after 'if' condition  curly
+  312:10  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/constants/reviewStars.js
+  18:5  warning  Expected { after 'if' condition  curly
+  19:5  warning  Expected { after 'else'          curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/Chart.js
+  51:17  error  'Chart' is not defined  no-undef
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/bankInfo/BankInformation.js
+  24:38  warning  Expected '===' and instead saw '=='  eqeqeq
+  75:22  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/bankInfo/BankInformationForm.js
+   55:9   warning  Expected { after 'if' condition      curly
+   56:14  warning  Expected { after 'if' condition      curly
+  105:44  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/confirm/FullScreenExpertCompleteComponent.js
+   91:9   warning  Expected { after 'if' condition      curly
+  208:40  warning  Expected '!==' and instead saw '!='  eqeqeq
+  208:83  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/invitation/Invite.js
+  20:52   warning  Expected '===' and instead saw '=='  eqeqeq
+  42:130  warning  Expected '===' and instead saw '=='  eqeqeq
+  77:36   warning  Expected '===' and instead saw '=='  eqeqeq
+  92:91   warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/opportunity/ExpertActiveChallengeItem.js
+  23:31  warning  Expected '!==' and instead saw '!='  eqeqeq
+  53:31  warning  Expected '!==' and instead saw '!='  eqeqeq
+  68:33  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/opportunity/ExpertPendingInvitationComponent.js
+  38:26  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/opportunity/OpportunityExpertCard.js
+  36:26  warning  Expected '===' and instead saw '=='  eqeqeq
+  59:26  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/opportunity/review/ExpertPublicFeedbackModal.js
+  56:9  warning  Expected { after 'if' condition  curly
+  73:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/opportunity/review/ReviewUserComponent.js
+   197:20  warning  Expected '===' and instead saw '=='  eqeqeq
+   255:9   warning  Expected { after 'if' condition      curly
+   266:9   warning  Expected { after 'if' condition      curly
+   353:24  warning  Expected '===' and instead saw '=='  eqeqeq
+   359:24  warning  Expected '===' and instead saw '=='  eqeqeq
+   520:31  warning  Expected '!==' and instead saw '!='  eqeqeq
+   560:9   warning  Expected { after 'if' condition      curly
+   561:14  warning  Expected { after 'if' condition      curly
+   563:9   warning  Expected { after 'if' condition      curly
+   566:9   warning  Expected { after 'if' condition      curly
+   567:9   warning  Expected { after 'if' condition      curly
+   736:9   warning  Expected { after 'if' condition      curly
+   738:9   warning  Expected { after 'if' condition      curly
+   799:24  warning  Expected '===' and instead saw '=='  eqeqeq
+   805:24  warning  Expected '===' and instead saw '=='  eqeqeq
+  1018:41  warning  Expected '!==' and instead saw '!='  eqeqeq
+  1022:45  warning  Expected '!==' and instead saw '!='  eqeqeq
+  1032:41  warning  Expected '===' and instead saw '=='  eqeqeq
+  1035:43  warning  Expected '===' and instead saw '=='  eqeqeq
+  1044:37  warning  Expected '===' and instead saw '=='  eqeqeq
+  1067:18  warning  Expected '===' and instead saw '=='  eqeqeq
+  1089:18  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/opportunity/review/UserToReview.js
+   89:27  warning  Expected '===' and instead saw '=='  eqeqeq
+  129:37  warning  Expected '===' and instead saw '=='  eqeqeq
+  129:64  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/expert/templates/templateEditor/ChallengeTemplateCreationComponent.js
+  125:9   warning  Expected { after 'if' condition      curly
+  198:13  error    Unexpected constant condition        no-constant-condition
+  209:9   warning  Expected { after 'if' condition      curly
+  233:9   warning  Expected { after 'if' condition      curly
+  234:9   warning  Expected { after 'else'              curly
+  235:23  warning  Expected '===' and instead saw '=='  eqeqeq
+  247:29  warning  Expected '===' and instead saw '=='  eqeqeq
+  601:53  error    Unexpected constant condition        no-constant-condition
+  643:43  error    Unexpected constant condition        no-constant-condition
+  659:43  error    Unexpected constant condition        no-constant-condition
+  724:43  error    Unexpected constant condition        no-constant-condition
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/feed/FeedComponent.js
+  101:62  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/feed/FeedReplyWriteComponent.js
+  52:9  warning  Expected { after 'if' condition  curly
+  91:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/navigation/NavigationManager.js
+   33:17  warning  Expected '!==' and instead saw '!='  eqeqeq
+   35:16  warning  Expected '!==' and instead saw '!='  eqeqeq
+  189:5   warning  Expected { after 'if' condition      curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/notification/NotificationItem.js
+  12:41  warning  Strings must use singlequote  quotes
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/notification/NotificationMenuNew.js
+    8:41  warning  Strings must use singlequote  quotes
+  124:11  warning  Expected { after 'else'       curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/notification/NotificationsMenu.js
+  37:43  warning  Expected '===' and instead saw '=='  eqeqeq
+  70:37  warning  Expected '===' and instead saw '=='  eqeqeq
+  84:60  warning  Expected '===' and instead saw '=='  eqeqeq
+  99:34  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/opportunity/challenge/OpportunityChallengeModal.js
+  39:9  warning  Expected { after 'if' condition  curly
+  58:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/opportunity/OpportunityHeaderCard.js
+  19:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/opportunity/OpportunityHeaderCardDetail.js
+  100:11  warning  Expected { after 'else'  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/opportunity/OpportunityHeaderCardNew.js
+  20:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/opportunity/OpportunityTimer.js
+   18:9   warning  Expected { after 'if' condition               curly
+   24:13  error    Unexpected lexical declaration in case block  no-case-declarations
+   29:13  error    Unexpected lexical declaration in case block  no-case-declarations
+   38:9   warning  Expected { after 'if' condition               curly
+   51:9   warning  Expected { after 'if' condition               curly
+   54:9   warning  Expected { after 'if' condition               curly
+   57:9   warning  Expected { after 'if' condition               curly
+   77:9   warning  Expected { after 'if' condition               curly
+  109:9   warning  Expected { after 'if' condition               curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/opportunity/tag/OpportunityTags.js
+  19:7   warning  Expected { after 'if' condition      curly
+  43:7   warning  Expected { after 'if' condition      curly
+  50:43  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/candidate/RecruiterCandidateCard.js
+   67:9   warning  Expected { after 'if' condition      curly
+   77:9   warning  Expected { after 'if' condition      curly
+   88:13  warning  Expected { after 'if' condition      curly
+   98:13  warning  Expected { after 'else'              curly
+  182:61  warning  Expected '===' and instead saw '=='  eqeqeq
+  183:70  warning  Expected '===' and instead saw '=='  eqeqeq
+  269:56  warning  Expected '===' and instead saw '=='  eqeqeq
+  292:35  warning  Expected '===' and instead saw '=='  eqeqeq
+  418:32  warning  Expected '!==' and instead saw '!='  eqeqeq
+  428:34  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/candidate/RecruiterCandidatesComponent.js
+   72:13  warning  Expected { after 'if' condition      curly
+   73:13  warning  Expected { after 'if' condition      curly
+   74:13  warning  Expected { after 'if' condition      curly
+  153:31  warning  Expected '!==' and instead saw '!='  eqeqeq
+  153:49  warning  Expected '===' and instead saw '=='  eqeqeq
+  173:31  warning  Expected '!==' and instead saw '!='  eqeqeq
+  173:49  warning  Expected '===' and instead saw '=='  eqeqeq
+  308:22  warning  Expected '!==' and instead saw '!='  eqeqeq
+  321:20  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/candidate/RecruiterNotesModal.js
+   65:9  warning  Expected { after 'if' condition  curly
+  110:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/candidate/RecruiterReviewCvModal.js
+   91:9   warning  Expected { after 'if' condition      curly
+  183:9   warning  Expected { after 'if' condition      curly
+  184:9   warning  Expected { after 'else'              curly
+  285:9   warning  Expected { after 'if' condition      curly
+  421:56  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/candidate/RecruiterReviewExtendTimelineModal.js
+   84:9  warning  Expected { after 'if' condition  curly
+  125:9  error    Unexpected console statement     no-console
+  149:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/candidate/RecruiterReviewTalentModal.js
+  29:9  warning  Expected { after 'if' condition  curly
+  46:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/confirm/FullScreenRecruiterCompleteOpportunity.js
+   84:9   warning  Expected { after 'if' condition      curly
+  117:18  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/confirm/FullScreenRecruiterCompleteOpportunityChallenge.js
+   85:9   warning  Expected { after 'if' condition      curly
+  118:18  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/dashboard/RecruiterDashboardCompleteProfile.js
+  15:7  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunity/ChallengeUpsellModal.js
+  27:9  warning  Expected { after 'if' condition  curly
+  60:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunity/RecruiterOpportunityCard.js
+  415:55  warning  Expected '!==' and instead saw '!='  eqeqeq
+  429:55  warning  Expected '!==' and instead saw '!='  eqeqeq
+  536:34  warning  Expected '!==' and instead saw '!='  eqeqeq
+  762:11  warning  Expected { after 'else'              curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunity/RecruiterOpportunityCreateComponent.js
+   91:13  warning  Expected { after 'if' condition      curly
+   92:13  warning  Expected { after 'else'              curly
+  238:25  warning  Expected '===' and instead saw '=='  eqeqeq
+  238:43  warning  Expected '!==' and instead saw '!='  eqeqeq
+  238:63  warning  Expected '===' and instead saw '=='  eqeqeq
+  238:83  warning  Expected '!==' and instead saw '!='  eqeqeq
+  242:24  warning  Expected '===' and instead saw '=='  eqeqeq
+  248:22  warning  Expected '===' and instead saw '=='  eqeqeq
+  319:9   warning  Expected { after 'if' condition      curly
+  320:9   warning  Expected { after 'else'              curly
+  332:13  warning  Expected { after 'if' condition      curly
+  333:13  warning  Expected { after 'else'              curly
+  379:9   error    Unexpected console statement         no-console
+  473:34  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunity/RecruiterOpportunityDetailComponent.js
+  121:46  warning  Expected '!==' and instead saw '!='  eqeqeq
+  122:40  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunity/RecruiterOpportunityLivePage.js
+  25:26  error  Unexpected constant condition  no-constant-condition
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunity/RecruiterOpportunitySplitComponent.js
+  16:32  warning  Strings must use singlequote         quotes
+  47:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  49:28  warning  Expected '===' and instead saw '=='  eqeqeq
+  66:9   warning  Expected { after 'if' condition      curly
+  67:9   warning  Expected { after 'else'              curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunity/RecruiterOpportunityTagAutosugest.js
+  181:9  error  Unexpected console statement  no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunity/RecruiterOpportunityTagComponent.js
+  172:53  warning  Expected '===' and instead saw '=='  eqeqeq
+  190:42  warning  Expected '===' and instead saw '=='  eqeqeq
+  221:9   warning  Expected { after 'else'              curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunity/RecruiterTemplatePage.js
+   61:11  warning  Expected { after 'else'          curly
+   77:9   warning  Expected { after 'if' condition  curly
+  105:13  warning  Expected { after 'if' condition  curly
+  183:13  warning  Expected { after 'if' condition  curly
+  197:9   warning  Expected { after 'if' condition  curly
+  227:13  warning  Expected { after 'if' condition  curly
+  350:11  warning  Expected { after 'else'          curly
+  413:9   warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/ChallengeHoursTalentDropDown.js
+  46:9  error  Unexpected console statement  no-console
+  47:9  error  Unexpected console statement  no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/ChallengeNormal.js
+  25:9  error  Unexpected console statement  no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/ChallengeWizard.js
+  56:74  error  Unexpected control character(s) in regular expression: \x0d, \x0a  no-control-regex
+  57:58  error  Unexpected control character(s) in regular expression: \x0d, \x0a  no-control-regex
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/opportunityChallengeConfiguration/OpportunityChallengeConfigurationPage.js
+  488:32  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/opportunityChallengeConfiguration/OpportunityChallengeConfigurationTemplateEditor.js
+  100:9  warning  Expected { after 'if' condition  curly
+  138:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/opportunityChallengeConfiguration/OpportunityChallengeConfigurationTemplateEditorPage.js
+  46:9   warning  Expected { after 'if' condition  curly
+  47:14  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/opportunityChallengeConfiguration/OpportunityChallengeConfigurationUpdatePage.js
+  12:9  error  Unexpected console statement  no-console
+  18:9  error  Unexpected console statement  no-console
+  19:9  error  Unexpected console statement  no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/OpportunityChallengeConfigurationComponent.js
+  175:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  249:40  warning  Expected '===' and instead saw '=='  eqeqeq
+  283:17  error    Unexpected constant condition        no-constant-condition
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/OpportunityChallengeConfigurationStepComponent.js
+  26:22  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/OpportunityChallengeConfigurationSummaryComponent.js
+  193:9   error    Unexpected console statement         no-console
+  277:11  error    Missing semicolon                    semi
+  572:28  warning  Expected '===' and instead saw '=='  eqeqeq
+  594:60  warning  Expected '===' and instead saw '=='  eqeqeq
+  599:30  warning  Expected '===' and instead saw '=='  eqeqeq
+  604:39  warning  Expected '!==' and instead saw '!='  eqeqeq
+  693:63  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/OpportunityConfigurationConfirmModal.js
+  42:9  warning  Expected { after 'if' condition  curly
+  71:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/OpportunityConfigurationWizardStepChallengeTest.js
+   69:48  warning  Expected '===' and instead saw '=='  eqeqeq
+  112:16  warning  Expected '===' and instead saw '=='  eqeqeq
+  237:23  warning  Expected '===' and instead saw '=='  eqeqeq
+  239:39  warning  Expected '===' and instead saw '=='  eqeqeq
+  345:28  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/OpportunityConfigurationWizardStepChallengeTestInput.js
+   92:18  warning  Expected '===' and instead saw '=='  eqeqeq
+  111:13  warning  Expected { after 'if' condition      curly
+  112:13  warning  Expected { after 'else'              curly
+  114:13  warning  Expected { after 'if' condition      curly
+  115:13  warning  Expected { after 'else'              curly
+  128:18  warning  Expected '===' and instead saw '=='  eqeqeq
+  131:18  warning  Expected '===' and instead saw '=='  eqeqeq
+  155:23  warning  Expected '===' and instead saw '=='  eqeqeq
+  175:29  warning  Expected '===' and instead saw '=='  eqeqeq
+  206:33  warning  Expected '!==' and instead saw '!='  eqeqeq
+  372:69  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/OpportunityConfigurationWizardStepExperts.js
+  167:50  warning  Expected '===' and instead saw '=='  eqeqeq
+  199:29  warning  Expected '!==' and instead saw '!='  eqeqeq
+  199:57  warning  Expected '!==' and instead saw '!='  eqeqeq
+  199:82  warning  Expected '!==' and instead saw '!='  eqeqeq
+  205:44  warning  Expected '===' and instead saw '=='  eqeqeq
+  209:43  warning  Expected '===' and instead saw '=='  eqeqeq
+  404:28  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/opportunityConfiguration/OpportunityTemplateList/OpportunityUnlockTemplateModal.js
+  44:7  warning  Expected { after 'if' condition  curly
+  62:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/profile/RecruiterEditProfileComponent.js
+  232:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/team/RecruiterTeamAddComponent.js
+   54:21  warning  Expected '===' and instead saw '=='  eqeqeq
+   56:28  warning  Expected '===' and instead saw '=='  eqeqeq
+   88:22  warning  Expected '!==' and instead saw '!='  eqeqeq
+  139:28  warning  Expected '===' and instead saw '=='  eqeqeq
+  228:34  warning  Expected '!==' and instead saw '!='  eqeqeq
+  427:32  warning  Expected '!==' and instead saw '!='  eqeqeq
+  427:56  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/team/RecruiterTeamAddModal.js
+   32:9   warning  Expected { after 'if' condition      curly
+   55:9   warning  Expected { after 'if' condition      curly
+  151:36  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/team/RecruiterTeamCard.js
+   64:29  warning  Expected '===' and instead saw '=='  eqeqeq
+  117:31  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/recruiter/team/RecruiterTeamListComponent.js
+   98:29  warning  Expected '===' and instead saw '=='  eqeqeq
+  108:36  warning  Expected '===' and instead saw '=='  eqeqeq
+  131:22  warning  Expected '!==' and instead saw '!='  eqeqeq
+  131:43  warning  Expected '!==' and instead saw '!='  eqeqeq
+  192:29  warning  Expected '===' and instead saw '=='  eqeqeq
+  194:36  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/social/SocialShare.js
+  17:26  error  Unexpected constant condition  no-constant-condition
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/template/AsynchContainer.js
+  11:9   warning  Expected { after 'if' condition      curly
+  35:9   warning  Expected { after 'if' condition      curly
+  39:9   warning  Expected { after 'if' condition      curly
+  49:60  warning  Expected '===' and instead saw '=='  eqeqeq
+  49:82  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/template/AsyncList.js  44:13  warning  Expected { after 'if' condition      curly
+  50:18  warning  Expected '!==' and instead saw '!='  eqeqeq
+  50:39  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/template/BackButton.js
+  12:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/template/FullScreen.js
+  27:9   warning  Expected { after 'if' condition  curly
+  28:9   warning  Expected { after 'else'          curly
+  32:9   warning  Expected { after 'if' condition  curly
+  33:14  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/template/ImageCrop.js
+   30:30  warning  Expected '!==' and instead saw '!='  eqeqeq
+   95:27  warning  Expected '===' and instead saw '=='  eqeqeq
+  138:13  error    Unexpected console statement         no-console
+  140:13  error    Unexpected console statement         no-console
+  162:30  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/template/PanelContainer.js
+   30:9  warning  Expected { after 'if' condition  curly
+   65:9  warning  Expected { after 'if' condition  curly
+   68:9  warning  Expected { after 'if' condition  curly
+   76:9  warning  Expected { after 'if' condition  curly
+   79:9  warning  Expected { after 'if' condition  curly
+  127:9  warning  Expected { after 'if' condition  curly
+  130:9  warning  Expected { after 'if' condition  curly
+  133:9  warning  Expected { after 'if' condition  curly
+  136:9  warning  Expected { after 'if' condition  curly
+  162:9  warning  Expected { after 'if' condition  curly
+  178:9  warning  Expected { after 'if' condition  curly
+  198:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/template/RatingStarComponent.js
+  14:1  warning  Expected indentation of 28 spaces but found 26  indent
+  21:1  warning  Expected indentation of 28 spaces but found 26  indent
+  22:1  warning  Expected indentation of 28 spaces but found 26  indent
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/test/components/results/TestResults.js
+  69:11  error  Unexpected console statement  no-console
+  85:11  error  Unexpected console statement  no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/test/components/TestManager.js
+  100:25  warning  Expected '===' and instead saw '=='  eqeqeq
+  108:9   error    Unexpected console statement         no-console
+  124:9   error    Unexpected console statement         no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/test/components/TestManagerForOpportunity.js
+  131:23  warning  Expected '===' and instead saw '=='  eqeqeq
+  139:7   error    Unexpected console statement         no-console
+  155:7   error    Unexpected console statement         no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/user/ExpertCard.js
+  55:51  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/user/PlayerHidden.js
+  37:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/user/UserInfo.js
+  24:18  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/user/UserInfoInline.js
+  20:18  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/utils/errorUtils.js
+  16:9  warning  Expected { after 'if' condition  curly
+  21:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/utils/FormUtils.js
+   35:5   warning  Expected { after 'if' condition      curly
+   36:5   warning  Expected { after 'else'              curly
+  107:14  warning  Expected '===' and instead saw '=='  eqeqeq
+  112:19  warning  Expected '!==' and instead saw '!='  eqeqeq
+  126:18  warning  Expected '===' and instead saw '=='  eqeqeq
+  137:25  warning  Expected '===' and instead saw '=='  eqeqeq
+  154:14  warning  Expected '===' and instead saw '=='  eqeqeq
+  155:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  155:36  warning  Expected '===' and instead saw '=='  eqeqeq
+  165:14  warning  Expected '===' and instead saw '=='  eqeqeq
+  169:23  warning  Expected '===' and instead saw '=='  eqeqeq
+  169:40  warning  Expected '===' and instead saw '=='  eqeqeq
+  169:62  warning  Expected '===' and instead saw '=='  eqeqeq
+  174:24  warning  Expected '!==' and instead saw '!='  eqeqeq
+  174:43  warning  Expected '!==' and instead saw '!='  eqeqeq
+  187:14  warning  Expected '===' and instead saw '=='  eqeqeq
+  188:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  188:36  warning  Expected '===' and instead saw '=='  eqeqeq
+  188:58  warning  Expected '===' and instead saw '=='  eqeqeq
+  202:14  warning  Expected '===' and instead saw '=='  eqeqeq
+  203:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  203:36  warning  Expected '===' and instead saw '=='  eqeqeq
+  203:58  warning  Expected '===' and instead saw '=='  eqeqeq
+  217:14  warning  Expected '===' and instead saw '=='  eqeqeq
+  218:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  218:36  warning  Expected '===' and instead saw '=='  eqeqeq
+  218:58  warning  Expected '===' and instead saw '=='  eqeqeq
+  218:80  warning  Expected '===' and instead saw '=='  eqeqeq
+  227:14  warning  Expected '===' and instead saw '=='  eqeqeq
+  228:19  warning  Expected '===' and instead saw '=='  eqeqeq
+  243:14  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/utils/inspectlet.js
+  10:5    error    '__insp' is not defined              no-undef
+  12:30   warning  Expected { after 'if' condition      curly
+  12:259  warning  Expected '===' and instead saw '=='  eqeqeq
+  13:54   warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/utils/Intercom.js
+  17:9  warning  Expected { after 'if' condition  curly
+  18:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/utils/planUtils.js
+   4:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  13:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  23:17  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/fltr/utils/urlUtils.js
+  43:5  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/buttons/CrazyButtons.js
+  27:9  warning  Expected { after 'if' condition  curly
+  28:9  warning  Expected { after 'if' condition  curly
+  29:9  warning  Expected { after 'if' condition  curly
+  30:9  warning  Expected { after 'if' condition  curly
+  31:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/dropdown/Dropdown.js
+  25:71  error    Missing semicolon                    semi
+  27:9   warning  Expected { after 'if' condition      curly
+  27:69  warning  Expected '===' and instead saw '=='  eqeqeq
+  28:14  warning  Expected { after 'if' condition      curly
+  29:14  warning  Expected { after 'if' condition      curly
+  59:9   warning  Expected { after 'if' condition      curly
+  69:9   warning  Expected { after 'if' condition      curly
+  70:9   warning  Expected { after 'if' condition      curly
+  71:9   warning  Expected { after 'if' condition      curly
+  94:9   warning  Expected { after 'if' condition      curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/fields/CrazyBubblesInput.js
+  16:13  warning  Expected { after 'if' condition  curly
+  17:13  warning  Expected { after 'else'          curly
+  41:9   warning  Expected { after 'if' condition  curly
+  61:13  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/fields/CrazyFields.js
+  29:9   warning  Expected { after 'if' condition  curly
+  50:9   warning  Expected { after 'if' condition  curly
+  51:14  warning  Expected { after 'if' condition  curly
+  56:9   warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/FluttrFonts.js
+  15:9  warning  Expected { after 'if' condition  curly
+  30:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/FluttrGrid.js
+  37:9  warning  Expected { after 'if' condition  curly
+  38:9  warning  Expected { after 'if' condition  curly
+  39:9  warning  Expected { after 'if' condition  curly
+  40:9  warning  Expected { after 'if' condition  curly
+  41:9  warning  Expected { after 'if' condition  curly
+  42:9  warning  Expected { after 'if' condition  curly
+  43:9  warning  Expected { after 'if' condition  curly
+  44:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/header/Header.js
+  12:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/layout/Col.js
+  17:9  warning  Expected { after 'if' condition  curly
+  19:9  warning  Expected { after 'if' condition  curly
+  21:9  warning  Expected { after 'if' condition  curly
+  23:9  warning  Expected { after 'if' condition  curly
+  25:9  warning  Expected { after 'if' condition  curly
+  27:9  warning  Expected { after 'if' condition  curly
+  29:9  warning  Expected { after 'if' condition  curly
+  31:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/layout/Container.js
+  13:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/modal/CrazyModal.js
+  30:9   warning  Expected { after 'if' condition  curly
+  41:13  warning  Expected { after 'if' condition  curly
+  42:13  warning  Expected { after 'if' condition  curly
+  50:13  warning  Expected { after 'if' condition  curly
+  51:13  warning  Expected { after 'if' condition  curly
+  56:9   warning  Expected { after 'if' condition  curly
+  61:9   warning  Expected { after 'if' condition  curly
+  68:9   warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/pages/OpportunityChallengeConfigurationTemplateEditor.js
+  194:9   warning  Expected { after 'if' condition  curly
+  434:13  warning  Expected { after 'if' condition  curly
+  450:13  warning  Expected { after 'if' condition  curly
+  473:9   warning  Expected { after 'if' condition  curly
+  538:13  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/pages/ProfileCreation.js
+  143:13  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/searchbar/Searchbar.js
+  47:9  warning  Expected { after 'if' condition  curly
+  48:9  warning  Expected { after 'if' condition  curly
+  49:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/uiUtils/inputControls.js
+  36:9  warning  Expected { after 'if' condition  curly
+  37:9  warning  Expected { after 'if' condition  curly
+  82:9  warning  Expected { after 'if' condition  curly
+  83:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/uiUtils/switchers.js
+  89:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/layout/uiUtils/tooltip.js
+  30:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/main.js
+  39:13  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/actions/bankInfoActions.js
+  125:41  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/actions/genericActions.js
+   31:17  warning  Expected { after 'if' condition  curly
+   96:17  warning  Expected { after 'if' condition  curly
+  131:17  warning  Expected { after 'if' condition  curly
+  172:17  warning  Expected { after 'if' condition  curly
+  207:17  warning  Expected { after 'if' condition  curly
+  251:17  warning  Expected { after 'if' condition  curly
+  292:17  warning  Expected { after 'if' condition  curly
+  333:17  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/actions/opportunityActions.js
+  140:18  warning  Expected '===' and instead saw '=='  eqeqeq
+  145:25  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/actions/recruiterOpportunityActions.js
+  167:9  warning  Expected { after 'if' condition  curly
+  168:9  warning  Expected { after 'if' condition  curly
+  169:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/actions/recruiterTeamActions.js
+  21:20  warning  Expected '===' and instead saw '=='  eqeqeq
+  23:27  warning  Expected '===' and instead saw '=='  eqeqeq
+  40:20  warning  Expected '===' and instead saw '=='  eqeqeq
+  42:27  warning  Expected '===' and instead saw '=='  eqeqeq
+  53:20  warning  Expected '===' and instead saw '=='  eqeqeq
+  55:27  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/actions/templateActions.js
+   50:9   warning  Expected { after 'if' condition  curly
+   51:9   warning  Expected { after 'else'          curly
+  107:5   error    Unexpected console statement     no-console
+  129:9   warning  Expected { after 'if' condition  curly
+  130:9   warning  Expected { after 'else'          curly
+  135:17  warning  Expected { after 'if' condition  curly
+  150:9   warning  Expected { after 'if' condition  curly
+  151:9   warning  Expected { after 'else'          curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/reducers/commonReducer.js
+   78:9   error    Unexpected lexical declaration in case block  no-case-declarations
+   79:37  warning  Expected '!==' and instead saw '!='           eqeqeq
+   80:46  warning  Expected '!==' and instead saw '!='           eqeqeq
+   81:54  warning  Expected '!==' and instead saw '!='           eqeqeq
+  137:9   error    Unexpected lexical declaration in case block  no-case-declarations
+  207:9   error    Unexpected lexical declaration in case block  no-case-declarations
+  267:41  warning  Expected '!==' and instead saw '!='           eqeqeq
+  268:50  warning  Expected '!==' and instead saw '!='           eqeqeq
+  269:58  warning  Expected '!==' and instead saw '!='           eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/reducers/navigationReducer.js
+  9:21  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/reducers/notificationReducer.js
+  25:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  37:28  warning  Expected '===' and instead saw '=='  eqeqeq
+  54:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  60:24  warning  Expected '!==' and instead saw '!='  eqeqeq
+  66:28  warning  Expected '===' and instead saw '=='  eqeqeq
+  71:28  warning  Expected '===' and instead saw '=='  eqeqeq
+  83:28  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/reducers/recruiterOpportunityReducer.js
+   38:21  warning  Expected '===' and instead saw '=='  eqeqeq
+   39:21  warning  Expected '===' and instead saw '=='  eqeqeq
+   40:21  warning  Expected '===' and instead saw '=='  eqeqeq
+   41:21  warning  Expected '===' and instead saw '=='  eqeqeq
+   42:21  warning  Expected '===' and instead saw '=='  eqeqeq
+   86:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  102:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  105:25  warning  Expected '!==' and instead saw '!='  eqeqeq
+  118:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  155:21  warning  Expected '===' and instead saw '=='  eqeqeq
+  290:9   warning  Expected { after 'if' condition      curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/redux/reducers/templatesReducer.js
+  59:9   error    Unexpected lexical declaration in case block  no-case-declarations
+  77:15  warning  Expected { after 'else'                       curly
+  80:9   error    Unexpected console statement                  no-console
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes.js
+  141:38  warning  Expected '===' and instead saw '=='  eqeqeq
+  203:9   warning  Expected { after 'if' condition      curly
+  268:41  warning  Expected '!==' and instead saw '!='  eqeqeq
+  280:11  warning  Expected { after 'else'              curly
+  300:41  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/expert/ExpertDashboard.js
+  122:26  warning  Expected '===' and instead saw '=='  eqeqeq
+  178:26  warning  Expected '===' and instead saw '=='  eqeqeq
+  231:26  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/expert/ExpertReviewUserPage.js
+  28:9  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/boarding/boardingFlowSkipModal.js
+  30:9   warning  Expected { after 'if' condition  curly
+  48:9   warning  Expected { after 'if' condition  curly
+  49:9   warning  Expected { after 'else'          curly
+  63:11  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/boarding/BoardingGiftModal.js
+  36:9   warning  Expected { after 'if' condition  curly
+  69:11  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/boarding/RecruiterBoardingFlowFinalPage.js
+  40:7  warning  Expected { after 'if' condition  curly
+  41:7  warning  Expected { after 'else'          curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/boarding/RecruiterBoardingFlowPage.js
+  37:9  warning  Expected { after 'if' condition  curly
+  38:9  warning  Expected { after 'else'          curly
+  48:7  warning  Expected { after 'if' condition  curly
+  49:7  warning  Expected { after 'else'          curly
+  53:9  warning  Expected { after 'if' condition  curly
+  54:9  warning  Expected { after 'if' condition  curly
+  55:9  warning  Expected { after 'else'          curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/challenge/ChallengeConfigurationRouter.js
+  24:9   warning  Expected { after 'if' condition  curly
+  90:17  error    Unexpected 'debugger' statement  no-debugger
+  94:11  warning  Expected { after 'else'          curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/company/RecruiterCompanyCreatePage.js
+  18:47  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/company/RecruiterCompanyUpgradeContactPage.js
+  26:9   error    Unexpected 'debugger' statement  no-debugger
+  32:19  warning  Expected { after 'else'          curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/company/RecruiterCompanyUpgradePage.js
+   66:13  warning  Expected { after 'if' condition  curly
+  141:29  warning  Expected { after 'if' condition  curly
+  144:29  warning  Expected { after 'if' condition  curly
+  145:34  warning  Expected { after 'if' condition  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/opportunity/RecruiterOpportunityCreatePage.js
+  16:43  warning  Expected '===' and instead saw '=='  eqeqeq
+  16:84  warning  Expected '===' and instead saw '=='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/RecruiterDashboard.js
+  64:80  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/recruiterLanding.js
+  66:9  warning  Expected { after 'else'  curly
+
+/home/oscraker/projects/fluttr/reactweb/demo/src/routes/recruiter/team/RecruiterOpportunityTeamPage.js
+   57:18  warning  Expected '===' and instead saw '=='  eqeqeq
+   60:25  warning  Expected '===' and instead saw '=='  eqeqeq
+   63:25  warning  Expected '===' and instead saw '=='  eqeqeq
+  122:29  warning  Expected '!==' and instead saw '!='  eqeqeq
+
+✖ 589 problems (49 errors, 540 warnings)
+  3 errors and 308 warnings potentially fixable with the `--fix` option.
+

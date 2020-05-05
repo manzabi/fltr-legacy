@@ -1,0 +1,36 @@
+.crazy-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    &.container-fluid {
+        padding-left: 30px;
+        padding-right: 30px;
+        & > .crazy-grid-parent {
+            margin-left: -30px;
+            margin-right: -30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            &.grid-no-padding {
+                padding: 0;
+            }
+            & > .crazy-grid {
+                max-width: unset;
+                margin-right: unset;
+                margin-left: unset;
+            }
+        }
+    }
+    & .crazy-grid-parent {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        &.grid-no-padding {
+            padding: 0;
+        }
+        & .crazy-grid {
+            max-width: 984px;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "serverUrl": "https://qas.fluttr.in",
+    "webLoginPage": "https://qas.fluttr.in/bizAroundSite/signinWeb",
+    "webLogoutPage": "https://qas.fluttr.in/bizAroundSite/logout",
+    "env": "qas"
+}

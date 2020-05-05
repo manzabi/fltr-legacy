@@ -1,0 +1,157 @@
+.candidate-list-container {
+    min-width: max-content;
+    & .candidate-list-container-grid {
+        min-width: max-content;
+        & .crazy-container {
+            min-width: max-content;
+        }
+    }
+    & .candidates-list-sticky-content {
+        width: calc(100% + 60px);
+        margin: 0 -30px;
+        & .candidate-list-menu {
+            border-bottom: 1px solid $crazy-lightgrey;
+            padding: 15px 30px;
+            margin-bottom: 10px;
+        }
+    }
+    & .candidate-list-menu {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        background: white;
+        margin-top: -30px;
+        & .crazy-dropdown {
+            width: 105px !important;
+            border: 0;
+            background-color: transparent;
+            flex-grow: 0;
+            & .options-wrapper {
+                top: 26px;
+            }
+            &.active .selected-container {
+                margin-right: 20px;
+                & > p {
+                    color: $crazy-darkside;
+                    text-align: left;
+                }
+                & .crazy-icon {
+                    color: $crazy-darkside;
+                }
+            }
+            & .selected-container {
+                height: 1em;
+                white-space: nowrap;
+                color: $crazy-darkside;
+                padding: 0;
+                & > p {
+                    overflow: hidden;
+                    width: 100%;
+                    color: $crazy-mediumgrey;
+                    font-weight: bold;
+                }
+                & .crazy-icon {
+                    color: $crazy-mediumgrey;
+                    font-size: 10px;
+                    width: 1em;
+                    height: 1em;
+                    top: 20%;
+                }
+            }
+        }
+        & .filters-container {
+            display: flex;
+            margin-right: 16px;
+            flex-grow: 0;
+            width: 50px;
+            & #favourites {
+                &.active {
+                    color: $crazy-correct;
+                }
+            }
+            & #discarded {
+                &.active {
+                    color: $crazy-error;
+                }
+            }
+            & .tooltip-icon-candidate-card {
+                font-size: 16px;
+
+                &:not(:first-of-type) {
+                    margin-left: 17px;
+                }
+            }
+        }
+
+        & > * {
+            line-height: 1em;
+            height: 1em;
+            margin: 0;
+            flex-grow: 1;
+        }
+        & .sort-button-container {
+            &.enabled {
+                & * {
+                    color: $crazy-darkside;
+                }
+            }
+            &.disabled {
+                & * {
+                    color: $crazy-mediumgrey;
+                }
+            }
+            &.rank_score {
+                min-width: 102px;
+                max-width: 102px;
+            }
+
+            &.name_candidate {
+                min-width: 195px;
+                max-width: 195px;
+            }
+
+            &.status_status {
+                min-width: 122px;
+                max-width: 122px;
+            }
+            &.attitude_attitude, &.motivation_engagement, &.cv_experience, &.challenge_challenge {
+                min-width: 200px;
+            }
+            .sort-button {
+                cursor: pointer;
+                margin: 0;
+                width: max-content;
+                & .sort-arrow {
+                    margin-left: 3px;
+                    font-size: 10px;
+                    position: relative;
+                    top: 1px;
+                }
+            }
+        }
+    }
+}
+.opportunity-filters-container {
+    & .options-container {
+        & .crazy-button {
+            padding: 0 7px;
+        }
+    }
+    & .crazy-dropdown {
+        font-size: 12px;
+        height: 32px;
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+            border-color: transparent;
+            background-color: #f0f0f0;
+        }
+        &.open {
+            border-color: transparent;
+            background-color: white;
+        }
+        & .options-wrapper {
+            top: 26px;
+        }
+    }
+}

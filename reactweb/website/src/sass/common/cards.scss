@@ -1,0 +1,109 @@
+.review-card-small {
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 0px;
+    background-color: white;
+    margin-bottom: 60px;
+    min-height: 500px;
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 5px black;
+    }
+    & .review-image-small {
+        width: 70%;
+        border-radius: 100%;
+        padding: 0px 0px 20px 0px;
+    }
+    & .review-card-body {
+        width: 70%;
+        margin: auto;
+        & .review-body-small {
+            min-height: 30px;
+            padding: 0px 15px;
+            & p {
+            }
+            & .card-link {
+                background-color: white;
+                border: 0px;
+                color: #3498db;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        & .review-footer-small {
+            margin-top: 20px;
+            &:last-child p {
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+        }
+        & .review-body {
+            &.hidden {
+                display: none;
+            }
+        }
+    }
+}
+.review-card-detail {
+    text-align: center;
+    border-radius: 13px;
+    border: 2px solid #3498db;
+    box-shadow: 0 2px 4px 0 #3498db;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    margin-bottom: 60px;
+    min-height: 500px;
+    & .review-body-detail {
+        box-sizing: border-box;
+        height: 100%;
+        padding: 0px 30px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        line-height: 1.6;
+        min-height: 500px;
+        & .user-review {
+            font-style: italic;
+            text-align: left;
+        }
+        & .review-footer-detail {
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@media (min-width: $tablet) {
+    .review-card-small {
+        & .review-image-small {
+            padding: 20px 0px 20px 0px;
+        }
+        & .review-body-small {
+            min-height: 50px;
+        }
+    }
+}
+@media (min-width: $desktop-sm) {
+    .review-card-small {
+        & .review-image-small {
+            padding: 0px 0px 10px 0px;
+        }
+        & .review-body-small {
+            min-height: 100px;
+        }
+    }
+}
+@media (min-width: $desktop-lg) {
+
+}

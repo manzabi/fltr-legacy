@@ -1,0 +1,358 @@
+.challenge-team-configuration {
+    & > .crazy-grid.section-container-content.challenge-team-configuration-grid {
+        padding-left: 27px;
+        padding-right: 27px;
+    }
+    & .separator {
+        border-top: 1px solid #d8d8d8;
+    }
+    & .title {
+        margin-top: 0;
+    }
+    & .crazy-checkbox-label {
+        color: $crazy-darkside;
+        font-weight: normal;
+    }
+    & .crazy-tooltip {
+        width: max-content;
+        & .team-tooltip {
+            color: $crazy-white;
+            margin: 10px 16px;
+            font-size: 11px;
+        }
+    }
+    & .assign-myself {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .tooltip-bubble {
+            bottom: calc(100% + 13px)
+        }
+        &:hover {
+            background-color: $crazy-background;
+        }
+    }
+    & .special-wrapper {
+        &:hover {
+            & .add-members-button {
+                visibility: visible;
+                margin: 0;
+                color: $crazy-primary;
+            }
+        }
+    }
+    & .assign-people {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        &:hover {
+            background-color: $crazy-background;
+            & .add-members-button {
+                visibility: visible;
+                margin: 0;
+                color: $crazy-primary;
+            }
+        }
+        & .add-members-button {
+            visibility: hidden;
+            margin: 0;
+        }
+    }
+    & .assign-external-experts {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+        margin-top: 10px;
+        &:hover {
+            background-color: $crazy-background;
+        }
+        & .pro-tag {
+            border: 1px solid $crazy-orange;
+            width: 30px;
+            height: 17px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            margin-left: 15px;
+            & p {
+                font-size: 10px;
+                font-weight: bold;
+                color: $crazy-orange;
+                margin: auto;
+            }
+        }
+    }
+    // Expert list
+    & .judge-list-container {
+        & .judge-list-whole-item {
+            &:hover {
+                background-color: $crazy-background;
+                & .remove-members-button {
+                    visibility: visible;
+                }
+            }
+            & .judge-list-item {
+                display: flex;
+                align-items: center;
+                margin-left: 35px;
+                margin-bottom: 10px;
+                & img {
+                    width: 40px;
+                }
+                & .own-picture {
+                    border: 2px solid $crazy-primary;
+                }
+                & div {
+                    margin-left: 20px;
+                    width: calc(100% - 40px);
+                    & p {
+                        margin: 0;
+                    }
+                }
+            }
+            & .remove-members-button {
+                text-align: right;
+                color: $crazy-mediumgrey;
+                cursor: pointer;
+                visibility: hidden;
+            }
+            & .remove-expert-section {
+                margin-bottom: 10px;
+                margin-left: 30px;
+                & .field-and-buttons-wrapper {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 10px;
+                    & .crazy-field {
+                        width: 60%;
+                        height: 100%;
+                        & .filler-message {
+                            display: none;
+                        }
+                    }
+                    & .buttons-wrapper {
+                        width: 115px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: auto 0;
+                        margin-left: 21px;
+                        padding-bottom: 5px;
+                        & p {
+                            color: $crazy-primary;
+                            cursor: pointer;
+                            &.disabled {
+                                color: $crazy-mediumgrey;
+                                cursor: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.add-members-modal {
+    & .add-members-modal-children {
+        padding: 7px 60px;
+        padding-bottom: 0;
+        margin: 8px 0 12px;
+        & p {
+            margin: 0;
+            & span {
+                color: $crazy-mediumgrey;
+            }
+        }
+        & .crazy-tooltip {
+            width: 100%;
+            & .team-tooltip {
+                color: $crazy-white;
+                margin: 10px 16px;
+                font-size: 11px;
+            }
+        }
+        // Expert list
+    & .judge-list-container {
+        & .judge-list-whole-item {
+            &:hover {
+                background-color: $crazy-background;
+                & .remove-members-button {
+                    visibility: visible;
+                }
+            }
+            & .judge-list-item {
+                display: flex;
+                align-items: center;
+                margin-left: 35px;
+                margin-bottom: 10px;
+                & img {
+                    width: 40px;
+                }
+                & .own-picture {
+                    border: 2px solid $crazy-primary;
+                }
+                & div {
+                    margin-left: 20px;
+                    width: calc(100% - 40px);
+                    & p {
+                        margin: 0;
+                    }
+                }
+            }
+            & .remove-members-button {
+                text-align: right;
+                color: $crazy-mediumgrey;
+                cursor: pointer;
+                visibility: hidden;
+            }
+            & .remove-expert-section {
+                margin-bottom: 10px;
+                margin-left: 30px;
+                & .field-and-buttons-wrapper {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 10px;
+                    & .crazy-field {
+                        width: 60%;
+                        height: 100%;
+                        & .filler-message {
+                            display: none;
+                        }
+                    }
+                    & .buttons-wrapper {
+                        width: 115px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: auto 0;
+                        margin-left: 21px;
+                        padding-bottom: 5px;
+                        & p {
+                            color: $crazy-primary;
+                            cursor: pointer;
+                            &.disabled {
+                                color: $crazy-mediumgrey;
+                                cursor: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}
+
+.challenge-configuration-summary {
+    background-color: $crazy-background;
+    // padding-bottom: 61px;
+    & > .crazy-grid.section-container-content.challenge-configuration-summary-grid {
+        // padding: 41px 20px;
+        padding-left: 27px;
+        padding-right: 27px;
+        & .separator {
+            border-top: 1px solid #d8d8d8;
+        }
+        & .time-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 6px;
+            & > p {
+                margin-right: 27px;
+                margin-bottom: 0;
+            }
+            & .tooltip-top {
+                bottom: calc(100% + 13px);
+            }
+            & .tooltip-bottom {
+                top: calc(100% + 13px);
+            }
+            & .crazy-dropdown {
+                width: 148px;
+                & .selected-container {
+                    position: relative;
+                    margin-left: 14px;
+                    &::before {
+                        content: '\41';
+                        color: $crazy-primary;
+                        font-weight: bold;
+                        font-family: fluttr-icon-set;
+                        position: absolute;
+                        left: -4px;
+                        font-size: 16px;
+                    }
+                }
+                &:hover {
+                    & .selected-container {
+                        &::before {
+                            left: -5px;
+                        }
+                    }
+                }
+            }
+            & .rdt {
+                position: relative;
+                &::before {
+                    content: '\7a';
+                    color: $crazy-primary;
+                    font-weight: bold;
+                    font-family: fluttr-icon-set;
+                    position: absolute;
+                    left: 12px;
+                    top: 10px;
+                    font-size: 16px;
+                }
+                & .form-control {
+                    width: 148px;
+                    height: 49px;
+                    cursor: pointer;
+                    // font-weight: bold;
+                    padding-left: 33px;
+                    font-size: 12px;
+                    border-width: 1px;
+                }
+                &:hover {
+                    & .form-control {
+                        border: 2px solid #8A81E1;
+                        padding-left: 32px;
+                    }
+                }
+                & .rdtDays {
+                    color: #2C3E50;
+                    & .rdtActive {
+                        background-color: #8A81E1;
+                    }
+                    & .rdtDisabled {
+                        background-color: #EDFAF7;
+                        color: #2C3E50;
+                    }
+                }
+            }
+        }
+        & .crazy-radio-label {
+            color: $crazy-darkside;
+            font-weight: normal;
+        }
+    }
+    & .title {
+        margin-top: 0;
+    }
+    & .crazy-tooltip {
+        & .settings-tooltip {
+            color: $crazy-white;
+            margin: 10px 16px;
+            font-size: 11px;
+        }
+    }
+}

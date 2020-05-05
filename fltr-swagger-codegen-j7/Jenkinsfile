@@ -1,0 +1,121 @@
+// import
+@Library("fltrJenkinsLib")
+import com.fluttr.fltrJenkinsGlobalLib
+import groovy.transform.Field
+
+
+def fltr
+
+def notificationChannel = "#devops"
+
+def logContent
+
+def buildTimestamp = ""
+
+pipeline {
+    agent any
+
+    // global env variables
+    environment {
+        EMAIL_RECIPIENTS = 'devops@fluttr.in'
+    }
+
+    stages {
+
+        stage('Initializing Fluttr Global Library') {
+            steps {
+                script {
+                      fltr = new fltrJenkinsGlobalLib()
+                      buildTimestamp = fltr.buildTimestamp()
+                 }
+             }
+        }
+
+        stage('Notify build start') {
+                    steps {
+                        script {
+
+                            fltr.notifySlackWithChannel('STARTED', notificationChannel)
+
+                            slackSend(color: '#BDFFC3', channel: notificationChannel, message: "- Changelog: \n" + getChangeString())
+
+                         }
+                     }
+        }
+
+
+        stage('Invoking Maven'){
+
+            steps {
+
+                script {
+
+                    try{
+
+                        if (currentBuild.result == null || currentBuild.result == 'SUCCESS') {
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: "- Invoking Maven")
+
+                                def commandOutput = sh(script: "mvn clean install", returnStdout: true)
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: commandOutput)
+
+                        } else {
+                            error "Release is not possible. as build is not successful"
+                        }
+
+
+                    } catch (e) {
+                            currentBuild.result = 'FAILURE'
+                            throw e
+                    } finally {
+                            fltr.notifySlackWithChannel(currentBuild.result, notificationChannel)
+
+                    }
+
+                }
+            }
+        }
+
+
+
+
+
+    }
+
+// The options directive is for configuration that applies to the whole job.
+    options {
+        // For example, we'd like to make sure we only keep 10 builds at a time, so
+        // we don't fill up our storage!
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+
+        // And we'd really like to be sure that this build doesn't hang forever, so
+        // let's time it out after an hour.
+        timeout(time: 25, unit: 'MINUTES')
+    }
+
+}
+def developmentArtifactVersion = ''
+def releasedVersion = ''
+// get change log
+@NonCPS
+def getChangeString() {
+    MAX_MSG_LEN = 100
+    def changeString = ""
+
+    echo "Gathering SCM changes"
+    def changeLogSets = currentBuild.changeSets
+    for (int i = 0; i < changeLogSets.size(); i++) {
+        def entries = changeLogSets[i].items
+        for (int j = 0; j < entries.length; j++) {
+            def entry = entries[j]
+            truncated_msg = entry.msg.take(MAX_MSG_LEN)
+            changeString += " - ${truncated_msg} [${entry.author}]\n"
+        }
+    }
+
+    if (!changeString) {
+        changeString = " - No new changes"
+    }
+    return changeString
+}

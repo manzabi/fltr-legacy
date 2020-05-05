@@ -1,0 +1,25 @@
+.pendingOpportunityRow {
+
+  .pendingItemContainer{
+    padding:5px;
+    border-bottom: 1px solid $fluttr-light-grey;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+
+    &:hover {
+      background-color: $fluttr-light-light-blue;
+      border-left: 4px solid $fluttr-violet;
+    }
+  }
+
+  .pendingIcon{
+    font-size: $icon-medium;
+  }
+
+  .pendingItemText{
+    color : $fluttr-black;
+    font-size: $text-medium;
+    font-weight: 300;
+  }
+
+}

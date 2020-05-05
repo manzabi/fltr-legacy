@@ -1,0 +1,36 @@
+@keyframes fadeInFromNone {
+  0% {
+    background-color: transparent;
+  }
+
+  1% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: $fluttr-light-grey-darker;
+  }
+}
+
+@keyframes fadeOut{
+  0% {
+    background-color: $fluttr-light-grey-darker;
+  }
+
+  1% {
+    background-color: $fluttr-light-grey-darker;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+
+.fade-in{
+  animation: fadeInFromNone 0.7s forwards;
+}
+
+.fade-out{
+  animation: fadeOut .5s forwards;
+}

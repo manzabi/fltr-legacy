@@ -1,0 +1,192 @@
+// import
+@Library("fltrJenkinsLib")
+import com.fluttr.fltrJenkinsGlobalLib
+import groovy.transform.Field
+
+@Field static stgMap = [
+    tag: 'stg',
+    gkeClusterCredentials: 'gcloud container clusters get-credentials fltr-stg-kube --zone europe-west4-a --project stg-env-228711'
+]
+
+@Field static qasMap = [
+    tag: 'qas',
+    gkeClusterCredentials: 'gcloud container clusters get-credentials fltr-qas-kube --zone europe-west4-a --project qa-env-225712'
+]
+
+@Field static prdMap = [
+    tag: 'prd',
+    gkeClusterCredentials: 'gcloud container clusters get-credentials fltr-prd-kube --zone europe-west4-a --project exalted-entity-163908'
+]
+
+def fltr
+
+def notificationChannel = "#devops"
+
+def logContent
+
+def dockerImageRepoURL = "eu.gcr.io/devops-tools-228909/fluttr-architecture-image-repository/reverseproxyplus"
+
+def dockerComposeImageName = "reverseproxy_plus"
+
+def deploymentName  = "reverseproxyplus"
+
+def buildTimestamp = ""
+
+def configMap
+
+def imageTag = ""
+
+pipeline {
+    agent any
+
+    // global env variables
+    environment {
+        EMAIL_RECIPIENTS = 'devops@fluttr.in'
+    }
+
+    stages {
+
+        stage('Initializing Fluttr Global Library') {
+            steps {
+                script {
+                      fltr = new fltrJenkinsGlobalLib()
+                      buildTimestamp = fltr.buildTimestamp()
+                 }
+             }
+        }
+
+        stage('Define build config') {
+                    steps {
+                        script {
+                            if (params.GCP_ENV == "qas") {
+                                 configMap = qasMap
+                            } else if(params.GCP_ENV == "prd") {
+                                 configMap = prdMap
+                            } else if(params.GCP_ENV == "stg") {
+                                 configMap = stgMap
+                            }
+                            imageTag = buildTimestamp+"_"+configMap['tag']
+                        }
+
+                    }
+
+        }
+
+        stage('Notify build start') {
+                    steps {
+                        script {
+
+                            fltr.notifySlackWithChannel('STARTED', notificationChannel)
+
+                            slackSend(color: '#BDFFC3', channel: notificationChannel, message: "- Changelog: \n" + getChangeString())
+
+                         }
+                     }
+        }
+
+
+        stage('Build artifact and Docker Image') {
+
+            steps {
+
+                script {
+
+                    try{
+
+                        if (currentBuild.result == null || currentBuild.result == 'SUCCESS') {
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: "- CD to directory")
+
+                                def commandOutput = sh(script: "cd ${params.GCP_ENV}_env_kubernetes/${params.GCP_ENV}_env_kubernetes/docker", returnStdout: true)
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: commandOutput)
+
+                                commandOutput = sh(script: "ls", returnStdout: true)
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: commandOutput)
+
+                                //build
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: "- Building docker image")
+
+                                commandOutput = sh(script: "TAG=$imageTag docker-compose build --pull $dockerComposeImageName", returnStdout: true)
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: commandOutput)
+
+                                //push
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: "- Pushing docker image")
+
+                                commandOutput = sh(script: "TAG=$imageTag docker-compose push $dockerComposeImageName", returnStdout: true)
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: commandOutput)
+
+                                //get cluster credentials
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: "- Getting k8s cluster credentials")
+
+                                commandOutput = sh(script: configMap['gkeClusterCredentials'], returnStdout: true)
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: commandOutput)
+
+                                //set image
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: "- Applying docker image to k8s deployment")
+
+                                commandOutput = sh(script: "kubectl set image deployment/$deploymentName *=$dockerImageRepoURL:"+configMap['tag']+"_$buildTimestamp", returnStdout: true)
+
+                                slackSend(color: '#BDFFC3', channel: notificationChannel, message: commandOutput)
+
+                        } else {
+                            error "Release is not possible. as build is not successful"
+                        }
+
+
+                    } catch (e) {
+                            currentBuild.result = 'FAILURE'
+                            throw e
+                    } finally {
+                            fltr.notifySlackWithChannel(currentBuild.result, notificationChannel)                             }
+
+                    }
+
+                }
+            }
+        }
+
+// The options directive is for configuration that applies to the whole job.
+    options {
+        // For example, we'd like to make sure we only keep 10 builds at a time, so
+        // we don't fill up our storage!
+        buildDiscarder(logRotator(numToKeepStr: '5'))
+
+        // And we'd really like to be sure that this build doesn't hang forever, so
+        // let's time it out after an hour.
+        timeout(time: 25, unit: 'MINUTES')
+    }
+
+}
+def developmentArtifactVersion = ''
+def releasedVersion = ''
+// get change log
+@NonCPS
+def getChangeString() {
+    MAX_MSG_LEN = 100
+    def changeString = ""
+
+    echo "Gathering SCM changes"
+    def changeLogSets = currentBuild.changeSets
+    for (int i = 0; i < changeLogSets.size(); i++) {
+        def entries = changeLogSets[i].items
+        for (int j = 0; j < entries.length; j++) {
+            def entry = entries[j]
+            truncated_msg = entry.msg.take(MAX_MSG_LEN)
+            changeString += " - ${truncated_msg} [${entry.author}]\n"
+        }
+    }
+
+    if (!changeString) {
+        changeString = " - No new changes"
+    }
+    return changeString
+}

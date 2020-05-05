@@ -1,0 +1,49 @@
+.company-edit-modal {
+    & .crazy-modal-content {
+        padding-top: 78px;
+    }
+    & .company-edit-modal-title {
+        position: absolute;
+        top: 20px;
+        left: 31px;
+        & h2 {
+            margin: 0;
+            margin-bottom: 17px;
+        }
+    }
+    & .company-edit-content {
+        & .profile-content-photo {
+            display: flex; 
+            align-items: center;
+            & .profile-content-photo-button {
+                height: 100px;
+                width: 100px;
+                border: 1px solid $crazy-lightgrey;
+                background-color: $crazy-background;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 0;
+                left: 0;
+                &.transparent-hover {
+                    background-color: $crazy-white;
+                    opacity: 0;
+                    &:hover {
+                        background-color: rgba(255,255,255,0.7);
+                        opacity: 1;
+                    }
+                } 
+                & > i {
+                    color: $crazy-primary;
+                    display: flex;
+                }
+            }
+        }
+        & .current-plan {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

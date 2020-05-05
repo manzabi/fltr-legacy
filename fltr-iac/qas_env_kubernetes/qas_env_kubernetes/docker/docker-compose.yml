@@ -1,0 +1,44 @@
+version: '3'
+services:
+    reverseproxy:
+        image: eu.gcr.io/qa-env-225712/fluttr-architecture-image-repository/fluttrproxynginx_250419_1:qas
+        build: ./reverseproxy/
+        ports:
+            - "80:80"
+            - "443:443"
+            - "8080:8080"
+        restart: always
+    postgres:
+        image: mdillon/postgis:9.6
+        container_name: postgres
+        environment:
+            - LC_ALL=C.UTF-8
+            - POSTGRES_DBNAME=bizaround
+            - POSTGRES_USER=bizaround
+            - POSTGRES_PASS=bizaround
+            - POSTGRES_PORT=5432
+            - PGDATA=/var/lib/postgresql/data/pgdata #needed for kubernetes or the image will bootloop
+        volumes:
+            - $PWD/output_files/postgres_data:/var/lib/postgresql/data
+        ports:
+            - 5432:5432
+    wildfly:
+        image: eu.gcr.io/qa-env-225712/fluttr-architecture-image-repository/fluttras_12042019:qas
+        container_name: wildfly
+        build: ./wildfly/
+        environment:
+            - DB_HOST=postgres
+            - DB_PORT=5432
+            - DB_NAME=bizaround
+            - DB_USER=bizaround
+            - DB_PASS=bizaround
+            - DS_NAME=postgresDSß
+            - JNDI_NAME=java:jboss/datasources/postgresDS
+            - SPRING_PROFILES_ACTIVE=qas
+            - JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+            - BIZAROUND_ENVIRONMENT=qas
+        ports:
+            - 8080:8080
+            - 9990:9990
+volumes:
+    jboss-conf: {}
