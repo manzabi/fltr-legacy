@@ -101,7 +101,7 @@
     "clipboard": "^1.7.1",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
-    "dompurify": "^0.9.0",
+    "dompurify": "^2.0.17",
     "draft-js": "^0.10.5",
     "draftjs-to-html": "^0.7.5",
     "express": "^4.14.0",
